@@ -1,0 +1,9593 @@
+{
+ "version": "oos-0.1",
+ "status": "ok",
+ "generated_at": "2026-09-28T15:14:19+00:00",
+ "range": [
+  "2021-12-15",
+  "2026-03-31"
+ ],
+ "warning": "倖存者偏差：只能用今日仍掛牌的股票回看過去，已下市的失敗案例不在樣本中，小型股受影響最大，結果偏樂觀。價差為 Corwin–Schultz 估計值。未套用族群與財報日排除（免費資料無法取得完整歷史）。",
+ "criteria": {
+  "c1": "系統帳（含手續費與估計價差）同時贏過同曝險 SPY 與同曝險 IWM，且平均 R > 0",
+  "c2": "T2、T3 兩層平均 R 皆高於 T1；任一層少於 30 筆視為不成立",
+  "rule": "兩條都過 → 進紙上階段；任一條不過 → Thanos X 停止"
+ },
+ "verdict": {
+  "c1_pass": false,
+  "c2_pass": false,
+  "tier_sample_enough": true,
+  "result": "未通過：Thanos X 停止"
+ },
+ "universe_size": 3694,
+ "coverage": {
+  "requested": 3697,
+  "received": 3690,
+  "missing_sample": [
+   "GIXI",
+   "IPHXU",
+   "MIAC",
+   "SGLD",
+   "TLACU",
+   "TRBG",
+   "XTND"
+  ]
+ },
+ "oos_config": {
+  "price_min": 5.0,
+  "adv_floor": 2000000.0,
+  "screen_price": 3.0,
+  "screen_adv": 1000000.0,
+  "spread_cap": 0.03,
+  "min_tier_trades": 30
+ },
+ "frequency": {
+  "sessions": 1076,
+  "days_with_candidate": 637,
+  "selected_total": 1178,
+  "selected_A": 789,
+  "selected_B": 389,
+  "selected_per_week": 5.47,
+  "filled_total": 865,
+  "filled_per_week": 4.02,
+  "weeks_to_30_trades": 7.5,
+  "short_watch_total": 2193
+ },
+ "by_tier": {
+  "T1": {
+   "label": "日均成交 ≥ 5,000 萬",
+   "closed": 557,
+   "open": 0,
+   "no_fill": 13,
+   "skipped_capacity": 0,
+   "win_rate": 0.33,
+   "avg_r": -0.109,
+   "total_r": -60.6,
+   "avg_win": 1.08,
+   "avg_loss": -0.695,
+   "avg_hold_days": 11.9,
+   "A": {
+    "closed": 389,
+    "open": 0,
+    "no_fill": 9,
+    "skipped_capacity": 0,
+    "win_rate": 0.329,
+    "avg_r": -0.098,
+    "total_r": -37.94,
+    "avg_win": 1.153,
+    "avg_loss": -0.711,
+    "avg_hold_days": 11.7
+   },
+   "B": {
+    "closed": 168,
+    "open": 0,
+    "no_fill": 4,
+    "skipped_capacity": 0,
+    "win_rate": 0.333,
+    "avg_r": -0.135,
+    "total_r": -22.66,
+    "avg_win": 0.911,
+    "avg_loss": -0.658,
+    "avg_hold_days": 12.4
+   }
+  },
+  "T2": {
+   "label": "1,000 萬–5,000 萬",
+   "closed": 383,
+   "open": 0,
+   "no_fill": 5,
+   "skipped_capacity": 0,
+   "win_rate": 0.332,
+   "avg_r": -0.142,
+   "total_r": -54.5,
+   "avg_win": 1.056,
+   "avg_loss": -0.737,
+   "avg_hold_days": 11.7,
+   "A": {
+    "closed": 248,
+    "open": 0,
+    "no_fill": 3,
+    "skipped_capacity": 0,
+    "win_rate": 0.359,
+    "avg_r": -0.143,
+    "total_r": -35.59,
+    "avg_win": 1.02,
+    "avg_loss": -0.795,
+    "avg_hold_days": 11.8
+   },
+   "B": {
+    "closed": 135,
+    "open": 0,
+    "no_fill": 2,
+    "skipped_capacity": 0,
+    "win_rate": 0.281,
+    "avg_r": -0.14,
+    "total_r": -18.91,
+    "avg_win": 1.14,
+    "avg_loss": -0.641,
+    "avg_hold_days": 11.7
+   }
+  },
+  "T3": {
+   "label": "200 萬–1,000 萬",
+   "closed": 216,
+   "open": 0,
+   "no_fill": 4,
+   "skipped_capacity": 0,
+   "win_rate": 0.278,
+   "avg_r": -0.214,
+   "total_r": -46.18,
+   "avg_win": 1.037,
+   "avg_loss": -0.695,
+   "avg_hold_days": 11.4,
+   "A": {
+    "closed": 137,
+    "open": 0,
+    "no_fill": 3,
+    "skipped_capacity": 0,
+    "win_rate": 0.285,
+    "avg_r": -0.23,
+    "total_r": -31.54,
+    "avg_win": 1.125,
+    "avg_loss": -0.769,
+    "avg_hold_days": 11.2
+   },
+   "B": {
+    "closed": 79,
+    "open": 0,
+    "no_fill": 1,
+    "skipped_capacity": 0,
+    "win_rate": 0.266,
+    "avg_r": -0.185,
+    "total_r": -14.64,
+    "avg_win": 0.873,
+    "avg_loss": -0.569,
+    "avg_hold_days": 11.9
+   }
+  }
+ },
+ "avg_est_spread_pct_by_tier": {
+  "T1": 0.67,
+  "T2": 0.76,
+  "T3": 0.772
+ },
+ "paper": {
+  "benchmark": {
+   "index": "SPY",
+   "range": [
+    "2021-12-15",
+    "2026-03-31"
+   ],
+   "sessions": 1076,
+   "assumed_cash_rate_pct": 4.0,
+   "avg_exposure_pct": 49.8,
+   "max_exposure_pct": 100.0,
+   "system_pct": -35.82,
+   "system_trading_only_pct": -41.1,
+   "matched_benchmark_pct": 36.8,
+   "spy_buy_hold_pct": 40.35,
+   "cash_only_pct": 18.62,
+   "max_drawdown_pct": {
+    "system": -36.44,
+    "matched": -8.99,
+    "spy": -25.36
+   },
+   "excess_vs_matched_pct": -72.62,
+   "beats_matched": false
+  },
+  "benchmark_iwm": {
+   "index": "IWM",
+   "range": [
+    "2021-12-15",
+    "2026-03-31"
+   ],
+   "sessions": 1076,
+   "assumed_cash_rate_pct": 4.0,
+   "avg_exposure_pct": 49.8,
+   "max_exposure_pct": 100.0,
+   "system_pct": -35.82,
+   "system_trading_only_pct": -41.1,
+   "matched_benchmark_pct": 24.11,
+   "spy_buy_hold_pct": 15.79,
+   "cash_only_pct": 18.62,
+   "max_drawdown_pct": {
+    "system": -36.44,
+    "matched": -16.45,
+    "spy": -28.01
+   },
+   "excess_vs_matched_pct": -59.93,
+   "beats_matched": false
+  },
+  "system": {
+   "stats": {
+    "closed": 865,
+    "open": 0,
+    "no_fill": 22,
+    "skipped_capacity": 286,
+    "win_rate": 0.319,
+    "avg_r": -0.116,
+    "total_r": -100.1,
+    "avg_win": 0.945,
+    "avg_loss": -0.613,
+    "avg_hold_days": 11.6
+   },
+   "filled_trades": 865,
+   "peak": {
+    "positions": 24,
+    "open_risk_r": 16.0,
+    "cash_used_pct": 99.9
+   },
+   "skip_reasons": {
+    "同標的已持有": 187,
+    "現金不足": 99
+   },
+   "open": [],
+   "recent_closed": [
+    {
+     "entry_date": "2026-02-27",
+     "entry": 22.77,
+     "stop": 20.85,
+     "t1": 26.61,
+     "unit": 2.339,
+     "cost_side": 0.00867,
+     "fills": [
+      {
+       "date": "2026-03-13",
+       "frac": 1.0,
+       "price": 20.99,
+       "reason": "E4 停滯"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -0.923,
+     "status": "closed",
+     "exit_date": "2026-03-13",
+     "pnl_r": -0.923,
+     "exit_reason": "E4 停滯",
+     "hold_days": 10,
+     "ticker": "PRMB",
+     "template": "A",
+     "e_date": "2026-02-26",
+     "signal_date": "2026-02-26",
+     "size": 1.0
+    },
+    {
+     "entry_date": "2026-02-27",
+     "entry": 39.1,
+     "stop": 36.78,
+     "t1": 43.74,
+     "unit": 3.7889,
+     "cost_side": 0.00659,
+     "fills": [
+      {
+       "date": "2026-03-04",
+       "frac": 1.0,
+       "price": 36.25,
+       "reason": "E1 停損"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -0.883,
+     "status": "closed",
+     "exit_date": "2026-03-04",
+     "pnl_r": -0.883,
+     "exit_reason": "E1 停損",
+     "hold_days": 3,
+     "ticker": "CPS",
+     "template": "B",
+     "e_date": "2026-02-13",
+     "signal_date": "2026-02-26",
+     "size": 1.0
+    },
+    {
+     "entry_date": "2026-02-27",
+     "entry": 36.02,
+     "stop": 34.36,
+     "t1": 39.34,
+     "unit": 3.1043,
+     "cost_side": 0.0127,
+     "fills": [
+      {
+       "date": "2026-03-06",
+       "frac": 0.5,
+       "price": 39.42,
+       "reason": "E2 第一目標"
+      },
+      {
+       "date": "2026-03-12",
+       "frac": 0.5,
+       "price": 38.5,
+       "reason": "E3 跌破 10 日均線"
+      }
+     ],
+     "t1_date": "2026-03-06",
+     "realized_r": 0.64,
+     "status": "closed",
+     "exit_date": "2026-03-12",
+     "pnl_r": 0.64,
+     "exit_reason": "E3 跌破 10 日均線",
+     "hold_days": 9,
+     "ticker": "RNG",
+     "template": "B",
+     "e_date": "2026-02-20",
+     "signal_date": "2026-02-26",
+     "size": 1.0
+    },
+    {
+     "entry_date": "2026-03-02",
+     "entry": 15.64,
+     "stop": 14.3,
+     "t1": 18.32,
+     "unit": 1.7272,
+     "cost_side": 0.00811,
+     "fills": [
+      {
+       "date": "2026-03-16",
+       "frac": 1.0,
+       "price": 15.0,
+       "reason": "E4 停滯"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -0.514,
+     "status": "closed",
+     "exit_date": "2026-03-16",
+     "pnl_r": -0.257,
+     "exit_reason": "E4 停滯",
+     "hold_days": 10,
+     "ticker": "FIGS",
+     "template": "A",
+     "e_date": "2026-02-27",
+     "signal_date": "2026-02-27",
+     "size": 0.5
+    },
+    {
+     "entry_date": "2026-03-02",
+     "entry": 95.26,
+     "stop": 90.58,
+     "t1": 104.62,
+     "unit": 6.515,
+     "cost_side": 0.00705,
+     "fills": [
+      {
+       "date": "2026-03-17",
+       "frac": 1.0,
+       "price": 95.3,
+       "reason": "E4 停滯"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -0.2,
+     "status": "closed",
+     "exit_date": "2026-03-17",
+     "pnl_r": -0.1,
+     "exit_reason": "E4 停滯",
+     "hold_days": 11,
+     "ticker": "NFLX",
+     "template": "A",
+     "e_date": "2026-02-27",
+     "signal_date": "2026-02-27",
+     "size": 0.5
+    },
+    {
+     "entry_date": "2026-03-03",
+     "entry": 36.44,
+     "stop": 34.9824,
+     "t1": 39.3552,
+     "unit": 2.1401,
+     "cost_side": 0.00716,
+     "fills": [
+      {
+       "date": "2026-03-06",
+       "frac": 1.0,
+       "price": 34.12,
+       "reason": "E1 停損"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -1.32,
+     "status": "closed",
+     "exit_date": "2026-03-06",
+     "pnl_r": -0.66,
+     "exit_reason": "E1 停損",
+     "hold_days": 3,
+     "ticker": "FRO",
+     "template": "A",
+     "e_date": "2026-03-02",
+     "signal_date": "2026-03-02",
+     "size": 0.5
+    },
+    {
+     "entry_date": "2026-03-05",
+     "entry": 13.0,
+     "stop": 12.34,
+     "t1": 14.32,
+     "unit": 0.898,
+     "cost_side": 0.00503,
+     "fills": [
+      {
+       "date": "2026-03-06",
+       "frac": 1.0,
+       "price": 11.88,
+       "reason": "E1 停損"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -1.387,
+     "status": "closed",
+     "exit_date": "2026-03-06",
+     "pnl_r": -0.694,
+     "exit_reason": "E1 停損",
+     "hold_days": 1,
+     "ticker": "ACEL",
+     "template": "A",
+     "e_date": "2026-03-04",
+     "signal_date": "2026-03-04",
+     "size": 0.5
+    },
+    {
+     "entry_date": "2026-03-05",
+     "entry": 43.96,
+     "stop": 41.09,
+     "t1": 49.7,
+     "unit": 4.3447,
+     "cost_side": 0.00931,
+     "fills": [
+      {
+       "date": "2026-03-16",
+       "frac": 1.0,
+       "price": 41.98,
+       "reason": "E1 停損"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -0.64,
+     "status": "closed",
+     "exit_date": "2026-03-16",
+     "pnl_r": -0.32,
+     "exit_reason": "E1 停損",
+     "hold_days": 7,
+     "ticker": "GCT",
+     "template": "B",
+     "e_date": "2026-02-26",
+     "signal_date": "2026-03-04",
+     "size": 0.5
+    },
+    {
+     "entry_date": "2026-03-05",
+     "entry": 62.06,
+     "stop": 56.97,
+     "t1": 72.24,
+     "unit": 6.2072,
+     "cost_side": 0.00708,
+     "fills": [
+      {
+       "date": "2026-03-13",
+       "frac": 1.0,
+       "price": 56.42,
+       "reason": "E1 停損"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -1.044,
+     "status": "closed",
+     "exit_date": "2026-03-13",
+     "pnl_r": -0.522,
+     "exit_reason": "E1 停損",
+     "hold_days": 6,
+     "ticker": "PRLB",
+     "template": "B",
+     "e_date": "2026-02-06",
+     "signal_date": "2026-03-04",
+     "size": 0.5
+    },
+    {
+     "entry_date": "2026-03-09",
+     "entry": 13.98,
+     "stop": 12.72,
+     "t1": 16.5,
+     "unit": 1.4782,
+     "cost_side": 0.00714,
+     "fills": [
+      {
+       "date": "2026-04-07",
+       "frac": 1.0,
+       "price": 14.72,
+       "reason": "E5 持有期滿"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": 0.362,
+     "status": "closed",
+     "exit_date": "2026-04-07",
+     "pnl_r": 0.181,
+     "exit_reason": "E5 持有期滿",
+     "hold_days": 20,
+     "ticker": "SWBI",
+     "template": "A",
+     "e_date": "2026-03-06",
+     "signal_date": "2026-03-06",
+     "size": 0.5
+    },
+    {
+     "entry_date": "2026-03-09",
+     "entry": 107.3,
+     "stop": 101.92,
+     "t1": 118.06,
+     "unit": 7.9079,
+     "cost_side": 0.00754,
+     "fills": [
+      {
+       "date": "2026-03-23",
+       "frac": 1.0,
+       "price": 108.0,
+       "reason": "E4 停滯"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -0.117,
+     "status": "closed",
+     "exit_date": "2026-03-23",
+     "pnl_r": -0.059,
+     "exit_reason": "E4 停滯",
+     "hold_days": 10,
+     "ticker": "LMAT",
+     "template": "B",
+     "e_date": "2026-02-26",
+     "signal_date": "2026-03-06",
+     "size": 0.5
+    },
+    {
+     "entry_date": "2026-03-10",
+     "entry": 27.1,
+     "stop": 25.095,
+     "t1": 31.11,
+     "unit": 2.8112,
+     "cost_side": 0.00835,
+     "fills": [
+      {
+       "date": "2026-03-16",
+       "frac": 1.0,
+       "price": 25.0,
+       "reason": "E1 停損"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -0.902,
+     "status": "closed",
+     "exit_date": "2026-03-16",
+     "pnl_r": -0.451,
+     "exit_reason": "E1 停損",
+     "hold_days": 4,
+     "ticker": "ONT",
+     "template": "B",
+     "e_date": "2026-02-26",
+     "signal_date": "2026-03-09",
+     "size": 0.5
+    },
+    {
+     "entry_date": "2026-03-12",
+     "entry": 147.15,
+     "stop": 136.11,
+     "t1": 169.23,
+     "unit": 15.0964,
+     "cost_side": 0.01104,
+     "fills": [
+      {
+       "date": "2026-03-25",
+       "frac": 0.5,
+       "price": 177.76,
+       "reason": "E2 第一目標"
+      },
+      {
+       "date": "2026-03-31",
+       "frac": 0.5,
+       "price": 164.29,
+       "reason": "E3 跌破 10 日均線"
+      }
+     ],
+     "t1_date": "2026-03-25",
+     "realized_r": 1.349,
+     "status": "closed",
+     "exit_date": "2026-03-31",
+     "pnl_r": 0.674,
+     "exit_reason": "E3 跌破 10 日均線",
+     "hold_days": 13,
+     "ticker": "DELL",
+     "template": "B",
+     "e_date": "2026-02-27",
+     "signal_date": "2026-03-11",
+     "size": 0.5
+    },
+    {
+     "entry_date": "2026-03-13",
+     "entry": 15.2,
+     "stop": 14.44,
+     "t1": 16.72,
+     "unit": 1.2268,
+     "cost_side": 0.00588,
+     "fills": [
+      {
+       "date": "2026-03-24",
+       "frac": 1.0,
+       "price": 14.63,
+       "reason": "E1 停損"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -0.608,
+     "status": "closed",
+     "exit_date": "2026-03-24",
+     "pnl_r": -0.304,
+     "exit_reason": "E1 停損",
+     "hold_days": 7,
+     "ticker": "LXU",
+     "template": "A",
+     "e_date": "2026-03-12",
+     "signal_date": "2026-03-12",
+     "size": 0.5
+    },
+    {
+     "entry_date": "2026-03-13",
+     "entry": 132.1,
+     "stop": 126.59,
+     "t1": 143.12,
+     "unit": 9.115,
+     "cost_side": 0.00591,
+     "fills": [
+      {
+       "date": "2026-03-17",
+       "frac": 1.0,
+       "price": 123.58,
+       "reason": "E1 停損"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -1.101,
+     "status": "closed",
+     "exit_date": "2026-03-17",
+     "pnl_r": -0.55,
+     "exit_reason": "E1 停損",
+     "hold_days": 2,
+     "ticker": "CF",
+     "template": "A",
+     "e_date": "2026-03-12",
+     "signal_date": "2026-03-12",
+     "size": 0.5
+    },
+    {
+     "entry_date": "2026-03-17",
+     "entry": 32.61,
+     "stop": 31.3056,
+     "t1": 35.2188,
+     "unit": 2.2399,
+     "cost_side": 0.01289,
+     "fills": [
+      {
+       "date": "2026-03-30",
+       "frac": 1.0,
+       "price": 29.99,
+       "reason": "E1 停損"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -1.53,
+     "status": "closed",
+     "exit_date": "2026-03-30",
+     "pnl_r": -0.765,
+     "exit_reason": "E1 停損",
+     "hold_days": 9,
+     "ticker": "IOT",
+     "template": "B",
+     "e_date": "2026-03-06",
+     "signal_date": "2026-03-16",
+     "size": 0.5
+    },
+    {
+     "entry_date": "2026-03-18",
+     "entry": 12.61,
+     "stop": 11.48,
+     "t1": 14.87,
+     "unit": 1.4243,
+     "cost_side": 0.00845,
+     "fills": [
+      {
+       "date": "2026-03-31",
+       "frac": 0.5,
+       "price": 14.69,
+       "reason": "E2 第一目標"
+      },
+      {
+       "date": "2026-04-09",
+       "frac": 0.5,
+       "price": 14.56,
+       "reason": "E3 跌破 10 日均線"
+      }
+     ],
+     "t1_date": "2026-03-31",
+     "realized_r": 1.253,
+     "status": "closed",
+     "exit_date": "2026-04-09",
+     "pnl_r": 0.626,
+     "exit_reason": "E3 跌破 10 日均線",
+     "hold_days": 15,
+     "ticker": "AGRO",
+     "template": "A",
+     "e_date": "2026-03-17",
+     "signal_date": "2026-03-17",
+     "size": 0.5
+    },
+    {
+     "entry_date": "2026-03-24",
+     "entry": 92.79,
+     "stop": 89.0784,
+     "t1": 100.2132,
+     "unit": 4.8677,
+     "cost_side": 0.00705,
+     "fills": [
+      {
+       "date": "2026-04-10",
+       "frac": 0.5,
+       "price": 102.47,
+       "reason": "E2 第一目標"
+      },
+      {
+       "date": "2026-04-20",
+       "frac": 0.5,
+       "price": 97.14,
+       "reason": "E3 跌破 10 日均線"
+      }
+     ],
+     "t1_date": "2026-04-10",
+     "realized_r": 1.162,
+     "status": "closed",
+     "exit_date": "2026-04-20",
+     "pnl_r": 0.581,
+     "exit_reason": "E3 跌破 10 日均線",
+     "hold_days": 18,
+     "ticker": "NFLX",
+     "template": "B",
+     "e_date": "2026-02-27",
+     "signal_date": "2026-03-23",
+     "size": 0.5
+    },
+    {
+     "entry_date": "2026-03-26",
+     "entry": 23.93,
+     "stop": 22.92,
+     "t1": 25.95,
+     "unit": 1.509,
+     "cost_side": 0.0068,
+     "fills": [
+      {
+       "date": "2026-04-10",
+       "frac": 0.5,
+       "price": 26.58,
+       "reason": "E2 第一目標"
+      },
+      {
+       "date": "2026-04-24",
+       "frac": 0.5,
+       "price": 28.34,
+       "reason": "E5 持有期滿"
+      }
+     ],
+     "t1_date": "2026-04-10",
+     "realized_r": 2.108,
+     "status": "closed",
+     "exit_date": "2026-04-24",
+     "pnl_r": 1.054,
+     "exit_reason": "E5 持有期滿",
+     "hold_days": 20,
+     "ticker": "MOV",
+     "template": "B",
+     "e_date": "2026-03-19",
+     "signal_date": "2026-03-25",
+     "size": 0.5
+    },
+    {
+     "entry_date": "2026-04-01",
+     "entry": 35.81,
+     "stop": 32.54,
+     "t1": 42.35,
+     "unit": 3.9597,
+     "cost_side": 0.00777,
+     "fills": [
+      {
+       "date": "2026-04-16",
+       "frac": 1.0,
+       "price": 33.06,
+       "reason": "E4 停滯"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -0.83,
+     "status": "closed",
+     "exit_date": "2026-04-16",
+     "pnl_r": -0.415,
+     "exit_reason": "E4 停滯",
+     "hold_days": 10,
+     "ticker": "ALKS",
+     "template": "A",
+     "e_date": "2026-03-31",
+     "signal_date": "2026-03-31",
+     "size": 0.5
+    }
+   ]
+  },
+  "compare": {
+   "template_A": {
+    "closed": 774,
+    "open": 0,
+    "no_fill": 15,
+    "skipped_capacity": 0,
+    "win_rate": 0.331,
+    "avg_r": -0.136,
+    "total_r": -105.07,
+    "avg_win": 1.103,
+    "avg_loss": -0.748,
+    "avg_hold_days": 11.6
+   },
+   "template_B": {
+    "closed": 382,
+    "open": 0,
+    "no_fill": 7,
+    "skipped_capacity": 0,
+    "win_rate": 0.301,
+    "avg_r": -0.147,
+    "total_r": -56.22,
+    "avg_win": 0.98,
+    "avg_loss": -0.632,
+    "avg_hold_days": 12.0
+   },
+   "selected": {
+    "closed": 1156,
+    "open": 0,
+    "no_fill": 22,
+    "skipped_capacity": 0,
+    "win_rate": 0.321,
+    "avg_r": -0.14,
+    "total_r": -161.28,
+    "avg_win": 1.065,
+    "avg_loss": -0.709,
+    "avg_hold_days": 11.8
+   },
+   "not_selected": {
+    "closed": 419,
+    "open": 0,
+    "no_fill": 6,
+    "skipped_capacity": 0,
+    "win_rate": 0.334,
+    "avg_r": -0.049,
+    "total_r": -20.36,
+    "avg_win": 1.029,
+    "avg_loss": -0.59,
+    "avg_hold_days": 12.5
+   }
+  },
+  "shadow": {
+   "chase_no_fill": {
+    "note": "開盤高於限價、未成交者，若以開盤價追進",
+    "closed": 22,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0,
+    "win_rate": 0.318,
+    "avg_r": -0.031,
+    "total_r": -0.68,
+    "avg_win": 1.222,
+    "avg_loss": -0.616,
+    "avg_hold_days": 12.3
+   },
+   "baseline_same_set": {
+    "note": "入選者照現行規則（與下一列比較用）",
+    "closed": 1156,
+    "open": 0,
+    "no_fill": 22,
+    "skipped_capacity": 0,
+    "win_rate": 0.321,
+    "avg_r": -0.14,
+    "total_r": -161.28,
+    "avg_win": 1.065,
+    "avg_loss": -0.709,
+    "avg_hold_days": 11.8
+   },
+   "no_stall": {
+    "note": "同一批入選者，若不執行 E4 停滯出場",
+    "closed": 1156,
+    "open": 0,
+    "no_fill": 22,
+    "skipped_capacity": 0,
+    "win_rate": 0.412,
+    "avg_r": -0.151,
+    "total_r": -174.17,
+    "avg_win": 0.939,
+    "avg_loss": -0.914,
+    "avg_hold_days": 14.5
+   },
+   "x3_excluded": {
+    "note": "因停損距離 > 12% 被排除者，若照做",
+    "closed": 1906,
+    "open": 0,
+    "no_fill": 91,
+    "skipped_capacity": 0,
+    "win_rate": 0.313,
+    "avg_r": -0.057,
+    "total_r": -108.39,
+    "avg_win": 1.11,
+    "avg_loss": -0.589,
+    "avg_hold_days": 12.2
+   },
+   "target_only": {
+    "note": "2R 全數停利、取消持有期上限（大爺的提議）",
+    "closed": 1156,
+    "open": 0,
+    "no_fill": 22,
+    "skipped_capacity": 0,
+    "win_rate": 0.267,
+    "avg_r": -0.114,
+    "total_r": -131.88,
+    "avg_win": 1.46,
+    "avg_loss": -0.688,
+    "avg_hold_days": 13.4
+   },
+   "losers_time": {
+    "note": "持有期滿只砍未達 +1R 者，其餘改 10 日均線移動停利（發財的版本）",
+    "closed": 1156,
+    "open": 0,
+    "no_fill": 22,
+    "skipped_capacity": 0,
+    "win_rate": 0.321,
+    "avg_r": -0.149,
+    "total_r": -172.08,
+    "avg_win": 1.035,
+    "avg_loss": -0.709,
+    "avg_hold_days": 12.5
+   }
+  },
+  "surprise_tag": {
+   "note": "跳空 ÷ 財報前預期波動。只記錄、不過濾",
+   "within_expected": {
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   },
+   "beyond_expected": {
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   }
+  }
+ },
+ "by_day": [
+  {
+   "date": "2021-12-15",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2021-12-16",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2021-12-17",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2021-12-20",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2021-12-21",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2021-12-22",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2021-12-23",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2021-12-27",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2021-12-28",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2021-12-29",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2021-12-30",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2021-12-31",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-01-03",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-01-04",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-01-05",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-01-06",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-01-07",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-01-10",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-01-11",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-01-12",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-01-13",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-01-14",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-01-18",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-01-19",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-01-20",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-01-21",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2022-01-24",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-01-25",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-01-26",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-01-27",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2022-01-28",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-01-31",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-02-01",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-02-02",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-02-03",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2022-02-04",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-02-07",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-02-08",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-02-09",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-02-10",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-02-11",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 9
+  },
+  {
+   "date": "2022-02-14",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-02-15",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-02-16",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-02-17",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2022-02-18",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-02-22",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-02-23",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-02-24",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-02-25",
+   "passed": 7,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-02-28",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2022-03-01",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2022-03-02",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-03-03",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-03-04",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-03-07",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-03-08",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-03-09",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-03-10",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2022-03-11",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-03-14",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 9
+  },
+  {
+   "date": "2022-03-15",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-03-16",
+   "passed": 17,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-03-17",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-03-18",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-03-21",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-03-22",
+   "passed": 10,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-03-23",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-03-24",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-03-25",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-03-28",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-03-29",
+   "passed": 7,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-03-30",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-03-31",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-04-01",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-04-04",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-04-05",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-04-06",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-04-07",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-04-08",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-04-11",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-04-12",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-04-13",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-04-14",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-04-18",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-04-19",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-04-20",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-04-21",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2022-04-22",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2022-04-25",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-04-26",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-04-27",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2022-04-28",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-04-29",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2022-05-02",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-05-03",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-05-04",
+   "passed": 10,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-05-05",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2022-05-06",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2022-05-09",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2022-05-10",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-05-11",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 9
+  },
+  {
+   "date": "2022-05-12",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-05-13",
+   "passed": 11,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-05-16",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-05-17",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-05-18",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2022-05-19",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-05-20",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-05-23",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-05-24",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-05-25",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-05-26",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-05-27",
+   "passed": 7,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-05-31",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-06-01",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-06-02",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-06-03",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-06-06",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-06-07",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-06-08",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-06-09",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-06-10",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-06-13",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-06-14",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-06-15",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-06-16",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-06-17",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-06-21",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-06-22",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-06-23",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-06-24",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-06-27",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-06-28",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-06-29",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-06-30",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-07-01",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-07-05",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-07-06",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-07-07",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-07-08",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-07-11",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-07-12",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-07-13",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-07-14",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-07-15",
+   "passed": 3,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-07-18",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-07-19",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-07-20",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-07-21",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-07-22",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-07-25",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-07-26",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-07-27",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-07-28",
+   "passed": 6,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2022-07-29",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-08-01",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-08-02",
+   "passed": 3,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-08-03",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-08-04",
+   "passed": 6,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 9
+  },
+  {
+   "date": "2022-08-05",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2022-08-08",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-08-09",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 9
+  },
+  {
+   "date": "2022-08-10",
+   "passed": 8,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-08-11",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2022-08-12",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-08-15",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-08-16",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-08-17",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-08-18",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-08-19",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-08-22",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-08-23",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-08-24",
+   "passed": 5,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-08-25",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-08-26",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-08-29",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-08-30",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-08-31",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-09-01",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2022-09-02",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-09-06",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-09-07",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-09-08",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-09-09",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-09-12",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-09-13",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-09-14",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-09-15",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-09-16",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-09-19",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-09-20",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-09-21",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-09-22",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-09-23",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-09-26",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-09-27",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-09-28",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-09-29",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-09-30",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-10-03",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-10-04",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-10-05",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-10-06",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-10-07",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-10-10",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-10-11",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-10-12",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-10-13",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-10-14",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-10-17",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-10-18",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-10-19",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2022-10-20",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-10-21",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-10-24",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-10-25",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-10-26",
+   "passed": 5,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 7
+  },
+  {
+   "date": "2022-10-27",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2022-10-28",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2022-10-31",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-11-01",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2022-11-02",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 19
+  },
+  {
+   "date": "2022-11-03",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 16
+  },
+  {
+   "date": "2022-11-04",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 11
+  },
+  {
+   "date": "2022-11-07",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-11-08",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-11-09",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 10
+  },
+  {
+   "date": "2022-11-10",
+   "passed": 18,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-11-11",
+   "passed": 4,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-11-14",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-11-15",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-11-16",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-11-17",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-11-18",
+   "passed": 5,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-11-21",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-11-22",
+   "passed": 11,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-11-23",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-11-25",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-11-28",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-11-29",
+   "passed": 4,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-11-30",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-12-01",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2022-12-02",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-12-05",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-12-06",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2022-12-07",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2022-12-08",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-12-09",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2022-12-12",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-12-13",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-12-14",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-12-15",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-12-16",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-12-19",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-12-20",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-12-21",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 1
+  },
+  {
+   "date": "2022-12-22",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-12-23",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-12-27",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-12-28",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-12-29",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2022-12-30",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-01-03",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-01-04",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-01-05",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-01-06",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-01-09",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-01-10",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-01-11",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-01-12",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-01-13",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-01-17",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-01-18",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-01-19",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-01-20",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-01-23",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-01-24",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-01-25",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-01-26",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-01-27",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-01-30",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-01-31",
+   "passed": 11,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-02-01",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-02-02",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-02-03",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-02-06",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-02-07",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-02-08",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2023-02-09",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 7
+  },
+  {
+   "date": "2023-02-10",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2023-02-13",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-02-14",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-02-15",
+   "passed": 7,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-02-16",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2023-02-17",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-02-21",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2023-02-22",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-02-23",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-02-24",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 5
+  },
+  {
+   "date": "2023-02-27",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-02-28",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2023-03-01",
+   "passed": 7,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 6
+  },
+  {
+   "date": "2023-03-02",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-03-03",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-03-06",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-03-07",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-03-08",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-03-09",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 8
+  },
+  {
+   "date": "2023-03-10",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-03-13",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 10
+  },
+  {
+   "date": "2023-03-14",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-03-15",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-03-16",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-03-17",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-03-20",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-03-21",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-03-22",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-03-23",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-03-24",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-03-27",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-03-28",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-03-29",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-03-30",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-03-31",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-04-03",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-04-04",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-04-05",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-04-06",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-04-10",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-04-11",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-04-12",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-04-13",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-04-14",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-04-17",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-04-18",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-04-19",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-04-20",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-04-21",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-04-24",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-04-25",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-04-26",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-04-27",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2023-04-28",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-05-01",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-05-02",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2023-05-03",
+   "passed": 10,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-05-04",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 8
+  },
+  {
+   "date": "2023-05-05",
+   "passed": 8,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-05-08",
+   "passed": 5,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-05-09",
+   "passed": 8,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-05-10",
+   "passed": 11,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-05-11",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-05-12",
+   "passed": 5,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-05-15",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-05-16",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-05-17",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-05-18",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-05-19",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-05-22",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-05-23",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-05-24",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2023-05-25",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-05-26",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-05-30",
+   "passed": 6,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-05-31",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-06-01",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-06-02",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-06-05",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-06-06",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-06-07",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-06-08",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-06-09",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-06-12",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-06-13",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-06-14",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-06-15",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-06-16",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-06-20",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-06-21",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-06-22",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-06-23",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-06-26",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-06-27",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-06-28",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-06-29",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-06-30",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-07-03",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-07-05",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-07-06",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-07-07",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-07-10",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-07-11",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-07-12",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-07-13",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-07-14",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-07-17",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-07-18",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-07-19",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-07-20",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-07-21",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-07-24",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-07-25",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-07-26",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-07-27",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 11
+  },
+  {
+   "date": "2023-07-28",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-07-31",
+   "passed": 7,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-08-01",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2023-08-02",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2023-08-03",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 11
+  },
+  {
+   "date": "2023-08-04",
+   "passed": 6,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 12
+  },
+  {
+   "date": "2023-08-07",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-08-08",
+   "passed": 7,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 7
+  },
+  {
+   "date": "2023-08-09",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2023-08-10",
+   "passed": 5,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2023-08-11",
+   "passed": 8,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-08-14",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-08-15",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-08-16",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2023-08-17",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-08-18",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-08-21",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-08-22",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-08-23",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-08-24",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-08-25",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-08-28",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-08-29",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-08-30",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-08-31",
+   "passed": 3,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-09-01",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-09-05",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-09-06",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 4
+  },
+  {
+   "date": "2023-09-07",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2023-09-08",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-09-11",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-09-12",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-09-13",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-09-14",
+   "passed": 3,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-09-15",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-09-18",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-09-19",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-09-20",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-09-21",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-09-22",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-09-25",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-09-26",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-09-27",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-09-28",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-09-29",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-10-02",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-10-03",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-10-04",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-10-05",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-10-06",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-10-09",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-10-10",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-10-11",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-10-12",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-10-13",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-10-16",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-10-17",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-10-18",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-10-19",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-10-20",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-10-23",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-10-24",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-10-25",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2023-10-26",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 8
+  },
+  {
+   "date": "2023-10-27",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2023-10-30",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-10-31",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-11-01",
+   "passed": 6,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-11-02",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 7
+  },
+  {
+   "date": "2023-11-03",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-11-06",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-11-07",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-11-08",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2023-11-09",
+   "passed": 6,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 7
+  },
+  {
+   "date": "2023-11-10",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-11-13",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-11-14",
+   "passed": 11,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-11-15",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-11-16",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-11-17",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-11-20",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-11-21",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-11-22",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-11-24",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-11-27",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-11-28",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-11-29",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-11-30",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-12-01",
+   "passed": 6,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-12-04",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-12-05",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-12-06",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2023-12-07",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-12-08",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-12-11",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-12-12",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-12-13",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-12-14",
+   "passed": 6,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-12-15",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2023-12-18",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-12-19",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-12-20",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-12-21",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-12-22",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2023-12-26",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-12-27",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2023-12-28",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2023-12-29",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-01-02",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-01-03",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-01-04",
+   "passed": 4,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-01-05",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-01-08",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-01-09",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-01-10",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-01-11",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-01-12",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-01-16",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-01-17",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-01-18",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-01-19",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-01-22",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-01-23",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-01-24",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-01-25",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-01-26",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-01-29",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-01-30",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-01-31",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-02-01",
+   "passed": 10,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-02-02",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-02-05",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-02-06",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2024-02-07",
+   "passed": 3,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-02-08",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-02-09",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-02-12",
+   "passed": 3,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-02-13",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 8
+  },
+  {
+   "date": "2024-02-14",
+   "passed": 11,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-02-15",
+   "passed": 18,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2024-02-16",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 9
+  },
+  {
+   "date": "2024-02-20",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-02-21",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 7
+  },
+  {
+   "date": "2024-02-22",
+   "passed": 13,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-02-23",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2024-02-26",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-02-27",
+   "passed": 16,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-02-28",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2024-02-29",
+   "passed": 11,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 8
+  },
+  {
+   "date": "2024-03-01",
+   "passed": 6,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-03-04",
+   "passed": 6,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-03-05",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2024-03-06",
+   "passed": 5,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-03-07",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-03-08",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 6
+  },
+  {
+   "date": "2024-03-11",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-03-12",
+   "passed": 7,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-03-13",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2024-03-14",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2024-03-15",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-03-18",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-03-19",
+   "passed": 5,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-03-20",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-03-21",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2024-03-22",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-03-25",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-03-26",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-03-27",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-03-28",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-04-01",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-04-02",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-04-03",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-04-04",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-04-05",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-04-08",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-04-09",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-04-10",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-04-11",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-04-12",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-04-15",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-04-16",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-04-17",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-04-18",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-04-19",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-04-22",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-04-23",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-04-24",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-04-25",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2024-04-26",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2024-04-29",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-04-30",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-05-01",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2024-05-02",
+   "passed": 20,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2024-05-03",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 5
+  },
+  {
+   "date": "2024-05-06",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-05-07",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 8
+  },
+  {
+   "date": "2024-05-08",
+   "passed": 14,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 7
+  },
+  {
+   "date": "2024-05-09",
+   "passed": 10,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 10
+  },
+  {
+   "date": "2024-05-10",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2024-05-13",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-05-14",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-05-15",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-05-16",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-05-17",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-05-20",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-05-21",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-05-22",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2024-05-23",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-05-24",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-05-28",
+   "passed": 5,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-05-29",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-05-30",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 5
+  },
+  {
+   "date": "2024-05-31",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-06-03",
+   "passed": 6,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-06-04",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-06-05",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-06-06",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-06-07",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-06-10",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-06-11",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-06-12",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-06-13",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-06-14",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-06-17",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-06-18",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-06-20",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-06-21",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-06-24",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-06-25",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-06-26",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-06-27",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-06-28",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-07-01",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-07-02",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-07-03",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-07-05",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-07-08",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-07-09",
+   "passed": 5,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-07-10",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-07-11",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-07-12",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-07-15",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-07-16",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-07-17",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-07-18",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-07-19",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2024-07-22",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-07-23",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-07-24",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-07-25",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 5
+  },
+  {
+   "date": "2024-07-26",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-07-29",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-07-30",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-07-31",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 7
+  },
+  {
+   "date": "2024-08-01",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 15
+  },
+  {
+   "date": "2024-08-02",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 12
+  },
+  {
+   "date": "2024-08-05",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-08-06",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-08-07",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 12
+  },
+  {
+   "date": "2024-08-08",
+   "passed": 21,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-08-09",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 6
+  },
+  {
+   "date": "2024-08-12",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-08-13",
+   "passed": 11,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-08-14",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-08-15",
+   "passed": 6,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-08-16",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-08-19",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-08-20",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-08-21",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-08-22",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2024-08-23",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-08-26",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-08-27",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-08-28",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-08-29",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 4
+  },
+  {
+   "date": "2024-08-30",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-09-03",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-09-04",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-09-05",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-09-06",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-09-09",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-09-10",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-09-11",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-09-12",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-09-13",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-09-16",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-09-17",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-09-18",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-09-19",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-09-20",
+   "passed": 4,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-09-23",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-09-24",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-09-25",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-09-26",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-09-27",
+   "passed": 7,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-09-30",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-10-01",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-10-02",
+   "passed": 5,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-10-03",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-10-04",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-10-07",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-10-08",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-10-09",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-10-10",
+   "passed": 3,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-10-11",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-10-14",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-10-15",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-10-16",
+   "passed": 6,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-10-17",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-10-18",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-10-21",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-10-22",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-10-23",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2024-10-24",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 9
+  },
+  {
+   "date": "2024-10-25",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 7
+  },
+  {
+   "date": "2024-10-28",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-10-29",
+   "passed": 10,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 7
+  },
+  {
+   "date": "2024-10-30",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 15
+  },
+  {
+   "date": "2024-10-31",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 16
+  },
+  {
+   "date": "2024-11-01",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-11-04",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-11-05",
+   "passed": 14,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 9
+  },
+  {
+   "date": "2024-11-06",
+   "passed": 120,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 8
+  },
+  {
+   "date": "2024-11-07",
+   "passed": 11,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 16
+  },
+  {
+   "date": "2024-11-08",
+   "passed": 11,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 10
+  },
+  {
+   "date": "2024-11-11",
+   "passed": 79,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-11-12",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 4
+  },
+  {
+   "date": "2024-11-13",
+   "passed": 8,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-11-14",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-11-15",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-11-18",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-11-19",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-11-20",
+   "passed": 6,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-11-21",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-11-22",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-11-25",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-11-26",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-11-27",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-11-29",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-12-02",
+   "passed": 3,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-12-03",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-12-04",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-12-05",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2024-12-06",
+   "passed": 6,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-12-09",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-12-10",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2024-12-11",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-12-12",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2024-12-13",
+   "passed": 5,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-12-16",
+   "passed": 5,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-12-17",
+   "passed": 5,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2024-12-18",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2024-12-19",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-12-20",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2024-12-23",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-12-24",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-12-26",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-12-27",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-12-30",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2024-12-31",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-01-02",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-01-03",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-01-06",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-01-07",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-01-08",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-01-10",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 6
+  },
+  {
+   "date": "2025-01-13",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-01-14",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-01-15",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-01-16",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-01-17",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-01-21",
+   "passed": 8,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-01-22",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-01-23",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-01-24",
+   "passed": 3,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-01-27",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 37
+  },
+  {
+   "date": "2025-01-28",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-01-29",
+   "passed": 3,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2025-01-30",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-01-31",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-02-03",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-02-04",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-02-05",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-02-06",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 8
+  },
+  {
+   "date": "2025-02-07",
+   "passed": 7,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2025-02-10",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-02-11",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-02-12",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-02-13",
+   "passed": 12,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2025-02-14",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-02-18",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-02-19",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 6
+  },
+  {
+   "date": "2025-02-20",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2025-02-21",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 10
+  },
+  {
+   "date": "2025-02-24",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-02-25",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-02-26",
+   "passed": 10,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-02-27",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 16
+  },
+  {
+   "date": "2025-02-28",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 8
+  },
+  {
+   "date": "2025-03-03",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-03-04",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-03-05",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-03-06",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 6
+  },
+  {
+   "date": "2025-03-07",
+   "passed": 5,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-03-10",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-03-11",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-03-12",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-03-13",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-03-14",
+   "passed": 7,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-03-17",
+   "passed": 6,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-03-18",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-03-19",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-03-20",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-03-21",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-03-24",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-03-25",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-03-26",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-03-27",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-03-28",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-03-31",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-04-01",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-04-02",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-04-03",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 27
+  },
+  {
+   "date": "2025-04-04",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 9
+  },
+  {
+   "date": "2025-04-07",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-04-08",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-04-09",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-04-10",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-04-11",
+   "passed": 6,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-04-14",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-04-15",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-04-16",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-04-17",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-04-21",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-04-22",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-04-23",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-04-24",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-04-25",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-04-28",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-04-29",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-04-30",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2025-05-01",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2025-05-02",
+   "passed": 8,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-05-05",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-05-06",
+   "passed": 6,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2025-05-07",
+   "passed": 12,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 7
+  },
+  {
+   "date": "2025-05-08",
+   "passed": 21,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2025-05-09",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 8
+  },
+  {
+   "date": "2025-05-12",
+   "passed": 13,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-05-13",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-05-14",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-05-15",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-05-16",
+   "passed": 9,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-05-19",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-05-20",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-05-21",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-05-22",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-05-23",
+   "passed": 8,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-05-27",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-05-28",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-05-29",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-05-30",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 6
+  },
+  {
+   "date": "2025-06-02",
+   "passed": 6,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-06-03",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-06-04",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-06-05",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2025-06-06",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-06-09",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-06-10",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-06-11",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-06-12",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-06-13",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-06-16",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-06-17",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-06-18",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-06-20",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-06-23",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-06-24",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-06-25",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-06-26",
+   "passed": 3,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-06-27",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-06-30",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-07-01",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-07-02",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-07-03",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-07-07",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-07-08",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-07-09",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-07-10",
+   "passed": 6,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-07-11",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-07-14",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-07-15",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-07-16",
+   "passed": 6,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-07-17",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-07-18",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-07-21",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-07-22",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-07-23",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-07-24",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 10
+  },
+  {
+   "date": "2025-07-25",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-07-28",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-07-29",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 11
+  },
+  {
+   "date": "2025-07-30",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 8
+  },
+  {
+   "date": "2025-07-31",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 13
+  },
+  {
+   "date": "2025-08-01",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 10
+  },
+  {
+   "date": "2025-08-04",
+   "passed": 12,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-08-05",
+   "passed": 16,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 14
+  },
+  {
+   "date": "2025-08-06",
+   "passed": 14,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 8
+  },
+  {
+   "date": "2025-08-07",
+   "passed": 13,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 9
+  },
+  {
+   "date": "2025-08-08",
+   "passed": 11,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 9
+  },
+  {
+   "date": "2025-08-11",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-08-12",
+   "passed": 18,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-08-13",
+   "passed": 15,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-08-14",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-08-15",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-08-18",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-08-19",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-08-20",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-08-21",
+   "passed": 5,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-08-22",
+   "passed": 6,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-08-25",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-08-26",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-08-27",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-08-28",
+   "passed": 6,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-08-29",
+   "passed": 3,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-09-02",
+   "passed": 6,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-09-03",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-09-04",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-09-05",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-09-08",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-09-09",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-09-10",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2025-09-11",
+   "passed": 9,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-09-12",
+   "passed": 5,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-09-15",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-09-16",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-09-17",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-09-18",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-09-19",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-09-22",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-09-23",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-09-24",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-09-25",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-09-26",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-09-29",
+   "passed": 4,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-09-30",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-10-01",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-10-02",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-10-03",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-10-06",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-10-07",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-10-08",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-10-09",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-10-10",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-10-13",
+   "passed": 4,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-10-14",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-10-15",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-10-16",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-10-17",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-10-20",
+   "passed": 5,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-10-21",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-10-22",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-10-23",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-10-24",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-10-27",
+   "passed": 6,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-10-28",
+   "passed": 5,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2025-10-29",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 10
+  },
+  {
+   "date": "2025-10-30",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 9
+  },
+  {
+   "date": "2025-10-31",
+   "passed": 11,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2025-11-03",
+   "passed": 8,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-11-04",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 7
+  },
+  {
+   "date": "2025-11-05",
+   "passed": 21,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 14
+  },
+  {
+   "date": "2025-11-06",
+   "passed": 10,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 17
+  },
+  {
+   "date": "2025-11-07",
+   "passed": 14,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2025-11-10",
+   "passed": 13,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-11-11",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-11-12",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-11-13",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-11-14",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-11-17",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-11-18",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-11-19",
+   "passed": 6,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-11-20",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-11-21",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-11-24",
+   "passed": 11,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-11-25",
+   "passed": 8,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-11-26",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2025-11-28",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-12-01",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-12-02",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-12-03",
+   "passed": 4,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-12-04",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-12-05",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-12-08",
+   "passed": 7,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-12-09",
+   "passed": 4,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-12-10",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2025-12-11",
+   "passed": 7,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-12-12",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-12-15",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-12-16",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-12-17",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-12-18",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-12-19",
+   "passed": 5,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2025-12-22",
+   "passed": 6,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-12-23",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-12-24",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-12-26",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-12-29",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2025-12-30",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2025-12-31",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2026-01-02",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2026-01-05",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2026-01-06",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2026-01-07",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-01-08",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2026-01-09",
+   "passed": 10,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-01-12",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-01-13",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-01-14",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2026-01-15",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2026-01-16",
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-01-20",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-01-21",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2026-01-22",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-01-23",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2026-01-26",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2026-01-27",
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 8
+  },
+  {
+   "date": "2026-01-28",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2026-01-29",
+   "passed": 11,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-01-30",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 4
+  },
+  {
+   "date": "2026-02-02",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2026-02-03",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-02-04",
+   "passed": 3,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 4
+  },
+  {
+   "date": "2026-02-05",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 9
+  },
+  {
+   "date": "2026-02-06",
+   "passed": 11,
+   "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-02-09",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2026-02-10",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2026-02-11",
+   "passed": 6,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 6
+  },
+  {
+   "date": "2026-02-12",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2026-02-13",
+   "passed": 6,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2026-02-17",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2026-02-18",
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2026-02-19",
+   "passed": 5,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 3
+  },
+  {
+   "date": "2026-02-20",
+   "passed": 4,
+   "selected": 3,
+   "selected_A": 0,
+   "selected_B": 3,
+   "short_watch": 8
+  },
+  {
+   "date": "2026-02-23",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-02-24",
+   "passed": 5,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 7
+  },
+  {
+   "date": "2026-02-25",
+   "passed": 10,
+   "selected": 3,
+   "selected_A": 2,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2026-02-26",
+   "passed": 15,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 7
+  },
+  {
+   "date": "2026-02-27",
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 13
+  },
+  {
+   "date": "2026-03-02",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2026-03-03",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2026-03-04",
+   "passed": 8,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
+   "short_watch": 0
+  },
+  {
+   "date": "2026-03-05",
+   "passed": 4,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 5
+  },
+  {
+   "date": "2026-03-06",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 3
+  },
+  {
+   "date": "2026-03-09",
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2026-03-10",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-03-11",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2026-03-12",
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-03-13",
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2026-03-16",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-03-17",
+   "passed": 4,
+   "selected": 2,
+   "selected_A": 1,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2026-03-18",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
+  },
+  {
+   "date": "2026-03-19",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-03-20",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
+  },
+  {
+   "date": "2026-03-23",
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
+  },
+  {
+   "date": "2026-03-24",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
+  },
+  {
+   "date": "2026-03-25",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 2
+  },
+  {
+   "date": "2026-03-26",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-03-27",
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-03-30",
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
+  },
+  {
+   "date": "2026-03-31",
+   "passed": 4,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
+  }
+ ]
+}
