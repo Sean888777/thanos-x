@@ -3,7 +3,12 @@ name: Thanos X Radar
 on:
   schedule:
     - cron: "0 22 * * 1-5"   # UTC 22:00 = 台灣 06:00（美股收盤後），週一至週五
-  workflow_dispatch: {}      # 允許手動執行
+  workflow_dispatch:         # 允許手動執行
+    inputs:
+      backfill_days:
+        description: "回顧測試天數（例如 120）。留空＝一般每日執行"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -23,7 +28,12 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: 執行雷達
-        run: python radar.py
+        run: |
+          if [ -n "${{ github.event.inputs.backfill_days }}" ]; then
+            python radar.py --backfill "${{ github.event.inputs.backfill_days }}"
+          else
+            python radar.py
+          fi
 
       - name: 寫回資料（失敗時也寫，網站才會顯示「資料未更新」）
         if: always()
