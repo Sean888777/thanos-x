@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Thanos X 雷達 v0.1
+Thanos X 雷達 v0.2
 ------------------
 每個美股交易日收盤後，由 GitHub Actions 自動執行：
   1. 掃描事件跳空候選（做多＝可執行；放空＝只觀察）
@@ -103,11 +103,17 @@ def load_universe():
     for name, url in WIKI_SOURCES:
         try:
             html = requests.get(url, headers=headers, timeout=30).text
+            got = 0
             for table in pd.read_html(StringIO(html)):
                 cols = [c for c in table.columns if str(c).strip() in ("Symbol", "Ticker", "Ticker symbol")]
-                if cols:
-                    tickers.update(table[cols[0]].astype(str).str.strip())
+                if cols and len(table) >= 90:
+                    vals = table[cols[0]].astype(str).str.strip()
+                    tickers.update(vals)
+                    got = len(vals)
                     break
+            print(f"成分股 {name}：{got} 檔")
+            if got == 0:
+                print(f"[warn] {name} 找不到成分股表格")
         except Exception as e:
             print(f"[warn] 成分股清單讀取失敗 {name}: {e}")
     tickers = {t.replace(".", "-") for t in tickers if t and t.lower() != "nan"}
@@ -144,29 +150,37 @@ def download(tickers, period="4mo"):
     return frames
 
 
-def enrich(ticker, session):
-    """族群、下次財報日。抓不到就留空，網站會提示手動確認。"""
-    out = {"sector": None, "next_earnings": None}
-    if yf is None:
-        return out
-    try:
-        tk = yf.Ticker(ticker)
+_META = {}
+
+
+def ticker_meta(ticker):
+    """族群與財報日清單（每檔只抓一次）。抓不到就留空，網站會提示手動確認。"""
+    if ticker in _META:
+        return _META[ticker]
+    out = {"sector": None, "earn_dates": []}
+    if yf is not None:
         try:
-            out["sector"] = (tk.info or {}).get("sector")
+            tk = yf.Ticker(ticker)
+            try:
+                out["sector"] = (tk.info or {}).get("sector")
+            except Exception:
+                pass
+            try:
+                ed = tk.get_earnings_dates(limit=12)
+                if ed is not None and len(ed):
+                    out["earn_dates"] = sorted({str(pd.Timestamp(x).tz_localize(None).date()) for x in ed.index})
+            except Exception:
+                pass
         except Exception:
             pass
-        try:
-            ed = tk.get_earnings_dates(limit=8)
-            if ed is not None and len(ed):
-                days = sorted({pd.Timestamp(x).tz_localize(None).normalize() for x in ed.index})
-                fut = [x for x in days if x > pd.Timestamp(session)]
-                if fut:
-                    out["next_earnings"] = str(fut[0].date())
-        except Exception:
-            pass
-    except Exception:
-        pass
+    _META[ticker] = out
     return out
+
+
+def enrich(ticker, session):
+    m = ticker_meta(ticker)
+    fut = [x for x in m["earn_dates"] if pd.Timestamp(x) > pd.Timestamp(session)]
+    return {"sector": m["sector"], "next_earnings": fut[0] if fut else None}
 
 
 # ------------------------------------------------------------------
@@ -178,7 +192,9 @@ def atr_series(d, n=14):
     return tr.rolling(n).mean()
 
 
-def regime(frames):
+def regime(frames, upto=None):
+    if upto is not None:
+        frames = {k: frames[k][frames[k].index <= pd.Timestamp(upto)] for k in INDEX_TICKERS if k in frames}
     spy = frames["SPY"]["Close"]
     ma50 = spy.rolling(50).mean()
     s, m = float(spy.iloc[-1]), float(ma50.iloc[-1])
@@ -207,11 +223,11 @@ def scan(frames, session):
         dv = float((hist["Close"] * hist["Volume"]).mean())
         if avgv <= 0 or h <= l or pc <= 0:
             continue
-        a = float(atr_series(d).iloc[-1])
-        if not a > 0:
-            continue
         gap, vm, pos, hold = o / pc - 1, v / avgv, (c - l) / (h - l), c / pc - 1
-        if c < CFG["price_min"] or dv < CFG["dollar_vol_min"] or vm < CFG["vol_mult"]:
+        if c < CFG["price_min"] or dv < CFG["dollar_vol_min"] or vm < CFG["vol_mult"] or abs(gap) < CFG["gap_min"]:
+            continue
+        a = float(atr_series(d.iloc[-30:]).iloc[-1])
+        if not a > 0:
             continue
         base = {"ticker": t, "e_date": str(session), "gap_pct": r(gap * 100, 2), "vol_mult": r(vm, 2),
                 "close_pos": r(pos, 2), "hold_pct": r(hold * 100, 2), "e_open": r(o), "e_high": r(h),
@@ -399,6 +415,49 @@ def build_pool(hist, frames, session):
 
 
 # ------------------------------------------------------------------
+# 回顧測試：用真實行情重播過去 N 個交易日。只寫 backfill.json，不碰每日紀錄。
+# ------------------------------------------------------------------
+def backfill(n_days):
+    os.makedirs(DATA, exist_ok=True)
+    universe = load_universe()
+    frames = download(sorted(set(universe) | set(INDEX_TICKERS)), period="2y")
+    sessions = list(frames["SPY"].index[-n_days:])
+    print(f"回顧測試：{len(universe)} 檔 × {len(sessions)} 個交易日")
+    allc, by_day = [], []
+    for ts in sessions:
+        day = ts.date()
+        sub = {t: d[d.index <= ts] for t, d in frames.items() if t not in INDEX_TICKERS and len(d) and d.index[0] <= ts}
+        longs, shorts = scan(sub, day)
+        longs = rank_candidates(longs, regime(frames, ts), day)
+        allc.extend(longs)
+        by_day.append({"date": str(day), "passed": len(longs),
+                       "selected": sum(1 for c in longs if c.get("selected")), "short_watch": len(shorts)})
+    paper = run_paper({"candidates": allc}, frames)
+    days_with = sum(1 for b in by_day if b["selected"] > 0)
+    weeks = max(len(sessions) / 5, 1)
+    out = {
+        "version": "backfill-0.1", "status": "ok",
+        "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+        "warning": "倖存者偏差（用今日成分股回看過去）、樣本小、參數未調整。只用來確認雷達會動與候選頻率，不得作為跳過紙上階段的依據。",
+        "range": [str(sessions[0].date()), str(sessions[-1].date())],
+        "universe_size": len(universe),
+        "frequency": {
+            "sessions": len(sessions), "days_with_candidate": days_with,
+            "selected_total": sum(b["selected"] for b in by_day),
+            "selected_per_week": r(sum(b["selected"] for b in by_day) / weeks, 2),
+            "passed_total": len(allc), "excluded_total": sum(1 for c in allc if c.get("excluded")),
+            "short_watch_total": sum(b["short_watch"] for b in by_day),
+        },
+        "paper": paper,
+        "candidates": [{k: c.get(k) for k in ("ticker", "e_date", "gap_pct", "vol_mult", "sector", "selected",
+                                              "rank", "excluded", "shadow_reason", "next_earnings")} for c in allc],
+        "by_day": by_day,
+    }
+    save_json(os.path.join(DATA, "backfill.json"), out)
+    print(f"完成：入選 {out['frequency']['selected_total']} 檔，平均每週 {out['frequency']['selected_per_week']} 檔")
+
+
+# ------------------------------------------------------------------
 def main():
     os.makedirs(DATA, exist_ok=True)
     hist = load_json(HIST_PATH, {"last_session": None, "candidates": [], "short_watch": []})
@@ -423,7 +482,7 @@ def main():
 
     today = [c for c in hist["candidates"] if c["e_date"] == str(session)]
     out = {
-        "version": "radar-0.1",
+        "version": "radar-0.2",
         "status": "ok",
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "session": str(session),
@@ -445,6 +504,9 @@ def main():
 
 
 if __name__ == "__main__":
+    if len(sys.argv) >= 3 and sys.argv[1] == "--backfill":
+        backfill(int(sys.argv[2]))
+        sys.exit(0)
     try:
         main()
     except Exception as e:
