@@ -1,1 +1,40 @@
+name: Thanos X Radar
 
+on:
+  workflow_dispatch:   # 這行就是讓你能在介面上看到手動執行按鈕的關鍵
+  # 下面接著你原本寫好的 jobs: 等內容...
+name: Thanos X Radar
+
+on:
+  schedule:
+    - cron: "0 22 * * 1-5"   # UTC 22:00 = 台灣 06:00（美股收盤後），週一至週五
+  workflow_dispatch: {}      # 允許手動執行
+
+permissions:
+  contents: write
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 安裝套件
+        run: pip install -r requirements.txt
+
+      - name: 執行雷達
+        run: python radar.py
+
+      - name: 寫回資料（失敗時也寫，網站才會顯示「資料未更新」）
+        if: always()
+        run: |
+          git config user.name "thanos-x-radar"
+          git config user.email "thanos-x-radar@users.noreply.github.com"
+          git add docs/data
+          git diff --staged --quiet || git commit -m "radar $(date -u +%Y-%m-%d)"
+          git push
