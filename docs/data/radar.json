@@ -1,0 +1,72 @@
+{
+ "version": "radar-0.1",
+ "status": "ok",
+ "generated_at": "2026-09-28T11:15:03+00:00",
+ "session": "2026-09-25",
+ "universe_size": 903,
+ "config": {
+  "gap_min": 0.05,
+  "vol_mult": 3.0,
+  "close_pos_min": 0.7,
+  "gap_hold_min": 0.03,
+  "price_min": 10.0,
+  "dollar_vol_min": 50000000.0,
+  "stop_min_pct": 0.04,
+  "stop_max_pct": 0.12,
+  "limit_atr": 0.3,
+  "buffer_atr": 0.5,
+  "t1_r": 2.0,
+  "trail_ma": 10,
+  "stall_days": 5,
+  "max_hold": 10,
+  "earn_exit_days": 2,
+  "earn_exclude_days": 10,
+  "max_candidates": 3,
+  "max_positions": 3,
+  "max_open_risk_r": 3.0,
+  "vix_half": 25.0,
+  "vix_stop": 35.0,
+  "fee": 0.003,
+  "pool_days": 45
+ },
+ "regime": {
+  "spy_close": 771.35,
+  "spy_ma50": 761.57,
+  "spy_above_ma50": true,
+  "vix": 16.35,
+  "vix_level": "normal"
+ },
+ "today": {
+  "candidates": [],
+  "not_selected_count": 0,
+  "excluded": [],
+  "short_watch": []
+ },
+ "pool": {},
+ "paper": {
+  "system": {
+   "stats": {
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   },
+   "open": [],
+   "recent_closed": []
+  },
+  "compare": {
+   "selected": {
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   },
+   "not_selected": {
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   }
+  }
+ }
+}
