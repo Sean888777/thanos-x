@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Thanos X 雷達 v0.3
+Thanos X 雷達 v0.3.1
 ------------------
 每個美股交易日收盤後，由 GitHub Actions 自動執行：
   1. 掃描兩種進場模板
@@ -51,7 +51,10 @@ CFG = {
     "max_hold": 20,           # E5（v0.2 為 10）
     "earn_exit_days": 2, "earn_exclude_days": 10,
     # 數量與風險
-    "max_candidates": 3, "max_positions": 5, "max_open_risk_r": 5.0,
+    "max_candidates": 3,
+    "max_positions": None,    # 不限檔數（你的決定，2026-09-28）
+    "max_open_risk_r": 40.0,  # M6 總開放風險上限 40R（你的決定）
+    "capital_r": 200.0,       # 現金檢查：帳戶資金 ÷ R（複委託不能融資，買不起就不做）
     "vix_half": 25.0, "vix_stop": 35.0,
     "fee": 0.003,
     "pool_days": 75,          # 候選池保留天數（日曆日）
@@ -143,54 +146,77 @@ def index_symbols():
     return {s for s in syms if s and s.lower() != "nan"}
 
 
+UNIVERSE_SCHEMA = 2
+
+
 def load_universe(force=False):
     cache = load_json(P("universe.json"), {})
     fresh = cache.get("updated") and (dt.date.today() - dt.date.fromisoformat(cache["updated"])).days < 7
-    if fresh and not force and len(cache.get("tickers", [])) >= 300:
+    if fresh and not force and cache.get("schema") == UNIVERSE_SCHEMA and len(cache.get("tickers", [])) >= 500:
         return cache["tickers"]
-    syms = listed_symbols()
-    source = "全美股上市清單"
-    if len(syms) < 3000:
-        print(f"[warn] 上市清單只有 {len(syms)} 檔，改用指數成分股")
-        syms, source = index_symbols(), "指數成分股（備援）"
-    frames = download(sorted(syms), period="1mo", min_rows=15, pause=1.0)
-    liquid = []
+    listed, index = listed_symbols(), index_symbols()
+    source = "全美股上市清單＋指數成分股"
+    if len(listed) < 3000:
+        print(f"[warn] 上市清單只有 {len(listed)} 檔，只用指數成分股")
+        source = "指數成分股（備援）"
+    frames = download(sorted(listed | index), period="1mo", min_rows=15, pause=1.0)
+    liquid = set()
     for t, d in frames.items():
         tail = d.iloc[-20:]
         if float(tail["Close"].iloc[-1]) >= CFG["price_min"] and \
                 float((tail["Close"] * tail["Volume"]).mean()) >= CFG["dollar_vol_min"]:
-            liquid.append(t)
-    if len(liquid) < 300:
-        print(f"[warn] 流動性篩選後只剩 {len(liquid)} 檔，沿用舊清單")
-        return cache.get("tickers") or sorted(syms)
-    save_json(P("universe.json"), {"updated": str(dt.date.today()), "source": source,
-                                   "listed": len(syms), "tickers": sorted(liquid)})
-    print(f"掃描範圍更新：{source} {len(syms)} 檔 → 流動性合格 {len(liquid)} 檔")
-    return sorted(liquid)
+            liquid.add(t)
+    # 指數成分股一律納入（下載失敗也不會漏掉大型股）；不夠流動的會在掃描時被 S6 擋下
+    tickers = sorted(liquid | index)
+    if len(tickers) < 500:
+        print(f"[warn] 掃描範圍只有 {len(tickers)} 檔，沿用舊清單")
+        return cache.get("tickers") or tickers
+    save_json(P("universe.json"), {
+        "schema": UNIVERSE_SCHEMA, "updated": str(dt.date.today()), "source": source,
+        "listed": len(listed), "index": len(index), "liquid": len(liquid), "tickers_total": len(tickers),
+        "download": dict(COVERAGE), "tickers": tickers})
+    print(f"掃描範圍更新：上市 {len(listed)}、指數 {len(index)}、流動性合格 {len(liquid)} → 共 {len(tickers)} 檔")
+    return tickers
 
 
-def download(tickers, period="4mo", min_rows=30, pause=0.0):
-    frames = {}
-    for i in range(0, len(tickers), 200):
-        chunk = tickers[i:i + 200]
+COVERAGE = {"requested": 0, "received": 0, "missing_sample": []}
+
+
+def _fetch(chunk, period, min_rows, frames):
+    try:
+        df = yf.download(chunk, period=period, interval="1d", group_by="ticker",
+                         auto_adjust=False, actions=True, threads=True, progress=False)
+    except Exception as e:
+        print(f"[warn] 下載失敗：{e}")
+        return
+    for t in chunk:
         try:
-            df = yf.download(chunk, period=period, interval="1d", group_by="ticker",
-                             auto_adjust=False, actions=True, threads=True, progress=False)
-        except Exception as e:
-            print(f"[warn] 下載失敗 {i}: {e}")
-            continue
-        for t in chunk:
-            try:
-                d = df[t] if isinstance(df.columns, pd.MultiIndex) else df
-                keep = [c for c in ("Open", "High", "Low", "Close", "Volume", "Stock Splits") if c in d.columns]
-                d = d[keep].dropna(subset=["Open", "High", "Low", "Close"])
-                if len(d) >= min_rows:
-                    d.index = pd.DatetimeIndex(d.index).tz_localize(None).normalize()
-                    frames[t] = d
-            except Exception:
-                pass
-        if pause:
-            time.sleep(pause)
+            d = df[t] if isinstance(df.columns, pd.MultiIndex) else df
+            keep = [c for c in ("Open", "High", "Low", "Close", "Volume", "Stock Splits") if c in d.columns]
+            d = d[keep].dropna(subset=["Open", "High", "Low", "Close"])
+            if len(d) >= min_rows:
+                d.index = pd.DatetimeIndex(d.index).tz_localize(None).normalize()
+                frames[t] = d
+        except Exception:
+            pass
+
+
+def download(tickers, period="4mo", min_rows=30, pause=0.0, retries=2):
+    """分批下載；沒拿到的分更小批重試，避免被資料源擋掉時無聲漏股。"""
+    frames = {}
+    todo, size = list(tickers), 100
+    for attempt in range(retries + 1):
+        for i in range(0, len(todo), size):
+            _fetch(todo[i:i + size], period, min_rows, frames)
+            if pause:
+                time.sleep(pause)
+        todo = [t for t in todo if t not in frames]
+        if not todo or attempt == retries:
+            break
+        print(f"重試第 {attempt + 1} 輪：{len(todo)} 檔")
+        size, pause = 25, max(pause, 2.0)
+    COVERAGE.update(requested=len(tickers), received=len(frames), missing_sample=sorted(todo)[:30])
+    print(f"下載完成：{len(frames)}／{len(tickers)} 檔")
     return frames
 
 
@@ -462,7 +488,9 @@ def process_session(hist, frames, session, reg, implied_store=None):
 # ------------------------------------------------------------------
 # 紙上模擬（規格書第 6 節：收盤判斷、隔日開盤執行）
 # ------------------------------------------------------------------
-def simulate(c, d, chase=False, no_stall=False):
+def simulate(c, d, chase=False, no_stall=False, exit_mode="base"):
+    """exit_mode：base＝現行規則；target_only＝2R 全數停利、取消時間上限；
+    losers_time＝時間上限只砍未達 +1R 的部位，其餘改用 10 日均線移動停利。"""
     after = d[d.index > pd.Timestamp(c["signal_date"])]
     if len(after) == 0:
         return {"status": "waiting"}
@@ -476,7 +504,7 @@ def simulate(c, d, chase=False, no_stall=False):
     unit = risk + CFG["buffer_atr"] * c["atr14"]
     t1 = entry + CFG["t1_r"] * risk
     ma = d["Close"].rolling(CFG["trail_ma"]).mean()
-    rem, t1_hit, cur_stop, pending = 1.0, False, stop, None
+    rem, t1_hit, cur_stop, pending, trail_on = 1.0, False, stop, None, False
     fills, t1_date, exit_i = [], None, None
     for i, day in enumerate(after.index):
         row = after.iloc[i]
@@ -492,17 +520,23 @@ def simulate(c, d, chase=False, no_stall=False):
                 break
         close, held = float(row["Close"]), i + 1
         ne = c.get("next_earnings")
+        winner = close >= entry + risk
+        if exit_mode == "losers_time" and held >= CFG["max_hold"] and winner:
+            trail_on = True
+        time_up = held >= CFG["max_hold"] and exit_mode != "target_only" \
+            and not (exit_mode == "losers_time" and winner)
         if close < cur_stop:
             pending = (rem, "E1 保本停損" if t1_hit else "E1 停損")
         elif ne and tdays_after(day, ne) <= CFG["earn_exit_days"]:
             pending = (rem, "E6 財報將近")
-        elif held >= CFG["max_hold"]:
+        elif time_up:
             pending = (rem, "E5 持有期滿")
         elif not no_stall and held >= CFG["stall_days"] and not t1_hit and close < entry:
             pending = (rem, "E4 停滯")
         elif not t1_hit and close >= t1:
-            pending, t1_hit = (rem / 2, "E2 第一目標"), True
-        elif t1_hit and pd.notna(ma.loc[day]) and close < float(ma.loc[day]):
+            pending, t1_hit = ((rem, "E2 停利（全數）") if exit_mode == "target_only"
+                               else (rem / 2, "E2 第一目標")), True
+        elif (t1_hit or trail_on) and pd.notna(ma.loc[day]) and close < float(ma.loc[day]):
             pending = (rem, "E3 跌破 10 日均線")
     gross = sum(f["frac"] * (f["price"] - entry) for f in fills) / unit
     fees = sum(f["frac"] * CFG["fee"] * (f["price"] + entry) for f in fills) / unit
@@ -534,6 +568,19 @@ def stats(trades):
     return out
 
 
+def holding_on(book, D, inclusive=False):
+    """D 日開盤時仍持有的部位（inclusive=True 時含 D 日當天新進場者）。"""
+    return [b for b in book if b["status"] in ("open", "closed")
+            and (b["entry_date"] <= D if inclusive else b["entry_date"] <= D)
+            and (b["status"] == "open" or b["exit_date"] > D)]
+
+
+def notional_r(b, D):
+    """持倉市值（以 R 計，用進場價估算）；第一目標已賣一半者算一半。"""
+    half = 0.5 if (b.get("t1_date") and b["t1_date"] <= D) else 1.0
+    return b["size"] * b["entry"] / b["unit"] * half
+
+
 def key(c):
     return (c["ticker"], c["template"], c["signal_date"])
 
@@ -558,17 +605,39 @@ def run_paper(hist, frames):
                  signal_date=c["signal_date"], size=c.get("size_factor", 1.0))
         if s["status"] in ("open", "closed"):
             D = s["entry_date"]
-            held = [b for b in book if b["status"] in ("open", "closed") and b["entry_date"] <= D
-                    and (b["status"] == "open" or b["exit_date"] > D)]
+            held = holding_on(book, D)
             risk = sum(b["size"] for b in held if not (b.get("t1_date") and b["t1_date"] <= D))
-            if len(held) >= CFG["max_positions"] or risk + t["size"] > CFG["max_open_risk_r"] \
-                    or any(b["ticker"] == c["ticker"] for b in held):
+            cash = sum(notional_r(b, D) for b in held)
+            need = t["size"] * s["entry"] / s["unit"]
+            reason = None
+            if any(b["ticker"] == c["ticker"] for b in held):
+                reason = "同標的已持有"
+            elif CFG["max_positions"] and len(held) >= CFG["max_positions"]:
+                reason = "持倉檔數上限"
+            elif risk + t["size"] > CFG["max_open_risk_r"]:
+                reason = "總風險上限"
+            elif cash + need > CFG["capital_r"]:
+                reason = "現金不足"
+            if reason:
                 t = {"ticker": c["ticker"], "template": c["template"], "signal_date": c["signal_date"],
-                     "status": "skipped", "size": t["size"]}
+                     "status": "skipped", "skip_reason": reason, "size": t["size"]}
             elif s["status"] == "closed":
                 t["pnl_r"] = r(s["pnl_r"] * t["size"], 3)
         book.append(t)
     filled = [b for b in book if b["status"] in ("open", "closed")]
+    # 高峰負載：同時持有幾檔、總風險、現金使用率（每個進場日檢查一次）
+    peak = {"positions": 0, "open_risk_r": 0.0, "cash_used_pct": 0.0}
+    for D in sorted({b["entry_date"] for b in filled}):
+        held = holding_on(filled, D, inclusive=True)
+        peak["positions"] = max(peak["positions"], len(held))
+        peak["open_risk_r"] = max(peak["open_risk_r"],
+                                  sum(b["size"] for b in held if not (b.get("t1_date") and b["t1_date"] <= D)))
+        peak["cash_used_pct"] = max(peak["cash_used_pct"],
+                                    r(sum(notional_r(b, D) for b in held) / CFG["capital_r"] * 100, 1))
+    skips = {}
+    for b in book:
+        if b["status"] == "skipped":
+            skips[b["skip_reason"]] = skips.get(b["skip_reason"], 0) + 1
 
     sel = [c for c in elig if c.get("selected")]
     pick = lambda cs: [sims[key(c)] for c in cs if key(c) in sims]
@@ -582,10 +651,13 @@ def run_paper(hist, frames):
     # 影子帳三：因 X3 被排除者，若照做
     x3 = [c for c in allc if str(c.get("excluded", "")).startswith("X3")]
     shadow_x3 = [simulate(c, frames[c["ticker"]]) for c in x3 if c["ticker"] in frames]
+    # 影子帳四、五：出場方式
+    shadow_target = [simulate(c, frames[c["ticker"]], exit_mode="target_only") for c in sel if c["ticker"] in frames]
+    shadow_losers = [simulate(c, frames[c["ticker"]], exit_mode="losers_time") for c in sel if c["ticker"] in frames]
     # 預期波動標籤（只有往前累積的資料才會有）
     tagged = [c for c in sel_a if c.get("surprise_ratio") is not None]
     return {
-        "system": {"stats": stats(book), "filled_trades": len(filled),
+        "system": {"stats": stats(book), "filled_trades": len(filled), "peak": peak, "skip_reasons": skips,
                    "open": [b for b in book if b["status"] == "open"],
                    "recent_closed": [b for b in book if b["status"] == "closed"][-20:]},
         "compare": {
@@ -598,6 +670,9 @@ def run_paper(hist, frames):
             "baseline_same_set": {"note": "入選者照現行規則（與下一列比較用）", **stats(pick(sel))},
             "no_stall": {"note": "同一批入選者，若不執行 E4 停滯出場", **stats(shadow_nostall)},
             "x3_excluded": {"note": "因停損距離 > 12% 被排除者，若照做", **stats(shadow_x3)},
+            "target_only": {"note": "2R 全數停利、取消持有期上限（大爺的提議）", **stats(shadow_target)},
+            "losers_time": {"note": "持有期滿只砍未達 +1R 者，其餘改 10 日均線移動停利（發財的版本）",
+                            **stats(shadow_losers)},
         },
         "surprise_tag": {
             "note": "跳空 ÷ 財報前預期波動。只記錄、不過濾",
@@ -663,12 +738,12 @@ def backfill(n_days):
                        "short_watch": len(shorts)})
     paper = run_paper(hist, frames)
     out = {
-        "version": "backfill-0.3", "status": "ok", "generated_at": now_utc(),
+        "version": "backfill-0.3.1", "status": "ok", "generated_at": now_utc(),
         "warning": ("倖存者偏差（用今日上市、今日流動性合格的股票回看過去）、樣本小；"
                     "且 v0.3 是看過 v0.2 回顧測試之後修改的，成績屬於樣本內，不具驗證力。"
                     "只用來確認雷達會動與候選頻率，不得作為跳過紙上階段或再次修改規則的依據。"),
         "range": [str(sessions[0].date()), str(sessions[-1].date())],
-        "universe_size": len(universe),
+        "universe_size": len(universe), "coverage": dict(COVERAGE),
         "frequency": frequency(paper["system"]["filled_trades"], by_day, len(sessions)),
         "paper": paper,
         "candidates": [{k: c.get(k) for k in ("ticker", "template", "e_date", "signal_date", "gap_pct", "vol_mult",
@@ -711,8 +786,9 @@ def main():
 
     today = [c for c in hist["candidates"] if c["signal_date"] == str(session)]
     out = {
-        "version": "radar-0.3", "status": "ok", "generated_at": now_utc(),
-        "session": str(session), "universe_size": len(universe), "config": CFG, "regime": reg,
+        "version": "radar-0.3.1", "status": "ok", "generated_at": now_utc(),
+        "session": str(session), "universe_size": len(universe), "coverage": dict(COVERAGE),
+        "config": CFG, "regime": reg,
         "today": {
             "candidates": sorted([c for c in today if c.get("selected")], key=lambda c: c["rank"]),
             "not_selected_count": sum(1 for c in today if not c.get("excluded") and not c.get("selected")),
