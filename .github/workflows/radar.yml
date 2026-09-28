@@ -1,11 +1,6 @@
 name: Thanos X Radar
 
 on:
-  workflow_dispatch:   # 這行就是讓你能在介面上看到手動執行按鈕的關鍵
-  # 下面接著你原本寫好的 jobs: 等內容...
-name: Thanos X Radar
-
-on:
   schedule:
     - cron: "0 22 * * 1-5"   # UTC 22:00 = 台灣 06:00（美股收盤後），週一至週五
   workflow_dispatch: {}      # 允許手動執行
