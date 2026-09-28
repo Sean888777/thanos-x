@@ -1,175 +1,127 @@
 {
- "version": "backfill-0.1",
+ "version": "backfill-0.3",
  "status": "ok",
- "generated_at": "2026-09-28T11:44:41+00:00",
- "warning": "倖存者偏差（用今日成分股回看過去）、樣本小、參數未調整。只用來確認雷達會動與候選頻率，不得作為跳過紙上階段的依據。",
+ "generated_at": "2026-09-28T12:53:31+00:00",
+ "warning": "倖存者偏差（用今日上市、今日流動性合格的股票回看過去）、樣本小；且 v0.3 是看過 v0.2 回顧測試之後修改的，成績屬於樣本內，不具驗證力。只用來確認雷達會動與候選頻率，不得作為跳過紙上階段或再次修改規則的依據。",
  "range": [
   "2026-04-07",
   "2026-09-25"
  ],
- "universe_size": 903,
+ "universe_size": 730,
  "frequency": {
   "sessions": 120,
-  "days_with_candidate": 27,
-  "selected_total": 38,
-  "selected_per_week": 1.58,
-  "passed_total": 58,
-  "excluded_total": 16,
-  "short_watch_total": 68
+  "days_with_candidate": 31,
+  "selected_total": 39,
+  "selected_A": 23,
+  "selected_B": 16,
+  "selected_per_week": 1.62,
+  "filled_total": 26,
+  "filled_per_week": 1.08,
+  "weeks_to_30_trades": 27.7,
+  "short_watch_total": 67
  },
  "paper": {
   "system": {
    "stats": {
-    "closed": 18,
-    "open": 1,
-    "no_fill": 10,
-    "skipped_capacity": 9,
-    "win_rate": 0.389,
-    "avg_r": -0.035,
-    "total_r": -0.62,
-    "avg_win": 0.722,
-    "avg_loss": -0.516
+    "closed": 26,
+    "open": 0,
+    "no_fill": 1,
+    "skipped_capacity": 12,
+    "win_rate": 0.423,
+    "avg_r": 0.07,
+    "total_r": 1.82,
+    "avg_win": 0.861,
+    "avg_loss": -0.51,
+    "avg_hold_days": 12.0
    },
-   "open": [
-    {
-     "entry_date": "2026-09-22",
-     "entry": 30.83,
-     "stop": 29.5968,
-     "t1": 33.2964,
-     "unit": 1.4975,
-     "fills": [],
-     "t1_date": null,
-     "realized_r": 0.0,
-     "status": "open",
-     "remaining": 1.0,
-     "last_close": 30.86,
-     "stop_now": 29.5968,
-     "unrealized_r": 0.02,
-     "next_action": null,
-     "ticker": "WBD",
-     "e_date": "2026-09-21",
-     "size": 1.0
-    }
-   ],
+   "filled_trades": 26,
+   "open": [],
    "recent_closed": [
     {
-     "entry_date": "2026-04-24",
-     "entry": 175.12,
-     "stop": 163.23,
-     "t1": 198.9,
-     "unit": 15.4314,
+     "entry_date": "2026-05-11",
+     "entry": 28.195,
+     "stop": 26.71,
+     "t1": 31.165,
+     "unit": 1.9755,
      "fills": [
       {
-       "date": "2026-05-08",
+       "date": "2026-05-12",
        "frac": 1.0,
-       "price": 193.02,
-       "reason": "E5 持有滿 10 日"
-      }
-     ],
-     "t1_date": null,
-     "realized_r": 1.088,
-     "status": "closed",
-     "exit_date": "2026-05-08",
-     "pnl_r": 1.088,
-     "exit_reason": "E5 持有滿 10 日",
-     "ticker": "MOH",
-     "e_date": "2026-04-23",
-     "size": 1.0
-    },
-    {
-     "entry_date": "2026-04-30",
-     "entry": 289.44,
-     "stop": 277.8624,
-     "t1": 312.5952,
-     "unit": 17.393,
-     "fills": [
-      {
-       "date": "2026-05-14",
-       "frac": 1.0,
-       "price": 298.02,
-       "reason": "E5 持有滿 10 日"
-      }
-     ],
-     "t1_date": null,
-     "realized_r": 0.392,
-     "status": "closed",
-     "exit_date": "2026-05-14",
-     "pnl_r": 0.392,
-     "exit_reason": "E5 持有滿 10 日",
-     "ticker": "NXPI",
-     "e_date": "2026-04-29",
-     "size": 1.0
-    },
-    {
-     "entry_date": "2026-05-01",
-     "entry": 95.98,
-     "stop": 91.47,
-     "t1": 105.0,
-     "unit": 5.7436,
-     "fills": [
-      {
-       "date": "2026-05-05",
-       "frac": 1.0,
-       "price": 91.58,
+       "price": 26.66,
        "reason": "E1 停損"
       }
      ],
      "t1_date": null,
-     "realized_r": -0.864,
+     "realized_r": -0.86,
      "status": "closed",
-     "exit_date": "2026-05-05",
-     "pnl_r": -0.864,
+     "exit_date": "2026-05-12",
+     "pnl_r": -0.86,
      "exit_reason": "E1 停損",
-     "ticker": "TXT",
-     "e_date": "2026-04-30",
+     "hold_days": 1,
+     "ticker": "DBX",
+     "template": "A",
+     "e_date": "2026-05-08",
+     "signal_date": "2026-05-08",
      "size": 1.0
     },
     {
-     "entry_date": "2026-05-07",
-     "entry": 34.01,
-     "stop": 31.12,
-     "t1": 39.79,
-     "unit": 3.8728,
+     "entry_date": "2026-05-13",
+     "entry": 60.88,
+     "stop": 55.95,
+     "t1": 70.74,
+     "unit": 6.0127,
      "fills": [
       {
-       "date": "2026-05-14",
+       "date": "2026-06-08",
        "frac": 1.0,
-       "price": 32.02,
+       "price": 61.34,
        "reason": "E4 停滯"
       }
      ],
      "t1_date": null,
-     "realized_r": -0.565,
+     "realized_r": 0.016,
      "status": "closed",
-     "exit_date": "2026-05-14",
-     "pnl_r": -0.565,
+     "exit_date": "2026-06-08",
+     "pnl_r": 0.016,
      "exit_reason": "E4 停滯",
+     "hold_days": 17,
+     "ticker": "RAL",
+     "template": "A",
+     "e_date": "2026-05-12",
+     "signal_date": "2026-05-12",
+     "size": 1.0
+    },
+    {
+     "entry_date": "2026-05-15",
+     "entry": 31.6,
+     "stop": 30.336,
+     "t1": 34.128,
+     "unit": 2.3951,
+     "fills": [
+      {
+       "date": "2026-05-26",
+       "frac": 0.5,
+       "price": 36.0,
+       "reason": "E2 第一目標"
+      },
+      {
+       "date": "2026-06-08",
+       "frac": 0.5,
+       "price": 43.81,
+       "reason": "E3 跌破 10 日均線"
+      }
+     ],
+     "t1_date": "2026-05-26",
+     "realized_r": 3.378,
+     "status": "closed",
+     "exit_date": "2026-06-08",
+     "pnl_r": 3.378,
+     "exit_reason": "E3 跌破 10 日均線",
+     "hold_days": 15,
      "ticker": "SMCI",
+     "template": "B",
      "e_date": "2026-05-06",
-     "size": 1.0
-    },
-    {
-     "entry_date": "2026-05-08",
-     "entry": 17.3,
-     "stop": 16.36,
-     "t1": 19.18,
-     "unit": 1.2032,
-     "fills": [
-      {
-       "date": "2026-05-15",
-       "frac": 1.0,
-       "price": 17.17,
-       "reason": "E4 停滯"
-      }
-     ],
-     "t1_date": null,
-     "realized_r": -0.194,
-     "status": "closed",
-     "exit_date": "2026-05-15",
-     "pnl_r": -0.194,
-     "exit_reason": "E4 停滯",
-     "ticker": "VTRS",
-     "e_date": "2026-05-07",
+     "signal_date": "2026-05-14",
      "size": 1.0
     },
     {
@@ -186,20 +138,56 @@
        "reason": "E2 第一目標"
       },
       {
-       "date": "2026-06-03",
+       "date": "2026-06-08",
        "frac": 0.5,
-       "price": 303.57,
-       "reason": "E5 持有滿 10 日"
+       "price": 296.5,
+       "reason": "E3 跌破 10 日均線"
       }
      ],
      "t1_date": "2026-05-29",
-     "realized_r": 1.367,
+     "realized_r": 1.193,
      "status": "closed",
-     "exit_date": "2026-06-03",
-     "pnl_r": 1.367,
-     "exit_reason": "E5 持有滿 10 日",
+     "exit_date": "2026-06-08",
+     "pnl_r": 1.193,
+     "exit_reason": "E3 跌破 10 日均線",
+     "hold_days": 13,
      "ticker": "BIO",
+     "template": "A",
      "e_date": "2026-05-18",
+     "signal_date": "2026-05-18",
+     "size": 1.0
+    },
+    {
+     "entry_date": "2026-05-21",
+     "entry": 152.31,
+     "stop": 145.06,
+     "t1": 166.81,
+     "unit": 11.2632,
+     "fills": [
+      {
+       "date": "2026-06-03",
+       "frac": 0.5,
+       "price": 168.35,
+       "reason": "E2 第一目標"
+      },
+      {
+       "date": "2026-06-08",
+       "frac": 0.5,
+       "price": 158.65,
+       "reason": "E3 跌破 10 日均線"
+      }
+     ],
+     "t1_date": "2026-06-03",
+     "realized_r": 0.909,
+     "status": "closed",
+     "exit_date": "2026-06-08",
+     "pnl_r": 0.909,
+     "exit_reason": "E3 跌破 10 日均線",
+     "hold_days": 11,
+     "ticker": "NOVT",
+     "template": "B",
+     "e_date": "2026-05-12",
+     "signal_date": "2026-05-20",
      "size": 1.0
     },
     {
@@ -210,68 +198,23 @@
      "unit": 27.931,
      "fills": [
       {
-       "date": "2026-06-01",
+       "date": "2026-06-08",
        "frac": 1.0,
-       "price": 361.76,
+       "price": 365.02,
        "reason": "E4 停滯"
       }
      ],
      "t1_date": null,
-     "realized_r": -0.631,
+     "realized_r": -0.515,
      "status": "closed",
-     "exit_date": "2026-06-01",
-     "pnl_r": -0.631,
+     "exit_date": "2026-06-08",
+     "pnl_r": -0.515,
      "exit_reason": "E4 停滯",
+     "hold_days": 10,
      "ticker": "RL",
+     "template": "A",
      "e_date": "2026-05-21",
-     "size": 1.0
-    },
-    {
-     "entry_date": "2026-05-29",
-     "entry": 74.0,
-     "stop": 68.49,
-     "t1": 85.02,
-     "unit": 6.8125,
-     "fills": [
-      {
-       "date": "2026-06-05",
-       "frac": 1.0,
-       "price": 71.06,
-       "reason": "E4 停滯"
-      }
-     ],
-     "t1_date": null,
-     "realized_r": -0.495,
-     "status": "closed",
-     "exit_date": "2026-06-05",
-     "pnl_r": -0.495,
-     "exit_reason": "E4 停滯",
-     "ticker": "BBY",
-     "e_date": "2026-05-28",
-     "size": 1.0
-    },
-    {
-     "entry_date": "2026-06-02",
-     "entry": 50.5,
-     "stop": 48.3,
-     "t1": 54.9,
-     "unit": 3.2011,
-     "fills": [
-      {
-       "date": "2026-06-04",
-       "frac": 1.0,
-       "price": 48.72,
-       "reason": "E1 停損"
-      }
-     ],
-     "t1_date": null,
-     "realized_r": -0.649,
-     "status": "closed",
-     "exit_date": "2026-06-04",
-     "pnl_r": -0.649,
-     "exit_reason": "E1 停損",
-     "ticker": "MGM",
-     "e_date": "2026-06-01",
+     "signal_date": "2026-05-21",
      "size": 1.0
     },
     {
@@ -282,20 +225,110 @@
      "unit": 3.5897,
      "fills": [
       {
-       "date": "2026-06-18",
+       "date": "2026-06-23",
        "frac": 1.0,
-       "price": 64.97,
+       "price": 66.02,
        "reason": "E4 停滯"
       }
      ],
      "t1_date": null,
-     "realized_r": -0.447,
+     "realized_r": -0.155,
      "status": "closed",
-     "exit_date": "2026-06-18",
-     "pnl_r": -0.447,
+     "exit_date": "2026-06-23",
+     "pnl_r": -0.155,
      "exit_reason": "E4 停滯",
+     "hold_days": 10,
      "ticker": "COO",
+     "template": "A",
      "e_date": "2026-06-05",
+     "signal_date": "2026-06-05",
+     "size": 1.0
+    },
+    {
+     "entry_date": "2026-06-09",
+     "entry": 74.75,
+     "stop": 68.49,
+     "t1": 87.27,
+     "unit": 7.9254,
+     "fills": [
+      {
+       "date": "2026-07-09",
+       "frac": 1.0,
+       "price": 78.58,
+       "reason": "E5 持有期滿"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": 0.425,
+     "status": "closed",
+     "exit_date": "2026-07-09",
+     "pnl_r": 0.425,
+     "exit_reason": "E5 持有期滿",
+     "hold_days": 20,
+     "ticker": "BBY",
+     "template": "B",
+     "e_date": "2026-05-28",
+     "signal_date": "2026-06-08",
+     "size": 1.0
+    },
+    {
+     "entry_date": "2026-06-10",
+     "entry": 111.92,
+     "stop": 106.4,
+     "t1": 122.96,
+     "unit": 8.3664,
+     "fills": [
+      {
+       "date": "2026-06-29",
+       "frac": 0.5,
+       "price": 123.33,
+       "reason": "E2 第一目標"
+      },
+      {
+       "date": "2026-07-10",
+       "frac": 0.5,
+       "price": 122.68,
+       "reason": "E5 持有期滿"
+      }
+     ],
+     "t1_date": "2026-06-29",
+     "realized_r": 1.241,
+     "status": "closed",
+     "exit_date": "2026-07-10",
+     "pnl_r": 1.241,
+     "exit_reason": "E5 持有期滿",
+     "hold_days": 20,
+     "ticker": "DLTR",
+     "template": "B",
+     "e_date": "2026-05-28",
+     "signal_date": "2026-06-09",
+     "size": 1.0
+    },
+    {
+     "entry_date": "2026-06-25",
+     "entry": 69.39,
+     "stop": 65.0,
+     "t1": 78.17,
+     "unit": 5.4589,
+     "fills": [
+      {
+       "date": "2026-07-15",
+       "frac": 1.0,
+       "price": 68.71,
+       "reason": "E4 停滯"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -0.2,
+     "status": "closed",
+     "exit_date": "2026-07-15",
+     "pnl_r": -0.2,
+     "exit_reason": "E4 停滯",
+     "hold_days": 13,
+     "ticker": "COO",
+     "template": "B",
+     "e_date": "2026-06-05",
+     "signal_date": "2026-06-24",
      "size": 1.0
     },
     {
@@ -318,62 +351,38 @@
      "exit_date": "2026-08-06",
      "pnl_r": -0.499,
      "exit_reason": "E1 停損",
+     "hold_days": 5,
      "ticker": "AVTR",
+     "template": "A",
      "e_date": "2026-07-29",
+     "signal_date": "2026-07-29",
      "size": 0.5
     },
     {
-     "entry_date": "2026-07-31",
-     "entry": 450.0,
-     "stop": 432.0,
-     "t1": 486.0,
-     "unit": 25.9361,
+     "entry_date": "2026-08-03",
+     "entry": 278.29,
+     "stop": 262.01,
+     "t1": 310.85,
+     "unit": 20.9082,
      "fills": [
       {
-       "date": "2026-08-04",
-       "frac": 0.5,
-       "price": 480.9,
-       "reason": "E2 第一目標"
-      },
-      {
-       "date": "2026-08-14",
-       "frac": 0.5,
-       "price": 496.36,
-       "reason": "E5 持有滿 10 日"
-      }
-     ],
-     "t1_date": "2026-08-04",
-     "realized_r": 1.381,
-     "status": "closed",
-     "exit_date": "2026-08-14",
-     "pnl_r": 0.691,
-     "exit_reason": "E5 持有滿 10 日",
-     "ticker": "MSFT",
-     "e_date": "2026-07-30",
-     "size": 0.5
-    },
-    {
-     "entry_date": "2026-08-05",
-     "entry": 366.4,
-     "stop": 329.47,
-     "t1": 440.26,
-     "unit": 44.8739,
-     "fills": [
-      {
-       "date": "2026-08-19",
+       "date": "2026-08-17",
        "frac": 1.0,
-       "price": 370.19,
-       "reason": "E5 持有滿 10 日"
+       "price": 265.44,
+       "reason": "E4 停滯"
       }
      ],
      "t1_date": null,
-     "realized_r": 0.035,
+     "realized_r": -0.693,
      "status": "closed",
-     "exit_date": "2026-08-19",
-     "pnl_r": 0.035,
-     "exit_reason": "E5 持有滿 10 日",
-     "ticker": "ZBRA",
-     "e_date": "2026-08-04",
+     "exit_date": "2026-08-17",
+     "pnl_r": -0.693,
+     "exit_reason": "E4 停滯",
+     "hold_days": 10,
+     "ticker": "AMZN",
+     "template": "A",
+     "e_date": "2026-07-31",
+     "signal_date": "2026-07-31",
      "size": 1.0
     },
     {
@@ -384,20 +393,77 @@
      "unit": 18.2707,
      "fills": [
       {
-       "date": "2026-08-24",
+       "date": "2026-09-08",
        "frac": 1.0,
-       "price": 189.0,
-       "reason": "E5 持有滿 10 日"
+       "price": 181.635,
+       "reason": "E5 持有期滿"
       }
      ],
      "t1_date": null,
-     "realized_r": 0.504,
+     "realized_r": 0.102,
      "status": "closed",
-     "exit_date": "2026-08-24",
-     "pnl_r": 0.504,
-     "exit_reason": "E5 持有滿 10 日",
+     "exit_date": "2026-09-08",
+     "pnl_r": 0.102,
+     "exit_reason": "E5 持有期滿",
+     "hold_days": 20,
      "ticker": "ABNB",
+     "template": "A",
      "e_date": "2026-08-07",
+     "signal_date": "2026-08-07",
+     "size": 1.0
+    },
+    {
+     "entry_date": "2026-08-10",
+     "entry": 49.7,
+     "stop": 46.353,
+     "t1": 56.394,
+     "unit": 4.3003,
+     "fills": [
+      {
+       "date": "2026-09-08",
+       "frac": 1.0,
+       "price": 50.475,
+       "reason": "E5 持有期滿"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": 0.11,
+     "status": "closed",
+     "exit_date": "2026-09-08",
+     "pnl_r": 0.11,
+     "exit_reason": "E5 持有期滿",
+     "hold_days": 20,
+     "ticker": "CART",
+     "template": "A",
+     "e_date": "2026-08-07",
+     "signal_date": "2026-08-07",
+     "size": 1.0
+    },
+    {
+     "entry_date": "2026-08-11",
+     "entry": 114.13,
+     "stop": 104.75,
+     "t1": 132.89,
+     "unit": 12.575,
+     "fills": [
+      {
+       "date": "2026-08-31",
+       "frac": 1.0,
+       "price": 113.64,
+       "reason": "E4 停滯"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -0.093,
+     "status": "closed",
+     "exit_date": "2026-08-31",
+     "pnl_r": -0.093,
+     "exit_reason": "E4 停滯",
+     "hold_days": 14,
+     "ticker": "CORT",
+     "template": "B",
+     "e_date": "2026-07-30",
+     "signal_date": "2026-08-10",
      "size": 1.0
     },
     {
@@ -426,8 +492,11 @@
      "exit_date": "2026-09-02",
      "pnl_r": 0.977,
      "exit_reason": "E3 跌破 10 日均線",
+     "hold_days": 9,
      "ticker": "EL",
+     "template": "A",
      "e_date": "2026-08-19",
+     "signal_date": "2026-08-19",
      "size": 1.0
     },
     {
@@ -438,44 +507,50 @@
      "unit": 8.1994,
      "fills": [
       {
-       "date": "2026-08-28",
+       "date": "2026-09-08",
        "frac": 1.0,
-       "price": 146.72,
+       "price": 148.41,
        "reason": "E4 停滯"
       }
      ],
      "t1_date": null,
-     "realized_r": -0.604,
+     "realized_r": -0.399,
      "status": "closed",
-     "exit_date": "2026-08-28",
-     "pnl_r": -0.604,
+     "exit_date": "2026-09-08",
+     "pnl_r": -0.399,
      "exit_reason": "E4 停滯",
+     "hold_days": 12,
      "ticker": "MRK",
+     "template": "A",
      "e_date": "2026-08-19",
+     "signal_date": "2026-08-19",
      "size": 1.0
     },
     {
-     "entry_date": "2026-08-28",
-     "entry": 172.2,
-     "stop": 156.5,
-     "t1": 203.6,
-     "unit": 20.3289,
+     "entry_date": "2026-09-04",
+     "entry": 144.89,
+     "stop": 130.24,
+     "t1": 174.19,
+     "unit": 18.9225,
      "fills": [
       {
-       "date": "2026-09-04",
+       "date": "2026-09-21",
        "frac": 1.0,
-       "price": 168.38,
+       "price": 136.37,
        "reason": "E4 停滯"
       }
      ],
      "t1_date": null,
-     "realized_r": -0.238,
+     "realized_r": -0.495,
      "status": "closed",
-     "exit_date": "2026-09-04",
-     "pnl_r": -0.238,
+     "exit_date": "2026-09-21",
+     "pnl_r": -0.495,
      "exit_reason": "E4 停滯",
-     "ticker": "OKTA",
-     "e_date": "2026-08-27",
+     "hold_days": 10,
+     "ticker": "ANF",
+     "template": "B",
+     "e_date": "2026-08-26",
+     "signal_date": "2026-09-03",
      "size": 1.0
     },
     {
@@ -486,745 +561,1455 @@
      "unit": 3.7986,
      "fills": [
       {
-       "date": "2026-09-16",
+       "date": "2026-09-23",
        "frac": 1.0,
-       "price": 39.77,
+       "price": 38.0,
+       "reason": "E1 停損"
+      }
+     ],
+     "t1_date": null,
+     "realized_r": -0.955,
+     "status": "closed",
+     "exit_date": "2026-09-23",
+     "pnl_r": -0.955,
+     "exit_reason": "E1 停損",
+     "hold_days": 10,
+     "ticker": "ROIV",
+     "template": "A",
+     "e_date": "2026-09-08",
+     "signal_date": "2026-09-08",
+     "size": 1.0
+    },
+    {
+     "entry_date": "2026-09-10",
+     "entry": 50.14,
+     "stop": 46.81,
+     "t1": 56.8,
+     "unit": 4.2621,
+     "fills": [
+      {
+       "date": "2026-09-24",
+       "frac": 1.0,
+       "price": 48.46,
        "reason": "E4 停滯"
       }
      ],
      "t1_date": null,
-     "realized_r": -0.491,
+     "realized_r": -0.464,
      "status": "closed",
-     "exit_date": "2026-09-16",
-     "pnl_r": -0.491,
+     "exit_date": "2026-09-24",
+     "pnl_r": -0.464,
      "exit_reason": "E4 停滯",
-     "ticker": "ROIV",
-     "e_date": "2026-09-08",
+     "hold_days": 10,
+     "ticker": "ASO",
+     "template": "A",
+     "e_date": "2026-09-09",
+     "signal_date": "2026-09-09",
      "size": 1.0
     }
    ]
   },
   "compare": {
-   "selected": {
-    "closed": 27,
-    "open": 1,
-    "no_fill": 10,
+   "template_A": {
+    "closed": 23,
+    "open": 0,
+    "no_fill": 0,
     "skipped_capacity": 0,
-    "win_rate": 0.259,
-    "avg_r": -0.213,
-    "total_r": -5.74,
-    "avg_win": 0.821,
-    "avg_loss": -0.574
+    "win_rate": 0.304,
+    "avg_r": -0.254,
+    "total_r": -5.85,
+    "avg_win": 0.502,
+    "avg_loss": -0.585,
+    "avg_hold_days": 10.4
+   },
+   "template_B": {
+    "closed": 14,
+    "open": 1,
+    "no_fill": 1,
+    "skipped_capacity": 0,
+    "win_rate": 0.429,
+    "avg_r": 0.509,
+    "total_r": 7.13,
+    "avg_win": 1.581,
+    "avg_loss": -0.294,
+    "avg_hold_days": 14.0
+   },
+   "selected": {
+    "closed": 37,
+    "open": 1,
+    "no_fill": 1,
+    "skipped_capacity": 0,
+    "win_rate": 0.351,
+    "avg_r": 0.035,
+    "total_r": 1.28,
+    "avg_win": 1.0,
+    "avg_loss": -0.488,
+    "avg_hold_days": 11.8
    },
    "not_selected": {
-    "closed": 4,
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   }
+  },
+  "shadow": {
+   "chase_no_fill": {
+    "note": "開盤高於限價、未成交者，若以開盤價追進",
+    "closed": 1,
     "open": 0,
     "no_fill": 0,
     "skipped_capacity": 0,
     "win_rate": 0.0,
-    "avg_r": -0.387,
-    "total_r": -1.55,
+    "avg_r": -0.558,
+    "total_r": -0.56,
     "avg_win": null,
-    "avg_loss": -0.387
+    "avg_loss": -0.558,
+    "avg_hold_days": 13.0
+   },
+   "baseline_same_set": {
+    "note": "入選者照現行規則（與下一列比較用）",
+    "closed": 37,
+    "open": 1,
+    "no_fill": 1,
+    "skipped_capacity": 0,
+    "win_rate": 0.351,
+    "avg_r": 0.035,
+    "total_r": 1.28,
+    "avg_win": 1.0,
+    "avg_loss": -0.488,
+    "avg_hold_days": 11.8
+   },
+   "no_stall": {
+    "note": "同一批入選者，若不執行 E4 停滯出場",
+    "closed": 35,
+    "open": 3,
+    "no_fill": 1,
+    "skipped_capacity": 0,
+    "win_rate": 0.6,
+    "avg_r": 0.285,
+    "total_r": 9.99,
+    "avg_win": 0.952,
+    "avg_loss": -0.715,
+    "avg_hold_days": 14.9
+   },
+   "x3_excluded": {
+    "note": "因停損距離 > 12% 被排除者，若照做",
+    "closed": 55,
+    "open": 5,
+    "no_fill": 0,
+    "skipped_capacity": 0,
+    "win_rate": 0.273,
+    "avg_r": -0.167,
+    "total_r": -9.21,
+    "avg_win": 0.745,
+    "avg_loss": -0.509,
+    "avg_hold_days": 11.2
+   }
+  },
+  "surprise_tag": {
+   "note": "跳空 ÷ 財報前預期波動。只記錄、不過濾",
+   "within_expected": {
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   },
+   "beyond_expected": {
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
    }
   }
  },
  "candidates": [
   {
-   "ticker": "HIMS",
-   "e_date": "2026-04-16",
-   "gap_pct": 7.66,
-   "vol_mult": 3.21,
-   "sector": "Healthcare",
+   "ticker": "AEHR",
+   "template": "A",
+   "e_date": "2026-04-08",
+   "signal_date": "2026-04-08",
+   "gap_pct": 14.13,
+   "vol_mult": 4.74,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "RVMD",
+   "template": "A",
+   "e_date": "2026-04-13",
+   "signal_date": "2026-04-13",
+   "gap_pct": 37.16,
+   "vol_mult": 8.2,
+   "sector": null,
    "selected": true,
    "rank": 1,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-05-11"
+   "shadow_reason": null
+  },
+  {
+   "ticker": "RGTI",
+   "template": "A",
+   "e_date": "2026-04-15",
+   "signal_date": "2026-04-15",
+   "gap_pct": 5.96,
+   "vol_mult": 3.12,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "SYRE",
+   "template": "A",
+   "e_date": "2026-04-15",
+   "signal_date": "2026-04-15",
+   "gap_pct": 5.84,
+   "vol_mult": 3.84,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "HIMS",
+   "template": "A",
+   "e_date": "2026-04-16",
+   "signal_date": "2026-04-16",
+   "gap_pct": 7.66,
+   "vol_mult": 3.21,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
    "ticker": "MOH",
+   "template": "A",
    "e_date": "2026-04-23",
+   "signal_date": "2026-04-23",
    "gap_pct": 7.69,
    "vol_mult": 3.11,
-   "sector": "Healthcare",
-   "selected": true,
-   "rank": 3,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-07-22"
-  },
-  {
-   "ticker": "TXN",
-   "e_date": "2026-04-23",
-   "gap_pct": 10.16,
-   "vol_mult": 4.36,
-   "sector": "Technology",
+   "sector": null,
    "selected": true,
    "rank": 1,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-07-22"
+   "shadow_reason": null
   },
   {
-   "ticker": "UNP",
-   "e_date": "2026-04-23",
-   "gap_pct": 5.36,
-   "vol_mult": 3.02,
-   "sector": "Industrials",
-   "selected": false,
+   "ticker": "RVMD",
+   "template": "B",
+   "e_date": "2026-04-13",
+   "signal_date": "2026-04-28",
+   "gap_pct": 37.16,
+   "vol_mult": 8.2,
+   "sector": null,
+   "selected": null,
    "rank": null,
-   "excluded": null,
-   "shadow_reason": "超過每日上限",
-   "next_earnings": "2026-07-23"
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
-   "ticker": "URI",
-   "e_date": "2026-04-23",
-   "gap_pct": 17.47,
-   "vol_mult": 3.31,
-   "sector": "Industrials",
-   "selected": true,
-   "rank": 2,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-07-22"
+   "ticker": "COCO",
+   "template": "A",
+   "e_date": "2026-04-29",
+   "signal_date": "2026-04-29",
+   "gap_pct": 17.43,
+   "vol_mult": 5.06,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
    "ticker": "EAT",
+   "template": "A",
    "e_date": "2026-04-29",
+   "signal_date": "2026-04-29",
    "gap_pct": 10.73,
    "vol_mult": 3.45,
-   "sector": "Consumer Cyclical",
+   "sector": null,
    "selected": true,
    "rank": 1,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-08-12"
+   "shadow_reason": null
   },
   {
    "ticker": "GNRC",
+   "template": "A",
    "e_date": "2026-04-29",
+   "signal_date": "2026-04-29",
    "gap_pct": 12.27,
    "vol_mult": 3.31,
-   "sector": "Industrials",
+   "sector": null,
    "selected": true,
-   "rank": 3,
+   "rank": 2,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-07-29"
+   "shadow_reason": null
   },
   {
-   "ticker": "NXPI",
+   "ticker": "MXL",
+   "template": "A",
    "e_date": "2026-04-29",
-   "gap_pct": 22.15,
-   "vol_mult": 3.41,
-   "sector": "Technology",
-   "selected": true,
-   "rank": 2,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-07-28"
+   "signal_date": "2026-04-29",
+   "gap_pct": 5.25,
+   "vol_mult": 3.82,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
-   "ticker": "SFM",
-   "e_date": "2026-04-30",
-   "gap_pct": 6.16,
-   "vol_mult": 3.22,
-   "sector": "Consumer Defensive",
-   "selected": true,
-   "rank": 2,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-07-29"
+   "ticker": "SIMO",
+   "template": "A",
+   "e_date": "2026-04-29",
+   "signal_date": "2026-04-29",
+   "gap_pct": 30.71,
+   "vol_mult": 7.18,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
-   "ticker": "TXT",
-   "e_date": "2026-04-30",
-   "gap_pct": 8.19,
-   "vol_mult": 3.28,
-   "sector": "Industrials",
-   "selected": true,
-   "rank": 1,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-07-28"
+   "ticker": "SYRE",
+   "template": "B",
+   "e_date": "2026-04-15",
+   "signal_date": "2026-04-30",
+   "gap_pct": 5.84,
+   "vol_mult": 3.84,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
    "ticker": "ROKU",
+   "template": "A",
    "e_date": "2026-05-01",
+   "signal_date": "2026-05-01",
    "gap_pct": 7.67,
    "vol_mult": 3.12,
-   "sector": "Communication Services",
+   "sector": null,
    "selected": true,
    "rank": 1,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-08-06"
+   "shadow_reason": null
+  },
+  {
+   "ticker": "HIMS",
+   "template": "B",
+   "e_date": "2026-04-16",
+   "signal_date": "2026-05-01",
+   "gap_pct": 7.66,
+   "vol_mult": 3.21,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "CRCL",
+   "template": "A",
+   "e_date": "2026-05-04",
+   "signal_date": "2026-05-04",
+   "gap_pct": 7.45,
+   "vol_mult": 3.07,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
    "ticker": "DOCN",
+   "template": "A",
    "e_date": "2026-05-05",
+   "signal_date": "2026-05-05",
    "gap_pct": 19.66,
    "vol_mult": 3.1,
    "sector": null,
    "selected": null,
    "rank": null,
    "excluded": "X3 停損距離超過 12%",
-   "shadow_reason": null,
-   "next_earnings": null
+   "shadow_reason": null
   },
   {
    "ticker": "STRL",
+   "template": "A",
    "e_date": "2026-05-05",
+   "signal_date": "2026-05-05",
    "gap_pct": 37.39,
    "vol_mult": 5.31,
    "sector": null,
    "selected": null,
    "rank": null,
    "excluded": "X3 停損距離超過 12%",
-   "shadow_reason": null,
-   "next_earnings": null
+   "shadow_reason": null
+  },
+  {
+   "ticker": "ARM",
+   "template": "A",
+   "e_date": "2026-05-06",
+   "signal_date": "2026-05-06",
+   "gap_pct": 11.09,
+   "vol_mult": 3.05,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
    "ticker": "DVA",
+   "template": "A",
    "e_date": "2026-05-06",
+   "signal_date": "2026-05-06",
    "gap_pct": 7.79,
    "vol_mult": 4.34,
    "sector": null,
    "selected": null,
    "rank": null,
    "excluded": "X3 停損距離超過 12%",
-   "shadow_reason": null,
-   "next_earnings": null
-  },
-  {
-   "ticker": "FLEX",
-   "e_date": "2026-05-06",
-   "gap_pct": 24.26,
-   "vol_mult": 4.66,
-   "sector": null,
-   "selected": null,
-   "rank": null,
-   "excluded": "X3 停損距離超過 12%",
-   "shadow_reason": null,
-   "next_earnings": null
+   "shadow_reason": null
   },
   {
    "ticker": "IFF",
+   "template": "A",
    "e_date": "2026-05-06",
+   "signal_date": "2026-05-06",
    "gap_pct": 14.16,
    "vol_mult": 3.27,
-   "sector": "Basic Materials",
+   "sector": null,
    "selected": true,
-   "rank": 2,
+   "rank": 1,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-08-04"
+   "shadow_reason": null
   },
   {
    "ticker": "SMCI",
+   "template": "A",
    "e_date": "2026-05-06",
+   "signal_date": "2026-05-06",
    "gap_pct": 12.97,
    "vol_mult": 4.07,
-   "sector": "Technology",
-   "selected": true,
-   "rank": 1,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-08-11"
-  },
-  {
-   "ticker": "VTRS",
-   "e_date": "2026-05-07",
-   "gap_pct": 5.2,
-   "vol_mult": 3.24,
-   "sector": "Healthcare",
-   "selected": true,
-   "rank": 1,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-08-06"
-  },
-  {
-   "ticker": "VVV",
-   "e_date": "2026-05-07",
-   "gap_pct": 5.24,
-   "vol_mult": 3.03,
-   "sector": "Consumer Cyclical",
-   "selected": true,
-   "rank": 2,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-08-05"
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
    "ticker": "AKAM",
+   "template": "A",
    "e_date": "2026-05-08",
+   "signal_date": "2026-05-08",
    "gap_pct": 24.65,
    "vol_mult": 4.04,
-   "sector": "Technology",
-   "selected": true,
-   "rank": 1,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-08-06"
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
    "ticker": "DBX",
+   "template": "A",
    "e_date": "2026-05-08",
+   "signal_date": "2026-05-08",
    "gap_pct": 9.13,
    "vol_mult": 3.0,
-   "sector": "Technology",
-   "selected": false,
-   "rank": null,
+   "sector": null,
+   "selected": true,
+   "rank": 1,
    "excluded": null,
-   "shadow_reason": "同族群已有更高排名",
-   "next_earnings": "2026-08-06"
+   "shadow_reason": null
+  },
+  {
+   "ticker": "RKLB",
+   "template": "A",
+   "e_date": "2026-05-08",
+   "signal_date": "2026-05-08",
+   "gap_pct": 9.49,
+   "vol_mult": 3.68,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "WSC",
+   "template": "A",
+   "e_date": "2026-05-08",
+   "signal_date": "2026-05-08",
+   "gap_pct": 13.41,
+   "vol_mult": 5.14,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "COCO",
+   "template": "B",
+   "e_date": "2026-04-29",
+   "signal_date": "2026-05-08",
+   "gap_pct": 17.43,
+   "vol_mult": 5.06,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "DOCN",
+   "template": "B",
+   "e_date": "2026-05-05",
+   "signal_date": "2026-05-08",
+   "gap_pct": 19.66,
+   "vol_mult": 3.1,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "CRCL",
+   "template": "B",
+   "e_date": "2026-05-04",
+   "signal_date": "2026-05-11",
+   "gap_pct": 7.45,
+   "vol_mult": 3.07,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
    "ticker": "NOVT",
+   "template": "A",
    "e_date": "2026-05-12",
+   "signal_date": "2026-05-12",
    "gap_pct": 7.16,
    "vol_mult": 3.8,
-   "sector": "Technology",
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "RAL",
+   "template": "A",
+   "e_date": "2026-05-12",
+   "signal_date": "2026-05-12",
+   "gap_pct": 18.81,
+   "vol_mult": 6.33,
+   "sector": null,
    "selected": true,
    "rank": 1,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-08-05"
+   "shadow_reason": null
+  },
+  {
+   "ticker": "SMCI",
+   "template": "B",
+   "e_date": "2026-05-06",
+   "signal_date": "2026-05-14",
+   "gap_pct": 12.97,
+   "vol_mult": 4.07,
+   "sector": null,
+   "selected": true,
+   "rank": 1,
+   "excluded": null,
+   "shadow_reason": null
+  },
+  {
+   "ticker": "DVA",
+   "template": "B",
+   "e_date": "2026-05-06",
+   "signal_date": "2026-05-15",
+   "gap_pct": 7.79,
+   "vol_mult": 4.34,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
    "ticker": "BIO",
+   "template": "A",
    "e_date": "2026-05-18",
+   "signal_date": "2026-05-18",
    "gap_pct": 10.98,
    "vol_mult": 3.23,
-   "sector": "Healthcare",
+   "sector": null,
    "selected": true,
    "rank": 1,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-08-04"
+   "shadow_reason": null
   },
   {
-   "ticker": "RL",
-   "e_date": "2026-05-21",
-   "gap_pct": 10.25,
-   "vol_mult": 3.4,
-   "sector": "Consumer Cyclical",
-   "selected": true,
-   "rank": 1,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-08-06"
-  },
-  {
-   "ticker": "AVAV",
-   "e_date": "2026-05-28",
-   "gap_pct": 10.29,
-   "vol_mult": 3.73,
-   "sector": "Industrials",
+   "ticker": "NOVT",
+   "template": "B",
+   "e_date": "2026-05-12",
+   "signal_date": "2026-05-20",
+   "gap_pct": 7.16,
+   "vol_mult": 3.8,
+   "sector": null,
    "selected": true,
    "rank": 2,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-06-29"
+   "shadow_reason": null
   },
   {
-   "ticker": "BBY",
-   "e_date": "2026-05-28",
-   "gap_pct": 8.0,
-   "vol_mult": 3.79,
-   "sector": "Consumer Cyclical",
+   "ticker": "RAL",
+   "template": "B",
+   "e_date": "2026-05-12",
+   "signal_date": "2026-05-20",
+   "gap_pct": 18.81,
+   "vol_mult": 6.33,
+   "sector": null,
    "selected": true,
    "rank": 1,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-08-27"
+   "shadow_reason": null
   },
   {
-   "ticker": "DLTR",
-   "e_date": "2026-05-28",
-   "gap_pct": 15.79,
-   "vol_mult": 3.45,
-   "sector": "Consumer Defensive",
+   "ticker": "BIRK",
+   "template": "A",
+   "e_date": "2026-05-21",
+   "signal_date": "2026-05-21",
+   "gap_pct": 10.63,
+   "vol_mult": 3.26,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "RGTI",
+   "template": "A",
+   "e_date": "2026-05-21",
+   "signal_date": "2026-05-21",
+   "gap_pct": 10.69,
+   "vol_mult": 5.5,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "RL",
+   "template": "A",
+   "e_date": "2026-05-21",
+   "signal_date": "2026-05-21",
+   "gap_pct": 10.25,
+   "vol_mult": 3.4,
+   "sector": null,
+   "selected": true,
+   "rank": 1,
+   "excluded": null,
+   "shadow_reason": null
+  },
+  {
+   "ticker": "GNRC",
+   "template": "B",
+   "e_date": "2026-04-29",
+   "signal_date": "2026-05-21",
+   "gap_pct": 12.27,
+   "vol_mult": 3.31,
+   "sector": null,
+   "selected": true,
+   "rank": 2,
+   "excluded": null,
+   "shadow_reason": null
+  },
+  {
+   "ticker": "ROKU",
+   "template": "B",
+   "e_date": "2026-05-01",
+   "signal_date": "2026-05-21",
+   "gap_pct": 7.67,
+   "vol_mult": 3.12,
+   "sector": null,
    "selected": true,
    "rank": 3,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-08-27"
+   "shadow_reason": null
   },
   {
-   "ticker": "OKTA",
-   "e_date": "2026-05-29",
-   "gap_pct": 13.53,
-   "vol_mult": 5.44,
+   "ticker": "AKAM",
+   "template": "B",
+   "e_date": "2026-05-08",
+   "signal_date": "2026-05-21",
+   "gap_pct": 24.65,
+   "vol_mult": 4.04,
    "sector": null,
    "selected": null,
    "rank": null,
    "excluded": "X3 停損距離超過 12%",
-   "shadow_reason": null,
-   "next_earnings": null
+   "shadow_reason": null
+  },
+  {
+   "ticker": "STRL",
+   "template": "B",
+   "e_date": "2026-05-05",
+   "signal_date": "2026-05-26",
+   "gap_pct": 37.39,
+   "vol_mult": 5.31,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "BIO",
+   "template": "B",
+   "e_date": "2026-05-18",
+   "signal_date": "2026-05-26",
+   "gap_pct": 10.98,
+   "vol_mult": 3.23,
+   "sector": null,
+   "selected": true,
+   "rank": 1,
+   "excluded": null,
+   "shadow_reason": null
+  },
+  {
+   "ticker": "AVAV",
+   "template": "A",
+   "e_date": "2026-05-28",
+   "signal_date": "2026-05-28",
+   "gap_pct": 10.29,
+   "vol_mult": 3.73,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "BBY",
+   "template": "A",
+   "e_date": "2026-05-28",
+   "signal_date": "2026-05-28",
+   "gap_pct": 8.0,
+   "vol_mult": 3.79,
+   "sector": null,
+   "selected": true,
+   "rank": 1,
+   "excluded": null,
+   "shadow_reason": null
+  },
+  {
+   "ticker": "BTU",
+   "template": "A",
+   "e_date": "2026-05-28",
+   "signal_date": "2026-05-28",
+   "gap_pct": 7.16,
+   "vol_mult": 3.68,
+   "sector": null,
+   "selected": true,
+   "rank": 2,
+   "excluded": null,
+   "shadow_reason": null
+  },
+  {
+   "ticker": "DLTR",
+   "template": "A",
+   "e_date": "2026-05-28",
+   "signal_date": "2026-05-28",
+   "gap_pct": 15.79,
+   "vol_mult": 3.45,
+   "sector": null,
+   "selected": true,
+   "rank": 3,
+   "excluded": null,
+   "shadow_reason": null
   },
   {
    "ticker": "MGM",
+   "template": "A",
    "e_date": "2026-06-01",
+   "signal_date": "2026-06-01",
    "gap_pct": 10.97,
    "vol_mult": 5.37,
-   "sector": "Consumer Cyclical",
+   "sector": null,
    "selected": true,
    "rank": 1,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-07-29"
+   "shadow_reason": null
   },
   {
-   "ticker": "MRVL",
-   "e_date": "2026-06-02",
-   "gap_pct": 15.51,
-   "vol_mult": 3.92,
+   "ticker": "ABVX",
+   "template": "A",
+   "e_date": "2026-06-03",
+   "signal_date": "2026-06-03",
+   "gap_pct": 12.08,
+   "vol_mult": 3.26,
    "sector": null,
    "selected": null,
    "rank": null,
    "excluded": "X3 停損距離超過 12%",
-   "shadow_reason": null,
-   "next_earnings": null
+   "shadow_reason": null
   },
   {
-   "ticker": "COO",
-   "e_date": "2026-06-05",
-   "gap_pct": 5.19,
-   "vol_mult": 3.27,
-   "sector": "Healthcare",
+   "ticker": "RL",
+   "template": "B",
+   "e_date": "2026-05-21",
+   "signal_date": "2026-06-04",
+   "gap_pct": 10.25,
+   "vol_mult": 3.4,
+   "sector": null,
    "selected": true,
    "rank": 1,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-09-09"
+   "shadow_reason": null
+  },
+  {
+   "ticker": "COO",
+   "template": "A",
+   "e_date": "2026-06-05",
+   "signal_date": "2026-06-05",
+   "gap_pct": 5.19,
+   "vol_mult": 3.27,
+   "sector": null,
+   "selected": true,
+   "rank": 1,
+   "excluded": null,
+   "shadow_reason": null
+  },
+  {
+   "ticker": "TNGX",
+   "template": "A",
+   "e_date": "2026-06-08",
+   "signal_date": "2026-06-08",
+   "gap_pct": 48.39,
+   "vol_mult": 7.78,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "BBY",
+   "template": "B",
+   "e_date": "2026-05-28",
+   "signal_date": "2026-06-08",
+   "gap_pct": 8.0,
+   "vol_mult": 3.79,
+   "sector": null,
+   "selected": true,
+   "rank": 1,
+   "excluded": null,
+   "shadow_reason": null
+  },
+  {
+   "ticker": "DLTR",
+   "template": "B",
+   "e_date": "2026-05-28",
+   "signal_date": "2026-06-09",
+   "gap_pct": 15.79,
+   "vol_mult": 3.45,
+   "sector": null,
+   "selected": true,
+   "rank": 1,
+   "excluded": null,
+   "shadow_reason": null
   },
   {
    "ticker": "CASY",
+   "template": "A",
    "e_date": "2026-06-10",
+   "signal_date": "2026-06-10",
    "gap_pct": 5.19,
    "vol_mult": 3.57,
    "sector": null,
    "selected": null,
    "rank": null,
    "excluded": "X3 停損距離超過 12%",
-   "shadow_reason": null,
-   "next_earnings": null
+   "shadow_reason": null
   },
   {
-   "ticker": "KBH",
-   "e_date": "2026-06-24",
-   "gap_pct": 7.53,
-   "vol_mult": 3.49,
-   "sector": "Consumer Cyclical",
-   "selected": true,
-   "rank": 1,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-09-22"
-  },
-  {
-   "ticker": "TECH",
-   "e_date": "2026-06-25",
-   "gap_pct": 19.28,
-   "vol_mult": 18.08,
-   "sector": null,
-   "selected": null,
-   "rank": null,
-   "excluded": "X1 疑似現金併購（跳空後區間極窄）",
-   "shadow_reason": null,
-   "next_earnings": null
-  },
-  {
-   "ticker": "FBIN",
-   "e_date": "2026-06-29",
-   "gap_pct": 6.64,
-   "vol_mult": 3.17,
-   "sector": "Industrials",
-   "selected": true,
-   "rank": 1,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-08-04"
-  },
-  {
-   "ticker": "PYPL",
-   "e_date": "2026-07-15",
-   "gap_pct": 15.78,
-   "vol_mult": 5.62,
-   "sector": "Financial Services",
-   "selected": null,
-   "rank": null,
-   "excluded": "X2 2026-07-28 有財報",
-   "shadow_reason": null,
-   "next_earnings": "2026-07-28"
-  },
-  {
-   "ticker": "AVTR",
-   "e_date": "2026-07-29",
-   "gap_pct": 16.67,
-   "vol_mult": 4.09,
-   "sector": "Healthcare",
-   "selected": true,
-   "rank": 1,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-10-28"
-  },
-  {
-   "ticker": "LAD",
-   "e_date": "2026-07-29",
-   "gap_pct": 5.2,
-   "vol_mult": 6.62,
+   "ticker": "CPNG",
+   "template": "A",
+   "e_date": "2026-06-11",
+   "signal_date": "2026-06-11",
+   "gap_pct": 8.2,
+   "vol_mult": 3.18,
    "sector": null,
    "selected": null,
    "rank": null,
    "excluded": "X3 停損距離超過 12%",
-   "shadow_reason": null,
-   "next_earnings": null
+   "shadow_reason": null
+  },
+  {
+   "ticker": "TNGX",
+   "template": "B",
+   "e_date": "2026-06-08",
+   "signal_date": "2026-06-12",
+   "gap_pct": 48.39,
+   "vol_mult": 7.78,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "RGTI",
+   "template": "B",
+   "e_date": "2026-05-21",
+   "signal_date": "2026-06-15",
+   "gap_pct": 10.69,
+   "vol_mult": 5.5,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "CPNG",
+   "template": "B",
+   "e_date": "2026-06-11",
+   "signal_date": "2026-06-16",
+   "gap_pct": 8.2,
+   "vol_mult": 3.18,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "KBH",
+   "template": "A",
+   "e_date": "2026-06-24",
+   "signal_date": "2026-06-24",
+   "gap_pct": 7.53,
+   "vol_mult": 3.49,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "COO",
+   "template": "B",
+   "e_date": "2026-06-05",
+   "signal_date": "2026-06-24",
+   "gap_pct": 5.19,
+   "vol_mult": 3.27,
+   "sector": null,
+   "selected": true,
+   "rank": 1,
+   "excluded": null,
+   "shadow_reason": null
+  },
+  {
+   "ticker": "IRDM",
+   "template": "A",
+   "e_date": "2026-06-29",
+   "signal_date": "2026-06-29",
+   "gap_pct": 18.93,
+   "vol_mult": 4.55,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "SLS",
+   "template": "A",
+   "e_date": "2026-06-29",
+   "signal_date": "2026-06-29",
+   "gap_pct": 7.59,
+   "vol_mult": 3.65,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "KBH",
+   "template": "B",
+   "e_date": "2026-06-24",
+   "signal_date": "2026-06-29",
+   "gap_pct": 7.53,
+   "vol_mult": 3.49,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "SLS",
+   "template": "B",
+   "e_date": "2026-06-29",
+   "signal_date": "2026-07-02",
+   "gap_pct": 7.59,
+   "vol_mult": 3.65,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "AVTR",
+   "template": "A",
+   "e_date": "2026-07-29",
+   "signal_date": "2026-07-29",
+   "gap_pct": 16.67,
+   "vol_mult": 4.09,
+   "sector": null,
+   "selected": true,
+   "rank": 1,
+   "excluded": null,
+   "shadow_reason": null
   },
   {
    "ticker": "CORT",
+   "template": "A",
    "e_date": "2026-07-30",
+   "signal_date": "2026-07-30",
    "gap_pct": 20.49,
    "vol_mult": 3.85,
    "sector": null,
    "selected": null,
    "rank": null,
    "excluded": "X3 停損距離超過 12%",
-   "shadow_reason": null,
-   "next_earnings": null
+   "shadow_reason": null
   },
   {
-   "ticker": "MSFT",
+   "ticker": "MOD",
+   "template": "A",
    "e_date": "2026-07-30",
-   "gap_pct": 12.13,
-   "vol_mult": 3.42,
-   "sector": "Technology",
-   "selected": true,
-   "rank": 1,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-10-28"
-  },
-  {
-   "ticker": "AMZN",
-   "e_date": "2026-07-31",
-   "gap_pct": 12.53,
-   "vol_mult": 3.11,
-   "sector": "Consumer Cyclical",
-   "selected": true,
-   "rank": 1,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-10-29"
-  },
-  {
-   "ticker": "PLTR",
-   "e_date": "2026-08-04",
-   "gap_pct": 15.52,
-   "vol_mult": 4.85,
+   "signal_date": "2026-07-30",
+   "gap_pct": 8.57,
+   "vol_mult": 3.64,
    "sector": null,
    "selected": null,
    "rank": null,
    "excluded": "X3 停損距離超過 12%",
-   "shadow_reason": null,
-   "next_earnings": null
+   "shadow_reason": null
   },
   {
-   "ticker": "ZBRA",
-   "e_date": "2026-08-04",
-   "gap_pct": 13.19,
-   "vol_mult": 3.66,
-   "sector": "Technology",
+   "ticker": "AMZN",
+   "template": "A",
+   "e_date": "2026-07-31",
+   "signal_date": "2026-07-31",
+   "gap_pct": 12.53,
+   "vol_mult": 3.11,
+   "sector": null,
    "selected": true,
    "rank": 1,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-11-03"
+   "shadow_reason": null
   },
   {
    "ticker": "CACI",
+   "template": "A",
    "e_date": "2026-08-06",
+   "signal_date": "2026-08-06",
    "gap_pct": 6.66,
    "vol_mult": 3.41,
    "sector": null,
    "selected": null,
    "rank": null,
    "excluded": "X3 停損距離超過 12%",
-   "shadow_reason": null,
-   "next_earnings": null
+   "shadow_reason": null
   },
   {
    "ticker": "SITM",
+   "template": "A",
    "e_date": "2026-08-06",
+   "signal_date": "2026-08-06",
    "gap_pct": 26.1,
    "vol_mult": 3.24,
-   "sector": "Technology",
-   "selected": true,
-   "rank": 1,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-11-04"
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
    "ticker": "ABNB",
+   "template": "A",
    "e_date": "2026-08-07",
+   "signal_date": "2026-08-07",
    "gap_pct": 8.61,
    "vol_mult": 4.37,
-   "sector": "Consumer Cyclical",
+   "sector": null,
    "selected": true,
    "rank": 1,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-11-05"
+   "shadow_reason": null
   },
   {
    "ticker": "CART",
+   "template": "A",
    "e_date": "2026-08-07",
+   "signal_date": "2026-08-07",
    "gap_pct": 11.04,
    "vol_mult": 3.88,
-   "sector": "Consumer Cyclical",
-   "selected": false,
-   "rank": null,
-   "excluded": null,
-   "shadow_reason": "同族群已有更高排名",
-   "next_earnings": "2026-11-09"
-  },
-  {
-   "ticker": "FLR",
-   "e_date": "2026-08-07",
-   "gap_pct": 11.84,
-   "vol_mult": 3.66,
-   "sector": "Industrials",
+   "sector": null,
    "selected": true,
    "rank": 2,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-11-06"
+   "shadow_reason": null
+  },
+  {
+   "ticker": "CORT",
+   "template": "B",
+   "e_date": "2026-07-30",
+   "signal_date": "2026-08-10",
+   "gap_pct": 20.49,
+   "vol_mult": 3.85,
+   "sector": null,
+   "selected": true,
+   "rank": 1,
+   "excluded": null,
+   "shadow_reason": null
   },
   {
    "ticker": "SMCI",
+   "template": "A",
    "e_date": "2026-08-12",
+   "signal_date": "2026-08-12",
    "gap_pct": 10.73,
    "vol_mult": 3.37,
-   "sector": "Technology",
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "CART",
+   "template": "B",
+   "e_date": "2026-08-07",
+   "signal_date": "2026-08-13",
+   "gap_pct": 11.04,
+   "vol_mult": 3.88,
+   "sector": null,
    "selected": true,
    "rank": 1,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-11-03"
+   "shadow_reason": null
+  },
+  {
+   "ticker": "MOD",
+   "template": "B",
+   "e_date": "2026-07-30",
+   "signal_date": "2026-08-14",
+   "gap_pct": 8.57,
+   "vol_mult": 3.64,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "SITM",
+   "template": "B",
+   "e_date": "2026-08-06",
+   "signal_date": "2026-08-14",
+   "gap_pct": 26.1,
+   "vol_mult": 3.24,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
    "ticker": "EL",
+   "template": "A",
    "e_date": "2026-08-19",
+   "signal_date": "2026-08-19",
    "gap_pct": 11.24,
    "vol_mult": 5.79,
-   "sector": "Consumer Defensive",
+   "sector": null,
    "selected": true,
    "rank": 1,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-11-02"
+   "shadow_reason": null
   },
   {
    "ticker": "MRK",
+   "template": "A",
    "e_date": "2026-08-19",
+   "signal_date": "2026-08-19",
    "gap_pct": 8.71,
    "vol_mult": 3.9,
-   "sector": "Healthcare",
+   "sector": null,
    "selected": true,
    "rank": 2,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-10-29"
+   "shadow_reason": null
   },
   {
    "ticker": "MRNA",
+   "template": "A",
    "e_date": "2026-08-19",
+   "signal_date": "2026-08-19",
    "gap_pct": 84.28,
    "vol_mult": 37.11,
    "sector": null,
    "selected": null,
    "rank": null,
    "excluded": "X3 停損距離超過 12%",
-   "shadow_reason": null,
-   "next_earnings": null
+   "shadow_reason": null
+  },
+  {
+   "ticker": "TEM",
+   "template": "A",
+   "e_date": "2026-08-19",
+   "signal_date": "2026-08-19",
+   "gap_pct": 13.41,
+   "vol_mult": 4.82,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "EL",
+   "template": "B",
+   "e_date": "2026-08-19",
+   "signal_date": "2026-08-24",
+   "gap_pct": 11.24,
+   "vol_mult": 5.79,
+   "sector": null,
+   "selected": true,
+   "rank": 1,
+   "excluded": null,
+   "shadow_reason": null
+  },
+  {
+   "ticker": "SMCI",
+   "template": "B",
+   "e_date": "2026-08-12",
+   "signal_date": "2026-08-25",
+   "gap_pct": 10.73,
+   "vol_mult": 3.37,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "MRK",
+   "template": "B",
+   "e_date": "2026-08-19",
+   "signal_date": "2026-08-25",
+   "gap_pct": 8.71,
+   "vol_mult": 3.9,
+   "sector": null,
+   "selected": true,
+   "rank": 1,
+   "excluded": null,
+   "shadow_reason": null
+  },
+  {
+   "ticker": "MRNA",
+   "template": "B",
+   "e_date": "2026-08-19",
+   "signal_date": "2026-08-25",
+   "gap_pct": 84.28,
+   "vol_mult": 37.11,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
    "ticker": "ANF",
+   "template": "A",
    "e_date": "2026-08-26",
+   "signal_date": "2026-08-26",
    "gap_pct": 20.63,
    "vol_mult": 16.35,
    "sector": null,
    "selected": null,
    "rank": null,
    "excluded": "X3 停損距離超過 12%",
-   "shadow_reason": null,
-   "next_earnings": null
+   "shadow_reason": null
   },
   {
    "ticker": "CRM",
+   "template": "A",
    "e_date": "2026-08-27",
+   "signal_date": "2026-08-27",
    "gap_pct": 11.88,
    "vol_mult": 4.67,
-   "sector": "Technology",
-   "selected": false,
+   "sector": null,
+   "selected": null,
    "rank": null,
-   "excluded": null,
-   "shadow_reason": "同族群已有更高排名",
-   "next_earnings": "2026-12-02"
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
-   "ticker": "OKTA",
-   "e_date": "2026-08-27",
-   "gap_pct": 23.61,
-   "vol_mult": 5.85,
-   "sector": "Technology",
-   "selected": true,
-   "rank": 1,
-   "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-12-01"
+   "ticker": "CACI",
+   "template": "B",
+   "e_date": "2026-08-06",
+   "signal_date": "2026-08-27",
+   "gap_pct": 6.66,
+   "vol_mult": 3.41,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
   },
   {
    "ticker": "DELL",
+   "template": "A",
    "e_date": "2026-09-02",
+   "signal_date": "2026-09-02",
    "gap_pct": 8.72,
    "vol_mult": 6.3,
    "sector": null,
    "selected": null,
    "rank": null,
    "excluded": "X3 停損距離超過 12%",
-   "shadow_reason": null,
-   "next_earnings": null
+   "shadow_reason": null
+  },
+  {
+   "ticker": "ANF",
+   "template": "B",
+   "e_date": "2026-08-26",
+   "signal_date": "2026-09-03",
+   "gap_pct": 20.63,
+   "vol_mult": 16.35,
+   "sector": null,
+   "selected": true,
+   "rank": 1,
+   "excluded": null,
+   "shadow_reason": null
   },
   {
    "ticker": "ROIV",
+   "template": "A",
    "e_date": "2026-09-08",
+   "signal_date": "2026-09-08",
    "gap_pct": 14.46,
    "vol_mult": 3.25,
-   "sector": "Healthcare",
+   "sector": null,
    "selected": true,
    "rank": 1,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-11-09"
+   "shadow_reason": null
   },
   {
-   "ticker": "WBD",
-   "e_date": "2026-09-21",
-   "gap_pct": 7.05,
-   "vol_mult": 12.51,
-   "sector": "Communication Services",
+   "ticker": "ASO",
+   "template": "A",
+   "e_date": "2026-09-09",
+   "signal_date": "2026-09-09",
+   "gap_pct": 6.78,
+   "vol_mult": 3.25,
+   "sector": null,
    "selected": true,
    "rank": 1,
    "excluded": null,
-   "shadow_reason": null,
-   "next_earnings": "2026-11-05"
+   "shadow_reason": null
+  },
+  {
+   "ticker": "TEM",
+   "template": "B",
+   "e_date": "2026-08-19",
+   "signal_date": "2026-09-14",
+   "gap_pct": 13.41,
+   "vol_mult": 4.82,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "CRM",
+   "template": "B",
+   "e_date": "2026-08-27",
+   "signal_date": "2026-09-14",
+   "gap_pct": 11.88,
+   "vol_mult": 4.67,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "ARM",
+   "template": "A",
+   "e_date": "2026-09-21",
+   "signal_date": "2026-09-21",
+   "gap_pct": 6.8,
+   "vol_mult": 3.19,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "GRAL",
+   "template": "A",
+   "e_date": "2026-09-21",
+   "signal_date": "2026-09-21",
+   "gap_pct": 16.06,
+   "vol_mult": 4.14,
+   "sector": null,
+   "selected": null,
+   "rank": null,
+   "excluded": "X3 停損距離超過 12%",
+   "shadow_reason": null
+  },
+  {
+   "ticker": "ASO",
+   "template": "B",
+   "e_date": "2026-09-09",
+   "signal_date": "2026-09-22",
+   "gap_pct": 6.78,
+   "vol_mult": 3.25,
+   "sector": null,
+   "selected": true,
+   "rank": 1,
+   "excluded": null,
+   "shadow_reason": null
   }
  ],
  "by_day": [
@@ -1232,720 +2017,960 @@
    "date": "2026-04-07",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-04-08",
-   "passed": 0,
+   "passed": 1,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-04-09",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-04-10",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-04-13",
-   "passed": 0,
-   "selected": 0,
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-04-14",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-04-15",
-   "passed": 0,
+   "passed": 2,
    "selected": 0,
-   "short_watch": 1
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
   },
   {
    "date": "2026-04-16",
    "passed": 1,
-   "selected": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-04-17",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-04-20",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-04-21",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-04-22",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-04-23",
-   "passed": 4,
-   "selected": 3,
-   "short_watch": 3
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
   },
   {
    "date": "2026-04-24",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-04-27",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-04-28",
-   "passed": 0,
+   "passed": 1,
    "selected": 0,
-   "short_watch": 1
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
   },
   {
    "date": "2026-04-29",
-   "passed": 3,
-   "selected": 3,
-   "short_watch": 2
+   "passed": 5,
+   "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 1
   },
   {
    "date": "2026-04-30",
-   "passed": 2,
-   "selected": 2,
-   "short_watch": 3
+   "passed": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
   },
   {
    "date": "2026-05-01",
-   "passed": 1,
+   "passed": 2,
    "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
    "short_watch": 1
   },
   {
    "date": "2026-05-04",
-   "passed": 0,
+   "passed": 1,
    "selected": 0,
-   "short_watch": 2
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
   },
   {
    "date": "2026-05-05",
    "passed": 2,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-05-06",
    "passed": 4,
-   "selected": 2,
-   "short_watch": 2
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 6
   },
   {
    "date": "2026-05-07",
-   "passed": 2,
-   "selected": 2,
-   "short_watch": 1
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
   },
   {
    "date": "2026-05-08",
-   "passed": 2,
+   "passed": 6,
    "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
    "short_watch": 2
   },
   {
    "date": "2026-05-11",
-   "passed": 0,
+   "passed": 1,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-05-12",
-   "passed": 1,
+   "passed": 2,
    "selected": 1,
-   "short_watch": 0
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
   },
   {
    "date": "2026-05-13",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-05-14",
-   "passed": 0,
-   "selected": 0,
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
    "short_watch": 0
   },
   {
    "date": "2026-05-15",
-   "passed": 0,
+   "passed": 1,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-05-18",
    "passed": 1,
    "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-05-19",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-05-20",
-   "passed": 0,
-   "selected": 0,
-   "short_watch": 1
+   "passed": 2,
+   "selected": 2,
+   "selected_A": 0,
+   "selected_B": 2,
+   "short_watch": 0
   },
   {
    "date": "2026-05-21",
-   "passed": 1,
-   "selected": 1,
+   "passed": 6,
+   "selected": 3,
+   "selected_A": 1,
+   "selected_B": 2,
    "short_watch": 0
   },
   {
    "date": "2026-05-22",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-05-26",
-   "passed": 0,
-   "selected": 0,
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
    "short_watch": 0
   },
   {
    "date": "2026-05-27",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 1
   },
   {
    "date": "2026-05-28",
-   "passed": 3,
+   "passed": 4,
    "selected": 3,
+   "selected_A": 3,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-05-29",
-   "passed": 1,
+   "passed": 0,
    "selected": 0,
-   "short_watch": 0
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 2
   },
   {
    "date": "2026-06-01",
    "passed": 1,
    "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-06-02",
-   "passed": 1,
+   "passed": 0,
    "selected": 0,
-   "short_watch": 0
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 4
   },
   {
    "date": "2026-06-03",
-   "passed": 0,
+   "passed": 1,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-06-04",
-   "passed": 0,
-   "selected": 0,
-   "short_watch": 1
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
   },
   {
    "date": "2026-06-05",
    "passed": 1,
    "selected": 1,
-   "short_watch": 0
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
   },
   {
    "date": "2026-06-08",
-   "passed": 0,
-   "selected": 0,
+   "passed": 2,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
    "short_watch": 0
   },
   {
    "date": "2026-06-09",
-   "passed": 0,
-   "selected": 0,
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
    "short_watch": 0
   },
   {
    "date": "2026-06-10",
    "passed": 1,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 1
   },
   {
    "date": "2026-06-11",
-   "passed": 0,
+   "passed": 1,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-06-12",
-   "passed": 0,
+   "passed": 1,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-06-15",
-   "passed": 0,
+   "passed": 1,
    "selected": 0,
-   "short_watch": 2
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
   },
   {
    "date": "2026-06-16",
-   "passed": 0,
+   "passed": 1,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-06-17",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-06-18",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 2
   },
   {
    "date": "2026-06-22",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-06-23",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-06-24",
-   "passed": 1,
+   "passed": 2,
    "selected": 1,
-   "short_watch": 0
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 1
   },
   {
    "date": "2026-06-25",
-   "passed": 1,
+   "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-06-26",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 2
   },
   {
    "date": "2026-06-29",
-   "passed": 1,
-   "selected": 1,
+   "passed": 3,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-06-30",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-07-01",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-07-02",
-   "passed": 0,
+   "passed": 1,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-07-06",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 1
   },
   {
    "date": "2026-07-07",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-07-08",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-07-09",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-07-10",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-07-13",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-07-14",
    "passed": 0,
    "selected": 0,
-   "short_watch": 1
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
   },
   {
    "date": "2026-07-15",
-   "passed": 1,
+   "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-07-16",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-07-17",
    "passed": 0,
    "selected": 0,
-   "short_watch": 1
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
   },
   {
    "date": "2026-07-20",
    "passed": 0,
    "selected": 0,
-   "short_watch": 0
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
   },
   {
    "date": "2026-07-21",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-07-22",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-07-23",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 1
   },
   {
    "date": "2026-07-24",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-07-27",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-07-28",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 3
   },
   {
    "date": "2026-07-29",
-   "passed": 2,
+   "passed": 1,
    "selected": 1,
-   "short_watch": 4
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 0
   },
   {
    "date": "2026-07-30",
    "passed": 2,
-   "selected": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 3
   },
   {
    "date": "2026-07-31",
    "passed": 1,
    "selected": 1,
-   "short_watch": 3
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 1
   },
   {
    "date": "2026-08-03",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 1
   },
   {
    "date": "2026-08-04",
-   "passed": 2,
-   "selected": 1,
+   "passed": 0,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 2
   },
   {
    "date": "2026-08-05",
    "passed": 0,
    "selected": 0,
-   "short_watch": 2
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 3
   },
   {
    "date": "2026-08-06",
    "passed": 2,
-   "selected": 1,
-   "short_watch": 4
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 5
   },
   {
    "date": "2026-08-07",
-   "passed": 3,
+   "passed": 2,
    "selected": 2,
-   "short_watch": 1
+   "selected_A": 2,
+   "selected_B": 0,
+   "short_watch": 2
   },
   {
    "date": "2026-08-10",
-   "passed": 0,
-   "selected": 0,
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
    "short_watch": 0
   },
   {
    "date": "2026-08-11",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-08-12",
    "passed": 1,
-   "selected": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-08-13",
-   "passed": 0,
-   "selected": 0,
-   "short_watch": 1
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
+   "short_watch": 0
   },
   {
    "date": "2026-08-14",
-   "passed": 0,
+   "passed": 2,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-08-17",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-08-18",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 1
   },
   {
    "date": "2026-08-19",
-   "passed": 3,
+   "passed": 4,
    "selected": 2,
+   "selected_A": 2,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-08-20",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 2
   },
   {
    "date": "2026-08-21",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-08-24",
-   "passed": 0,
-   "selected": 0,
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
    "short_watch": 0
   },
   {
    "date": "2026-08-25",
-   "passed": 0,
-   "selected": 0,
+   "passed": 3,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
    "short_watch": 1
   },
   {
    "date": "2026-08-26",
    "passed": 1,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 1
   },
   {
    "date": "2026-08-27",
    "passed": 2,
-   "selected": 1,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-08-28",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-08-31",
    "passed": 0,
    "selected": 0,
-   "short_watch": 2
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
   },
   {
    "date": "2026-09-01",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-09-02",
    "passed": 1,
    "selected": 0,
-   "short_watch": 0
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
   },
   {
    "date": "2026-09-03",
-   "passed": 0,
-   "selected": 0,
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
    "short_watch": 0
   },
   {
    "date": "2026-09-04",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-09-08",
    "passed": 1,
    "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
    "short_watch": 2
   },
   {
    "date": "2026-09-09",
-   "passed": 0,
-   "selected": 0,
-   "short_watch": 1
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 1,
+   "selected_B": 0,
+   "short_watch": 2
   },
   {
    "date": "2026-09-10",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-09-11",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-09-14",
-   "passed": 0,
+   "passed": 2,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-09-15",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-09-16",
    "passed": 0,
    "selected": 0,
-   "short_watch": 1
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 0
   },
   {
    "date": "2026-09-17",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-09-18",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-09-21",
-   "passed": 1,
-   "selected": 1,
-   "short_watch": 0
+   "passed": 2,
+   "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
+   "short_watch": 1
   },
   {
    "date": "2026-09-22",
-   "passed": 0,
-   "selected": 0,
+   "passed": 1,
+   "selected": 1,
+   "selected_A": 0,
+   "selected_B": 1,
    "short_watch": 0
   },
   {
    "date": "2026-09-23",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   },
   {
    "date": "2026-09-24",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 1
   },
   {
    "date": "2026-09-25",
    "passed": 0,
    "selected": 0,
+   "selected_A": 0,
+   "selected_B": 0,
    "short_watch": 0
   }
  ]
