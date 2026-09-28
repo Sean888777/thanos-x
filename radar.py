@@ -423,6 +423,7 @@ def candidates_b(event_pool, frames, session):
         sc = float(closes.iloc[-1])
         lv, dist = entry_levels(sc, a, ev["e_low"], CFG["limit_atr_b"])
         c = {k2: ev[k2] for k2 in ("ticker", "e_date", "gap_pct", "vol_mult", "e_high", "e_low", "e_close")}
+        c.update({k2: ev[k2] for k2 in ("adv", "tier", "half_spread") if k2 in ev})
         c.update(template="B", signal_date=str(session), side="long", days_after_event=k,
                  s_close=r(sc), atr14=r(a), **lv)
         if dist > CFG["stop_max_pct"]:
@@ -432,7 +433,7 @@ def candidates_b(event_pool, frames, session):
     return out
 
 
-def rank_candidates(cands, reg, session, implied_store=None):
+def rank_candidates(cands, reg, session, implied_store=None, enrich_on=True):
     size = 0.5 if (not reg["spy_above_ma50"] or reg["vix_level"] == "half") else 1.0
     blocked = reg["vix_level"] == "stop"
     for c in cands:
@@ -440,7 +441,7 @@ def rank_candidates(cands, reg, session, implied_store=None):
             tag_surprise(c, implied_store)
         if c.get("excluded"):
             continue
-        c.update(enrich(c["ticker"], session))
+        c.update(enrich(c["ticker"], session) if enrich_on else {"sector": None, "next_earnings": None})
         flags = ["請手動確認：非現金併購標的"]
         if c.get("next_earnings"):
             if tdays_after(session, c["next_earnings"]) <= CFG["earn_exclude_days"]:
@@ -504,6 +505,7 @@ def simulate(c, d, chase=False, no_stall=False, exit_mode="base"):
     risk = entry - stop
     unit = risk + CFG["buffer_atr"] * c["atr14"]
     t1 = entry + CFG["t1_r"] * risk
+    cost = CFG["fee"] + c.get("half_spread", 0.0)   # 每邊成本：手續費＋估計半價差
     ma = d["Close"].rolling(CFG["trail_ma"]).mean()
     rem, t1_hit, cur_stop, pending, trail_on = 1.0, False, stop, None, False
     fills, t1_date, exit_i = [], None, None
@@ -540,8 +542,9 @@ def simulate(c, d, chase=False, no_stall=False, exit_mode="base"):
         elif (t1_hit or trail_on) and pd.notna(ma.loc[day]) and close < float(ma.loc[day]):
             pending = (rem, "E3 跌破 10 日均線")
     gross = sum(f["frac"] * (f["price"] - entry) for f in fills) / unit
-    fees = sum(f["frac"] * CFG["fee"] * (f["price"] + entry) for f in fills) / unit
+    fees = sum(f["frac"] * cost * (f["price"] + entry) for f in fills) / unit
     res = {"entry_date": entry_date, "entry": r(entry), "stop": r(stop), "t1": r(t1), "unit": r(unit),
+           "cost_side": r(cost, 5),
            "fills": fills, "t1_date": t1_date, "realized_r": r(gross - fees, 3)}
     if rem <= 1e-9:
         res.update(status="closed", exit_date=fills[-1]["date"], pnl_r=res["realized_r"],
@@ -596,13 +599,14 @@ def equity_curve(filled, frames, sessions):
         by_day = {}
         for f in b.get("fills", []):
             by_day.setdefault(pd.Timestamp(f["date"]), []).append(f)
+        cost = b.get("cost_side", CFG["fee"])
         if ed in pnl.index:
-            pnl[ed] -= size * CFG["fee"] * entry / unit
+            pnl[ed] -= size * cost * entry / unit
         rem, prev = 1.0, entry
         for day, row in d[(d.index >= ed) & (d.index <= last)].iterrows():
             for f in by_day.get(day, []):
                 if day in pnl.index:
-                    pnl[day] += size * f["frac"] * ((f["price"] - prev) - CFG["fee"] * f["price"]) / unit
+                    pnl[day] += size * f["frac"] * ((f["price"] - prev) - cost * f["price"]) / unit
                 rem -= f["frac"]
             if rem <= 1e-9:
                 break
@@ -619,22 +623,22 @@ def max_drawdown(daily):
     return r(float((curve / curve.cummax() - 1).min()) * 100, 2)
 
 
-def benchmark(filled, frames, sessions):
-    """同樣的資金、同樣的平均曝險，放在 SPY（其餘放現金）會怎樣。"""
-    if not len(sessions) or "SPY" not in frames:
+def benchmark(filled, frames, sessions, index="SPY"):
+    """同樣的資金、同樣的平均曝險，放在指數（預設 SPY，其餘放現金）會怎樣。"""
+    if not len(sessions) or index not in frames:
         return None
     idx = pd.DatetimeIndex(sessions)
     pnl, expo = equity_curve(filled, frames, idx)
     cap, cash_d = CFG["capital_r"], CFG["cash_rate"] / 252
     exposure = (expo / cap).clip(upper=1.0)
     held = exposure.shift(1).fillna(0.0)                     # 前一日收盤的曝險，承擔今日漲跌
-    spy_ret = frames["SPY"]["Close"].pct_change().reindex(idx).fillna(0.0)
+    spy_ret = frames[index]["Close"].pct_change().reindex(idx).fillna(0.0)
     trade = pnl / cap                                        # 交易損益（佔資金比例）
     system = trade + (1 - held) * cash_d                     # 交易損益＋閒置現金利息
     matched = held * spy_ret + (1 - held) * cash_d           # 同曝險大盤＋閒置現金
     comp = lambda x: r(float((1 + x).prod() - 1) * 100, 2)
     out = {
-        "range": [str(idx[0].date()), str(idx[-1].date())], "sessions": len(idx),
+        "index": index, "range": [str(idx[0].date()), str(idx[-1].date())], "sessions": len(idx),
         "assumed_cash_rate_pct": CFG["cash_rate"] * 100,
         "avg_exposure_pct": r(float(exposure.mean()) * 100, 1),
         "max_exposure_pct": r(float(exposure.max()) * 100, 1),
@@ -728,8 +732,9 @@ def run_paper(hist, frames, sessions=None):
         first = min(pd.Timestamp(b["entry_date"]) for b in filled)
         sessions = frames["SPY"].index[frames["SPY"].index >= first]
     bench = benchmark(filled, frames, sessions) if sessions is not None else None
+    bench_iwm = benchmark(filled, frames, sessions, "IWM") if sessions is not None and "IWM" in frames else None
     return {
-        "benchmark": bench,
+        "benchmark": bench, "benchmark_iwm": bench_iwm,
         "system": {"stats": stats(book), "filled_trades": len(filled), "peak": peak, "skip_reasons": skips,
                    "open": [b for b in book if b["status"] == "open"],
                    "recent_closed": [b for b in book if b["status"] == "closed"][-20:]},
@@ -831,6 +836,163 @@ def backfill(n_days):
 
 
 # ------------------------------------------------------------------
+# 樣本外測試：放寬流動性、分層、估計價差成本；判準在執行前寫死，結果自動判定
+# ------------------------------------------------------------------
+OOS = {
+    "price_min": 5.0,        # 事件當日股價 ≥ 5 美元（排除仙股）
+    "adv_floor": 2e6,        # 事件前 20 日均成交額 ≥ 200 萬美元
+    "screen_price": 3.0,     # 目前仍掛牌且股價 ≥ 3、日均成交額 ≥ 100 萬者納入下載
+    "screen_adv": 1e6,
+    "spread_cap": 0.03,      # 估計價差上限 3%
+    "min_tier_trades": 30,   # 每一層至少 30 筆才算有結論
+}
+TIERS = [("T1", "日均成交 ≥ 5,000 萬", 50e6, float("inf")),
+         ("T2", "1,000 萬–5,000 萬", 10e6, 50e6),
+         ("T3", "200 萬–1,000 萬", 2e6, 10e6)]
+
+
+def tier_of(adv):
+    for code, _, lo, hi in TIERS:
+        if lo <= adv < hi:
+            return code
+    return None
+
+
+def cs_half_spread(high, low):
+    """Corwin–Schultz 價差估計（用日高低價），回傳半價差。"""
+    import numpy as np
+    k = 3 - 2 * np.sqrt(2)
+    hl = np.log(high / low)
+    beta = hl[:-1] ** 2 + hl[1:] ** 2
+    gamma = np.log(np.maximum(high[:-1], high[1:]) / np.minimum(low[:-1], low[1:])) ** 2
+    alpha = (np.sqrt(2 * beta) - np.sqrt(beta)) / k - np.sqrt(gamma / k)
+    spread = np.clip(2 * (np.exp(alpha) - 1) / (1 + np.exp(alpha)), 0, None)
+    val = float(np.nanmean(spread)) if len(spread) else 0.0
+    return min(val, OOS["spread_cap"]) / 2
+
+
+def detect_events(t, d, start, end):
+    """向量化偵測整段期間的做多事件（條件與 scan_events 相同，流動性門檻改用 OOS）。"""
+    pc = d["Close"].shift(1)
+    avgv = d["Volume"].shift(1).rolling(20).mean()
+    dv = (d["Close"] * d["Volume"]).shift(1).rolling(20).mean()
+    rng = d["High"] - d["Low"]
+    gap, vm = d["Open"] / pc - 1, d["Volume"] / avgv
+    pos, hold = (d["Close"] - d["Low"]) / rng, d["Close"] / pc - 1
+    atr = atr_series(d)
+    split = (d["Stock Splits"].fillna(0) != 0) if "Stock Splits" in d.columns else pd.Series(False, index=d.index)
+    base = (d.index >= start) & (d.index <= end) & (rng > 0) & (pc > 0) & (avgv > 0) & (atr > 0) & ~split \
+        & (d["Close"] >= OOS["price_min"]) & (dv >= OOS["adv_floor"]) & (vm >= CFG["vol_mult"])
+    longm = base & (gap >= CFG["gap_min"]) & (pos >= CFG["close_pos_min"]) & (hold >= CFG["gap_hold_min"])
+    shortm = base & (gap <= -CFG["gap_min"]) & ((1 - pos) >= CFG["close_pos_min"]) & (hold <= -CFG["gap_hold_min"])
+    H, L = d["High"].to_numpy(), d["Low"].to_numpy()
+    events = []
+    for ts in d.index[longm.fillna(False).to_numpy()]:
+        i = d.index.get_loc(ts)
+        if i < 22:
+            continue
+        o, h, l, c = (float(d[k].iloc[i]) for k in ("Open", "High", "Low", "Close"))
+        ev = {"ticker": t, "e_date": str(ts.date()), "gap_pct": r(gap.iloc[i] * 100, 2), "vol_mult": r(vm.iloc[i], 2),
+              "close_pos": r(pos.iloc[i], 2), "hold_pct": r(hold.iloc[i] * 100, 2), "e_open": r(o), "e_high": r(h),
+              "e_low": r(l), "e_close": r(c), "atr14": r(atr.iloc[i]), "range_pct": r((h - l) / c * 100, 2),
+              "adv": r(dv.iloc[i], 0), "tier": tier_of(float(dv.iloc[i])),
+              "half_spread": r(cs_half_spread(H[i - 21:i], L[i - 21:i]), 5)}
+        if gap.iloc[i] >= 0.08 and (h - l) / c < 0.015:
+            ev["x1"] = True
+        events.append(ev)
+    shorts = [str(x.date()) for x in d.index[shortm.fillna(False).to_numpy()]]
+    return events, shorts
+
+
+def broad_universe():
+    syms = listed_symbols() | index_symbols()
+    frames = download(sorted(syms), period="1mo", min_rows=15, pause=1.0)
+    keep = []
+    for t, d in frames.items():
+        tail = d.iloc[-20:]
+        if float(tail["Close"].iloc[-1]) >= OOS["screen_price"] and \
+                float((tail["Close"] * tail["Volume"]).mean()) >= OOS["screen_adv"]:
+            keep.append(t)
+    print(f"樣本外掃描範圍：上市 {len(syms)} → 目前股價 ≥ {OOS['screen_price']:.0f}、日均成交 ≥ 100 萬 {len(keep)} 檔")
+    return sorted(keep)
+
+
+def oos(start, end):
+    """樣本外測試。判準（2026-09-28 執行前寫死）：
+    一、系統帳扣除手續費與估計價差後，同時贏過「同曝險 SPY」與「同曝險 IWM」，且平均 R > 0。
+    二、流動性假設要成立：T2、T3 兩層的平均 R 都要高於 T1；任一層不足 30 筆視為不成立。
+    兩條都過 → 進紙上階段；任一條不過 → Thanos X 停止。"""
+    os.makedirs(DATA, exist_ok=True)
+    universe = broad_universe()
+    frames = download(sorted(set(universe) | {"SPY", "^VIX", "IWM"}), period="5y", pause=0.5)
+    s_ts, e_ts = pd.Timestamp(start), pd.Timestamp(end)
+    ev_by_day, short_count = {}, {}
+    for t, d in frames.items():
+        if t in ("SPY", "^VIX", "IWM"):
+            continue
+        evs, sh = detect_events(t, d, s_ts, e_ts)
+        for ev in evs:
+            ev_by_day.setdefault(ev["e_date"], []).append(ev)
+        for x in sh:
+            short_count[x] = short_count.get(x, 0) + 1
+    spy_idx = frames["SPY"].index
+    sessions = spy_idx[(spy_idx >= s_ts) & (spy_idx <= e_ts)]
+    print(f"樣本外測試：{len(universe)} 檔 × {len(sessions)} 個交易日，事件 {sum(len(v) for v in ev_by_day.values())} 個")
+    hist = {"events": [], "candidates": []}
+    by_day = []
+    for ts in sessions:
+        day = ts.date()
+        todays = ev_by_day.get(str(day), [])
+        active = {e["ticker"] for e in hist["events"] if not e.get("b_state") and not e.get("x1")}
+        sub = {t: frames[t][frames[t].index <= ts] for t in active if t in frames}
+        cands = candidates_a(todays) + candidates_b(hist["events"], sub, day)
+        cands = rank_candidates(cands, regime(frames, ts), day, enrich_on=False)
+        hist["events"].extend(todays)
+        cutoff = ts - pd.Timedelta(days=45)
+        hist["events"] = [e for e in hist["events"] if pd.Timestamp(e["e_date"]) >= cutoff]
+        hist["candidates"].extend(cands)
+        by_day.append({"date": str(day), "passed": len(cands),
+                       "selected": sum(1 for c in cands if c.get("selected")),
+                       "selected_A": sum(1 for c in cands if c.get("selected") and c["template"] == "A"),
+                       "selected_B": sum(1 for c in cands if c.get("selected") and c["template"] == "B"),
+                       "short_watch": short_count.get(str(day), 0)})
+    paper = run_paper(hist, frames, sessions)
+    sel = [c for c in hist["candidates"] if c.get("selected") and not c.get("excluded")]
+    by_tier, spread_tier = {}, {}
+    for code, label, _, _ in TIERS:
+        cs = [c for c in sel if c.get("tier") == code]
+        by_tier[code] = dict(label=label, **stats([simulate(c, frames[c["ticker"]]) for c in cs if c["ticker"] in frames]))
+        by_tier[code]["A"] = stats([simulate(c, frames[c["ticker"]]) for c in cs if c["template"] == "A" and c["ticker"] in frames])
+        by_tier[code]["B"] = stats([simulate(c, frames[c["ticker"]]) for c in cs if c["template"] == "B" and c["ticker"] in frames])
+        spread_tier[code] = r(sum(c.get("half_spread", 0) for c in cs) / len(cs) * 200, 3) if cs else None
+    bm, bmi, st = paper["benchmark"], paper.get("benchmark_iwm"), paper["system"]["stats"]
+    c1 = bool(bm and bmi and bm["beats_matched"] and bmi["beats_matched"] and (st.get("avg_r") or -9) > 0)
+    t1, t2, t3 = (by_tier[k] for k in ("T1", "T2", "T3"))
+    enough = all(x["closed"] >= OOS["min_tier_trades"] for x in (t1, t2, t3))
+    c2 = bool(enough and t2["avg_r"] > t1["avg_r"] and t3["avg_r"] > t1["avg_r"])
+    out = {
+        "version": "oos-0.1", "status": "ok", "generated_at": now_utc(),
+        "range": [str(sessions[0].date()), str(sessions[-1].date())],
+        "warning": ("倖存者偏差：只能用今日仍掛牌的股票回看過去，已下市的失敗案例不在樣本中，"
+                    "小型股受影響最大，結果偏樂觀。價差為 Corwin–Schultz 估計值。"
+                    "未套用族群與財報日排除（免費資料無法取得完整歷史）。"),
+        "criteria": {
+            "c1": "系統帳（含手續費與估計價差）同時贏過同曝險 SPY 與同曝險 IWM，且平均 R > 0",
+            "c2": "T2、T3 兩層平均 R 皆高於 T1；任一層少於 30 筆視為不成立",
+            "rule": "兩條都過 → 進紙上階段；任一條不過 → Thanos X 停止",
+        },
+        "verdict": {"c1_pass": c1, "c2_pass": c2, "tier_sample_enough": enough,
+                    "result": "通過：進入紙上階段" if (c1 and c2) else "未通過：Thanos X 停止"},
+        "universe_size": len(universe), "coverage": dict(COVERAGE), "oos_config": OOS,
+        "frequency": frequency(paper["system"]["filled_trades"], by_day, len(sessions)),
+        "by_tier": by_tier, "avg_est_spread_pct_by_tier": spread_tier,
+        "paper": paper, "by_day": by_day,
+    }
+    save_json(P("oos.json"), out)
+    print(f"判定：{out['verdict']['result']}（判準一 {c1}、判準二 {c2}）")
+
+
+# ------------------------------------------------------------------
 def main():
     os.makedirs(DATA, exist_ok=True)
     hist = load_json(P("history.json"), {})
@@ -878,6 +1040,9 @@ def main():
 
 
 if __name__ == "__main__":
+    if len(sys.argv) >= 4 and sys.argv[1] == "--oos":
+        oos(sys.argv[2], sys.argv[3])
+        sys.exit(0)
     if len(sys.argv) >= 3 and sys.argv[1] == "--backfill":
         backfill(int(sys.argv[2]))
         sys.exit(0)
