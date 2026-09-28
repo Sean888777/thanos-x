@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Thanos X 雷達 v0.3.1
+Thanos X 雷達 v0.3.3
 ------------------
 每個美股交易日收盤後，由 GitHub Actions 自動執行：
   1. 掃描兩種進場模板
@@ -55,6 +55,7 @@ CFG = {
     "max_positions": None,    # 不限檔數（你的決定，2026-09-28）
     "max_open_risk_r": 40.0,  # M6 總開放風險上限 40R（你的決定）
     "capital_r": 200.0,       # 現金檢查：帳戶資金 ÷ R（複委託不能融資，買不起就不做）
+    "cash_rate": 0.04,        # 【假設】閒置現金年化報酬（短債／貨幣市場），用於大盤比較
     "vix_half": 25.0, "vix_stop": 35.0,
     "fee": 0.003,
     "pool_days": 75,          # 候選池保留天數（日曆日）
@@ -581,11 +582,78 @@ def notional_r(b, D):
     return b["size"] * b["entry"] / b["unit"] * half
 
 
+def equity_curve(filled, frames, sessions):
+    """系統帳逐日損益（以 R 計，含手續費，按收盤價逐日評價）與逐日持倉市值（以 R 計）。"""
+    idx = pd.DatetimeIndex(sessions)
+    pnl, expo = pd.Series(0.0, index=idx), pd.Series(0.0, index=idx)
+    for b in filled:
+        d = frames.get(b["ticker"])
+        if d is None:
+            continue
+        unit, entry, size = b["unit"], b["entry"], b["size"]
+        ed = pd.Timestamp(b["entry_date"])
+        last = pd.Timestamp(b["exit_date"]) if b["status"] == "closed" else d.index[-1]
+        by_day = {}
+        for f in b.get("fills", []):
+            by_day.setdefault(pd.Timestamp(f["date"]), []).append(f)
+        if ed in pnl.index:
+            pnl[ed] -= size * CFG["fee"] * entry / unit
+        rem, prev = 1.0, entry
+        for day, row in d[(d.index >= ed) & (d.index <= last)].iterrows():
+            for f in by_day.get(day, []):
+                if day in pnl.index:
+                    pnl[day] += size * f["frac"] * ((f["price"] - prev) - CFG["fee"] * f["price"]) / unit
+                rem -= f["frac"]
+            if rem <= 1e-9:
+                break
+            c = float(row["Close"])
+            if day in pnl.index:
+                pnl[day] += size * rem * (c - prev) / unit
+                expo[day] += size * rem * c / unit
+            prev = c
+    return pnl, expo
+
+
+def max_drawdown(daily):
+    curve = (1 + daily).cumprod()
+    return r(float((curve / curve.cummax() - 1).min()) * 100, 2)
+
+
+def benchmark(filled, frames, sessions):
+    """同樣的資金、同樣的平均曝險，放在 SPY（其餘放現金）會怎樣。"""
+    if not len(sessions) or "SPY" not in frames:
+        return None
+    idx = pd.DatetimeIndex(sessions)
+    pnl, expo = equity_curve(filled, frames, idx)
+    cap, cash_d = CFG["capital_r"], CFG["cash_rate"] / 252
+    exposure = (expo / cap).clip(upper=1.0)
+    held = exposure.shift(1).fillna(0.0)                     # 前一日收盤的曝險，承擔今日漲跌
+    spy_ret = frames["SPY"]["Close"].pct_change().reindex(idx).fillna(0.0)
+    trade = pnl / cap                                        # 交易損益（佔資金比例）
+    system = trade + (1 - held) * cash_d                     # 交易損益＋閒置現金利息
+    matched = held * spy_ret + (1 - held) * cash_d           # 同曝險大盤＋閒置現金
+    comp = lambda x: r(float((1 + x).prod() - 1) * 100, 2)
+    out = {
+        "range": [str(idx[0].date()), str(idx[-1].date())], "sessions": len(idx),
+        "assumed_cash_rate_pct": CFG["cash_rate"] * 100,
+        "avg_exposure_pct": r(float(exposure.mean()) * 100, 1),
+        "max_exposure_pct": r(float(exposure.max()) * 100, 1),
+        "system_pct": comp(system), "system_trading_only_pct": comp(trade),
+        "matched_benchmark_pct": comp(matched), "spy_buy_hold_pct": comp(spy_ret),
+        "cash_only_pct": comp(pd.Series(cash_d, index=idx)),
+        "max_drawdown_pct": {"system": max_drawdown(system), "matched": max_drawdown(matched),
+                             "spy": max_drawdown(spy_ret)},
+    }
+    out["excess_vs_matched_pct"] = r(out["system_pct"] - out["matched_benchmark_pct"], 2)
+    out["beats_matched"] = out["excess_vs_matched_pct"] > 0
+    return out
+
+
 def key(c):
     return (c["ticker"], c["template"], c["signal_date"])
 
 
-def run_paper(hist, frames):
+def run_paper(hist, frames, sessions=None):
     allc = hist["candidates"]
     elig = [c for c in allc if not c.get("excluded")]
     sims = {}
@@ -656,7 +724,12 @@ def run_paper(hist, frames):
     shadow_losers = [simulate(c, frames[c["ticker"]], exit_mode="losers_time") for c in sel if c["ticker"] in frames]
     # 預期波動標籤（只有往前累積的資料才會有）
     tagged = [c for c in sel_a if c.get("surprise_ratio") is not None]
+    if sessions is None and filled and "SPY" in frames:
+        first = min(pd.Timestamp(b["entry_date"]) for b in filled)
+        sessions = frames["SPY"].index[frames["SPY"].index >= first]
+    bench = benchmark(filled, frames, sessions) if sessions is not None else None
     return {
+        "benchmark": bench,
         "system": {"stats": stats(book), "filled_trades": len(filled), "peak": peak, "skip_reasons": skips,
                    "open": [b for b in book if b["status"] == "open"],
                    "recent_closed": [b for b in book if b["status"] == "closed"][-20:]},
@@ -736,9 +809,9 @@ def backfill(n_days):
                        "selected_A": sum(1 for c in cands if c.get("selected") and c["template"] == "A"),
                        "selected_B": sum(1 for c in cands if c.get("selected") and c["template"] == "B"),
                        "short_watch": len(shorts)})
-    paper = run_paper(hist, frames)
+    paper = run_paper(hist, frames, sessions)
     out = {
-        "version": "backfill-0.3.1", "status": "ok", "generated_at": now_utc(),
+        "version": "backfill-0.3.3", "status": "ok", "generated_at": now_utc(),
         "warning": ("倖存者偏差（用今日上市、今日流動性合格的股票回看過去）、樣本小；"
                     "且 v0.3 是看過 v0.2 回顧測試之後修改的，成績屬於樣本內，不具驗證力。"
                     "只用來確認雷達會動與候選頻率，不得作為跳過紙上階段或再次修改規則的依據。"),
@@ -786,7 +859,7 @@ def main():
 
     today = [c for c in hist["candidates"] if c["signal_date"] == str(session)]
     out = {
-        "version": "radar-0.3.1", "status": "ok", "generated_at": now_utc(),
+        "version": "radar-0.3.3", "status": "ok", "generated_at": now_utc(),
         "session": str(session), "universe_size": len(universe), "coverage": dict(COVERAGE),
         "config": CFG, "regime": reg,
         "today": {
