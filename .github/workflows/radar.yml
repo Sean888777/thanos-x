@@ -9,6 +9,10 @@ on:
         description: "回顧測試天數（例如 120）。留空＝一般每日執行"
         required: false
         default: ""
+      oos_range:
+        description: "樣本外測試區間（例如 2021-12-15 2026-03-31）。留空＝不執行"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -16,7 +20,7 @@ permissions:
 jobs:
   radar:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
 
@@ -29,7 +33,9 @@ jobs:
 
       - name: 執行雷達
         run: |
-          if [ -n "${{ github.event.inputs.backfill_days }}" ]; then
+          if [ -n "${{ github.event.inputs.oos_range }}" ]; then
+            python radar.py --oos ${{ github.event.inputs.oos_range }}
+          elif [ -n "${{ github.event.inputs.backfill_days }}" ]; then
             python radar.py --backfill "${{ github.event.inputs.backfill_days }}"
           else
             python radar.py
