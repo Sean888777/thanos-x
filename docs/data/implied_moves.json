@@ -1,0 +1,82 @@
+{
+ "MU|2026-09-30": {
+  "ticker": "MU",
+  "earnings_date": "2026-09-30",
+  "captured": "2026-09-28",
+  "expiry": "2026-10-02",
+  "spot": 1053.98,
+  "implied_move_pct": 7.92
+ },
+ "CCL|2026-09-29": {
+  "ticker": "CCL",
+  "earnings_date": "2026-09-29",
+  "captured": "2026-09-28",
+  "expiry": "2026-10-02",
+  "spot": 22.14,
+  "implied_move_pct": 7.09
+ },
+ "JBL|2026-09-30": {
+  "ticker": "JBL",
+  "earnings_date": "2026-09-30",
+  "captured": "2026-09-28",
+  "expiry": "2026-10-02",
+  "spot": 318.93,
+  "implied_move_pct": 8.34
+ },
+ "FDS|2026-09-30": {
+  "ticker": "FDS",
+  "earnings_date": "2026-09-30",
+  "captured": "2026-09-28",
+  "expiry": "2026-10-16",
+  "spot": 267.67,
+  "implied_move_pct": 10.2
+ },
+ "CAG|2026-09-30": {
+  "ticker": "CAG",
+  "earnings_date": "2026-09-30",
+  "captured": "2026-09-28",
+  "expiry": "2026-10-02",
+  "spot": 14.16,
+  "implied_move_pct": 5.47
+ },
+ "KMX|2026-09-29": {
+  "ticker": "KMX",
+  "earnings_date": "2026-09-29",
+  "captured": "2026-09-28",
+  "expiry": "2026-10-16",
+  "spot": 56.55,
+  "implied_move_pct": 13.0
+ },
+ "MTN|2026-09-28": {
+  "ticker": "MTN",
+  "earnings_date": "2026-09-28",
+  "captured": "2026-09-28",
+  "expiry": "2026-10-16",
+  "spot": 138.09,
+  "implied_move_pct": 9.7
+ },
+ "JEF|2026-09-28": {
+  "ticker": "JEF",
+  "earnings_date": "2026-09-28",
+  "captured": "2026-09-28",
+  "expiry": "2026-10-16",
+  "spot": 47.13,
+  "implied_move_pct": 9.65
+ },
+ "CALM|2026-09-30": {
+  "ticker": "CALM",
+  "earnings_date": "2026-09-30",
+  "captured": "2026-09-28",
+  "expiry": "2026-10-16",
+  "spot": 67.36,
+  "implied_move_pct": 7.09
+ },
+ "CNXC|2026-09-29": {
+  "ticker": "CNXC",
+  "earnings_date": "2026-09-29",
+  "captured": "2026-09-28",
+  "expiry": "2026-10-16",
+  "spot": 25.45,
+  "implied_move_pct": 18.86
+ }
+}

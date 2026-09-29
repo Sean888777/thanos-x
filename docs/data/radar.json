@@ -1,9 +1,14 @@
 {
- "version": "radar-0.1",
+ "version": "radar-0.3.3",
  "status": "ok",
- "generated_at": "2026-09-28T11:15:03+00:00",
- "session": "2026-09-25",
- "universe_size": 903,
+ "generated_at": "2026-09-29T01:39:59+00:00",
+ "session": "2026-09-28",
+ "universe_size": 1452,
+ "coverage": {
+  "requested": 1454,
+  "received": 1454,
+  "missing_sample": []
+ },
  "config": {
   "gap_min": 0.05,
   "vol_mult": 3.0,
@@ -11,29 +16,34 @@
   "gap_hold_min": 0.03,
   "price_min": 10.0,
   "dollar_vol_min": 50000000.0,
+  "limit_atr_a": 1.0,
+  "limit_atr_b": 0.5,
+  "b_min_days": 3,
+  "b_max_days": 20,
   "stop_min_pct": 0.04,
   "stop_max_pct": 0.12,
-  "limit_atr": 0.3,
   "buffer_atr": 0.5,
   "t1_r": 2.0,
   "trail_ma": 10,
-  "stall_days": 5,
-  "max_hold": 10,
+  "stall_days": 10,
+  "max_hold": 20,
   "earn_exit_days": 2,
   "earn_exclude_days": 10,
   "max_candidates": 3,
-  "max_positions": 3,
-  "max_open_risk_r": 3.0,
+  "max_positions": null,
+  "max_open_risk_r": 40.0,
+  "capital_r": 200.0,
+  "cash_rate": 0.04,
   "vix_half": 25.0,
   "vix_stop": 35.0,
   "fee": 0.003,
-  "pool_days": 45
+  "pool_days": 75
  },
  "regime": {
-  "spy_close": 771.35,
-  "spy_ma50": 761.57,
+  "spy_close": 765.61,
+  "spy_ma50": 762.01,
   "spy_above_ma50": true,
-  "vix": 16.35,
+  "vix": 16.07,
   "vix_level": "normal"
  },
  "today": {
@@ -44,6 +54,8 @@
  },
  "pool": {},
  "paper": {
+  "benchmark": null,
+  "benchmark_iwm": null,
   "system": {
    "stats": {
     "closed": 0,
@@ -51,10 +63,29 @@
     "no_fill": 0,
     "skipped_capacity": 0
    },
+   "filled_trades": 0,
+   "peak": {
+    "positions": 0,
+    "open_risk_r": 0.0,
+    "cash_used_pct": 0.0
+   },
+   "skip_reasons": {},
    "open": [],
    "recent_closed": []
   },
   "compare": {
+   "template_A": {
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   },
+   "template_B": {
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   },
    "selected": {
     "closed": 0,
     "open": 0,
@@ -62,6 +93,65 @@
     "skipped_capacity": 0
    },
    "not_selected": {
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   }
+  },
+  "shadow": {
+   "chase_no_fill": {
+    "note": "開盤高於限價、未成交者，若以開盤價追進",
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   },
+   "baseline_same_set": {
+    "note": "入選者照現行規則（與下一列比較用）",
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   },
+   "no_stall": {
+    "note": "同一批入選者，若不執行 E4 停滯出場",
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   },
+   "x3_excluded": {
+    "note": "因停損距離 > 12% 被排除者，若照做",
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   },
+   "target_only": {
+    "note": "2R 全數停利、取消持有期上限（大爺的提議）",
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   },
+   "losers_time": {
+    "note": "持有期滿只砍未達 +1R 者，其餘改 10 日均線移動停利（發財的版本）",
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   }
+  },
+  "surprise_tag": {
+   "note": "跳空 ÷ 財報前預期波動。只記錄、不過濾",
+   "within_expected": {
+    "closed": 0,
+    "open": 0,
+    "no_fill": 0,
+    "skipped_capacity": 0
+   },
+   "beyond_expected": {
     "closed": 0,
     "open": 0,
     "no_fill": 0,
