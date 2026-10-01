@@ -1,6 +1,71 @@
 {
- "last_session": "2026-09-28",
- "candidates": [],
- "short_watch": [],
- "events": []
+ "last_session": "2026-09-29",
+ "candidates": [
+  {
+   "ticker": "CCL",
+   "e_date": "2026-09-29",
+   "gap_pct": 10.16,
+   "vol_mult": 3.22,
+   "close_pos": 0.86,
+   "hold_pct": 13.41,
+   "e_open": 24.39,
+   "e_high": 25.29,
+   "e_low": 24.0,
+   "e_close": 25.11,
+   "atr14": 0.925,
+   "range_pct": 5.14,
+   "template": "A",
+   "signal_date": "2026-09-29",
+   "side": "long",
+   "limit": 26.035,
+   "stop_ref": 24.0,
+   "risk_ref": 2.035,
+   "t1_ref": 30.105,
+   "stop_dist_pct": 7.82,
+   "implied_move_pct": 7.09,
+   "surprise_ratio": 1.43,
+   "sector": "Consumer Cyclical",
+   "next_earnings": "2026-12-18",
+   "flags": [
+    "請手動確認：非現金併購標的"
+   ],
+   "size_factor": 1.0,
+   "blocked": false,
+   "selected": true,
+   "rank": 1
+  }
+ ],
+ "short_watch": [
+  {
+   "ticker": "FICO",
+   "e_date": "2026-09-29",
+   "gap_pct": -20.55,
+   "vol_mult": 10.98,
+   "close_pos": 0.25,
+   "hold_pct": -26.52,
+   "e_open": 668.08,
+   "e_high": 685.0,
+   "e_low": 595.19,
+   "e_close": 617.87,
+   "atr14": 48.7771,
+   "range_pct": 14.54,
+   "side": "short_watch"
+  }
+ ],
+ "events": [
+  {
+   "ticker": "CCL",
+   "e_date": "2026-09-29",
+   "gap_pct": 10.16,
+   "vol_mult": 3.22,
+   "close_pos": 0.86,
+   "hold_pct": 13.41,
+   "e_open": 24.39,
+   "e_high": 25.29,
+   "e_low": 24.0,
+   "e_close": 25.11,
+   "atr14": 0.925,
+   "range_pct": 5.14
+  }
+ ]
 }

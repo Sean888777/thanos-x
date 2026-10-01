@@ -1,8 +1,8 @@
 {
  "version": "radar-0.3.3",
  "status": "ok",
- "generated_at": "2026-09-30T01:11:17+00:00",
- "session": "2026-09-28",
+ "generated_at": "2026-10-01T01:11:54+00:00",
+ "session": "2026-09-29",
  "universe_size": 1452,
  "coverage": {
   "requested": 1454,
@@ -40,19 +40,82 @@
   "pool_days": 75
  },
  "regime": {
-  "spy_close": 765.61,
-  "spy_ma50": 762.01,
+  "spy_close": 764.2,
+  "spy_ma50": 762.45,
   "spy_above_ma50": true,
-  "vix": 16.04,
+  "vix": 16.34,
   "vix_level": "normal"
  },
  "today": {
-  "candidates": [],
+  "candidates": [
+   {
+    "ticker": "CCL",
+    "e_date": "2026-09-29",
+    "gap_pct": 10.16,
+    "vol_mult": 3.22,
+    "close_pos": 0.86,
+    "hold_pct": 13.41,
+    "e_open": 24.39,
+    "e_high": 25.29,
+    "e_low": 24.0,
+    "e_close": 25.11,
+    "atr14": 0.925,
+    "range_pct": 5.14,
+    "template": "A",
+    "signal_date": "2026-09-29",
+    "side": "long",
+    "limit": 26.035,
+    "stop_ref": 24.0,
+    "risk_ref": 2.035,
+    "t1_ref": 30.105,
+    "stop_dist_pct": 7.82,
+    "implied_move_pct": 7.09,
+    "surprise_ratio": 1.43,
+    "sector": "Consumer Cyclical",
+    "next_earnings": "2026-12-18",
+    "flags": [
+     "請手動確認：非現金併購標的"
+    ],
+    "size_factor": 1.0,
+    "blocked": false,
+    "selected": true,
+    "rank": 1
+   }
+  ],
   "not_selected_count": 0,
   "excluded": [],
-  "short_watch": []
+  "short_watch": [
+   {
+    "ticker": "FICO",
+    "e_date": "2026-09-29",
+    "gap_pct": -20.55,
+    "vol_mult": 10.98,
+    "close_pos": 0.25,
+    "hold_pct": -26.52,
+    "e_open": 668.08,
+    "e_high": 685.0,
+    "e_low": 595.19,
+    "e_close": 617.87,
+    "atr14": 48.7771,
+    "range_pct": 14.54,
+    "side": "short_watch"
+   }
+  ]
  },
- "pool": {},
+ "pool": {
+  "CCL": {
+   "last_date": "2026-09-29",
+   "last_close": 25.11,
+   "ma10": 22.404,
+   "atr14": 0.925,
+   "next_earnings": "2026-12-18",
+   "template": "A",
+   "e_date": "2026-09-29",
+   "signal_date": "2026-09-29",
+   "e_low": 24.0,
+   "limit": 26.035
+  }
+ },
  "paper": {
   "benchmark": null,
   "benchmark_iwm": null,

@@ -78,5 +78,37 @@
   "expiry": "2026-10-16",
   "spot": 25.45,
   "implied_move_pct": 18.86
+ },
+ "NKE|2026-10-01": {
+  "ticker": "NKE",
+  "earnings_date": "2026-10-01",
+  "captured": "2026-09-29",
+  "expiry": "2026-10-02",
+  "spot": 35.84,
+  "implied_move_pct": 8.68
+ },
+ "ACN|2026-10-01": {
+  "ticker": "ACN",
+  "earnings_date": "2026-10-01",
+  "captured": "2026-09-29",
+  "expiry": "2026-10-02",
+  "spot": 177.12,
+  "implied_move_pct": 7.99
+ },
+ "MKC|2026-10-01": {
+  "ticker": "MKC",
+  "earnings_date": "2026-10-01",
+  "captured": "2026-09-29",
+  "expiry": "2026-10-16",
+  "spot": 48.4,
+  "implied_move_pct": 9.76
+ },
+ "AYI|2026-10-01": {
+  "ticker": "AYI",
+  "earnings_date": "2026-10-01",
+  "captured": "2026-09-29",
+  "expiry": "2026-10-16",
+  "spot": 308.79,
+  "implied_move_pct": 8.66
  }
 }
