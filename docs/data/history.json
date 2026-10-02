@@ -1,5 +1,5 @@
 {
- "last_session": "2026-09-29",
+ "last_session": "2026-09-30",
  "candidates": [
   {
    "ticker": "CCL",
@@ -35,23 +35,7 @@
    "rank": 1
   }
  ],
- "short_watch": [
-  {
-   "ticker": "FICO",
-   "e_date": "2026-09-29",
-   "gap_pct": -20.55,
-   "vol_mult": 10.98,
-   "close_pos": 0.25,
-   "hold_pct": -26.52,
-   "e_open": 668.08,
-   "e_high": 685.0,
-   "e_low": 595.19,
-   "e_close": 617.87,
-   "atr14": 48.7771,
-   "range_pct": 14.54,
-   "side": "short_watch"
-  }
- ],
+ "short_watch": [],
  "events": [
   {
    "ticker": "CCL",
