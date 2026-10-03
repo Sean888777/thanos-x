@@ -1,8 +1,8 @@
 {
  "version": "radar-0.3.3",
  "status": "ok",
- "generated_at": "2026-10-02T01:28:21+00:00",
- "session": "2026-09-30",
+ "generated_at": "2026-10-03T01:02:24+00:00",
+ "session": "2026-10-01",
  "universe_size": 1452,
  "coverage": {
   "requested": 1454,
@@ -40,30 +40,111 @@
   "pool_days": 75
  },
  "regime": {
-  "spy_close": 762.63,
-  "spy_ma50": 762.74,
-  "spy_above_ma50": false,
-  "vix": 16.39,
+  "spy_close": 763.99,
+  "spy_ma50": 763.07,
+  "spy_above_ma50": true,
+  "vix": 15.31,
   "vix_level": "normal"
  },
  "today": {
-  "candidates": [],
+  "candidates": [
+   {
+    "ticker": "SNPS",
+    "e_date": "2026-10-01",
+    "gap_pct": 7.57,
+    "vol_mult": 3.32,
+    "close_pos": 0.82,
+    "hold_pct": 12.78,
+    "e_open": 467.85,
+    "e_high": 496.95,
+    "e_low": 462.0,
+    "e_close": 490.54,
+    "atr14": 18.9179,
+    "range_pct": 7.12,
+    "template": "A",
+    "signal_date": "2026-10-01",
+    "side": "long",
+    "limit": 509.4579,
+    "stop_ref": 462.0,
+    "risk_ref": 47.4579,
+    "t1_ref": 604.3737,
+    "stop_dist_pct": 9.32,
+    "sector": "Technology",
+    "next_earnings": "2026-12-09",
+    "flags": [
+     "請手動確認：非現金併購標的"
+    ],
+    "size_factor": 1.0,
+    "blocked": false,
+    "selected": true,
+    "rank": 1
+   }
+  ],
   "not_selected_count": 0,
-  "excluded": [],
-  "short_watch": []
+  "excluded": [
+   {
+    "ticker": "FICO",
+    "template": "A",
+    "reason": "X3 停損距離超過 12%"
+   }
+  ],
+  "short_watch": [
+   {
+    "ticker": "CTVA",
+    "e_date": "2026-10-01",
+    "gap_pct": -81.4,
+    "vol_mult": 18.52,
+    "close_pos": 0.28,
+    "hold_pct": -83.81,
+    "e_open": 14.44,
+    "e_high": 14.44,
+    "e_low": 11.84,
+    "e_close": 12.57,
+    "atr14": 6.8389,
+    "range_pct": 20.68,
+    "side": "short_watch"
+   },
+   {
+    "ticker": "NKTR",
+    "e_date": "2026-10-01",
+    "gap_pct": -8.49,
+    "vol_mult": 4.45,
+    "close_pos": 0.07,
+    "hold_pct": -22.39,
+    "e_open": 55.41,
+    "e_high": 56.69,
+    "e_low": 46.29,
+    "e_close": 46.99,
+    "atr14": 4.445,
+    "range_pct": 22.13,
+    "side": "short_watch"
+   }
+  ]
  },
  "pool": {
   "CCL": {
-   "last_date": "2026-09-30",
-   "last_close": 24.54,
-   "ma10": 22.623,
-   "atr14": 0.955,
+   "last_date": "2026-10-01",
+   "last_close": 25.07,
+   "ma10": 22.913,
+   "atr14": 0.9514,
    "next_earnings": "2026-12-18",
    "template": "A",
    "e_date": "2026-09-29",
    "signal_date": "2026-09-29",
    "e_low": 24.0,
    "limit": 26.035
+  },
+  "SNPS": {
+   "last_date": "2026-10-01",
+   "last_close": 490.54,
+   "ma10": 421.797,
+   "atr14": 18.9179,
+   "next_earnings": "2026-12-09",
+   "template": "A",
+   "e_date": "2026-10-01",
+   "signal_date": "2026-10-01",
+   "e_low": 462.0,
+   "limit": 509.4579
   }
  },
  "paper": {
@@ -71,23 +152,23 @@
    "index": "SPY",
    "range": [
     "2026-09-30",
-    "2026-09-30"
+    "2026-10-01"
    ],
-   "sessions": 1,
+   "sessions": 2,
    "assumed_cash_rate_pct": 4.0,
-   "avg_exposure_pct": 6.6,
-   "max_exposure_pct": 6.6,
-   "system_pct": -0.23,
-   "system_trading_only_pct": -0.25,
-   "matched_benchmark_pct": 0.02,
-   "spy_buy_hold_pct": -0.21,
-   "cash_only_pct": 0.02,
+   "avg_exposure_pct": 6.7,
+   "max_exposure_pct": 6.8,
+   "system_pct": -0.08,
+   "system_trading_only_pct": -0.11,
+   "matched_benchmark_pct": 0.04,
+   "spy_buy_hold_pct": -0.03,
+   "cash_only_pct": 0.03,
    "max_drawdown_pct": {
     "system": 0.0,
     "matched": 0.0,
     "spy": 0.0
    },
-   "excess_vs_matched_pct": -0.25,
+   "excess_vs_matched_pct": -0.12,
    "beats_matched": false
   },
   "benchmark_iwm": null,
@@ -118,10 +199,10 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 24.54,
+     "last_close": 25.07,
      "stop_now": 24.0,
-     "unrealized_r": -0.459,
-     "held_days": 1,
+     "unrealized_r": -0.173,
+     "held_days": 2,
      "next_action": null,
      "ticker": "CCL",
      "template": "A",

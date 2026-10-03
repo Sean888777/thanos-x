@@ -110,5 +110,13 @@
   "expiry": "2026-10-16",
   "spot": 308.79,
   "implied_move_pct": 8.66
+ },
+ "AEHR|2026-10-05": {
+  "ticker": "AEHR",
+  "earnings_date": "2026-10-05",
+  "captured": "2026-10-01",
+  "expiry": "2026-10-09",
+  "spot": 101.6,
+  "implied_move_pct": 11.0
  }
 }

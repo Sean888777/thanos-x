@@ -1,5 +1,5 @@
 {
- "last_session": "2026-09-30",
+ "last_session": "2026-10-01",
  "candidates": [
   {
    "ticker": "CCL",
@@ -33,9 +33,94 @@
    "blocked": false,
    "selected": true,
    "rank": 1
+  },
+  {
+   "ticker": "FICO",
+   "e_date": "2026-10-01",
+   "gap_pct": 7.18,
+   "vol_mult": 3.9,
+   "close_pos": 0.75,
+   "hold_pct": 11.69,
+   "e_open": 635.0,
+   "e_high": 675.87,
+   "e_low": 620.0,
+   "e_close": 661.75,
+   "atr14": 51.5728,
+   "range_pct": 8.44,
+   "template": "A",
+   "signal_date": "2026-10-01",
+   "side": "long",
+   "limit": 713.3228,
+   "stop_ref": 620.0,
+   "risk_ref": 93.3228,
+   "t1_ref": 899.9684,
+   "stop_dist_pct": 13.08,
+   "excluded": "X3 停損距離超過 12%"
+  },
+  {
+   "ticker": "SNPS",
+   "e_date": "2026-10-01",
+   "gap_pct": 7.57,
+   "vol_mult": 3.32,
+   "close_pos": 0.82,
+   "hold_pct": 12.78,
+   "e_open": 467.85,
+   "e_high": 496.95,
+   "e_low": 462.0,
+   "e_close": 490.54,
+   "atr14": 18.9179,
+   "range_pct": 7.12,
+   "template": "A",
+   "signal_date": "2026-10-01",
+   "side": "long",
+   "limit": 509.4579,
+   "stop_ref": 462.0,
+   "risk_ref": 47.4579,
+   "t1_ref": 604.3737,
+   "stop_dist_pct": 9.32,
+   "sector": "Technology",
+   "next_earnings": "2026-12-09",
+   "flags": [
+    "請手動確認：非現金併購標的"
+   ],
+   "size_factor": 1.0,
+   "blocked": false,
+   "selected": true,
+   "rank": 1
   }
  ],
- "short_watch": [],
+ "short_watch": [
+  {
+   "ticker": "CTVA",
+   "e_date": "2026-10-01",
+   "gap_pct": -81.4,
+   "vol_mult": 18.52,
+   "close_pos": 0.28,
+   "hold_pct": -83.81,
+   "e_open": 14.44,
+   "e_high": 14.44,
+   "e_low": 11.84,
+   "e_close": 12.57,
+   "atr14": 6.8389,
+   "range_pct": 20.68,
+   "side": "short_watch"
+  },
+  {
+   "ticker": "NKTR",
+   "e_date": "2026-10-01",
+   "gap_pct": -8.49,
+   "vol_mult": 4.45,
+   "close_pos": 0.07,
+   "hold_pct": -22.39,
+   "e_open": 55.41,
+   "e_high": 56.69,
+   "e_low": 46.29,
+   "e_close": 46.99,
+   "atr14": 4.445,
+   "range_pct": 22.13,
+   "side": "short_watch"
+  }
+ ],
  "events": [
   {
    "ticker": "CCL",
@@ -50,6 +135,34 @@
    "e_close": 25.11,
    "atr14": 0.925,
    "range_pct": 5.14
+  },
+  {
+   "ticker": "FICO",
+   "e_date": "2026-10-01",
+   "gap_pct": 7.18,
+   "vol_mult": 3.9,
+   "close_pos": 0.75,
+   "hold_pct": 11.69,
+   "e_open": 635.0,
+   "e_high": 675.87,
+   "e_low": 620.0,
+   "e_close": 661.75,
+   "atr14": 51.5728,
+   "range_pct": 8.44
+  },
+  {
+   "ticker": "SNPS",
+   "e_date": "2026-10-01",
+   "gap_pct": 7.57,
+   "vol_mult": 3.32,
+   "close_pos": 0.82,
+   "hold_pct": 12.78,
+   "e_open": 467.85,
+   "e_high": 496.95,
+   "e_low": 462.0,
+   "e_close": 490.54,
+   "atr14": 18.9179,
+   "range_pct": 7.12
   }
  ]
 }
