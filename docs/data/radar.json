@@ -1,12 +1,12 @@
 {
  "version": "radar-0.3.3",
  "status": "ok",
- "generated_at": "2026-10-03T01:02:24+00:00",
- "session": "2026-10-01",
- "universe_size": 1452,
+ "generated_at": "2026-10-06T02:25:54+00:00",
+ "session": "2026-10-05",
+ "universe_size": 1466,
  "coverage": {
-  "requested": 1454,
-  "received": 1454,
+  "requested": 1468,
+  "received": 1468,
   "missing_sample": []
  },
  "config": {
@@ -40,93 +40,46 @@
   "pool_days": 75
  },
  "regime": {
-  "spy_close": 763.99,
-  "spy_ma50": 763.07,
+  "spy_close": 774.83,
+  "spy_ma50": 764.42,
   "spy_above_ma50": true,
-  "vix": 15.31,
+  "vix": 15.52,
   "vix_level": "normal"
  },
  "today": {
-  "candidates": [
-   {
-    "ticker": "SNPS",
-    "e_date": "2026-10-01",
-    "gap_pct": 7.57,
-    "vol_mult": 3.32,
-    "close_pos": 0.82,
-    "hold_pct": 12.78,
-    "e_open": 467.85,
-    "e_high": 496.95,
-    "e_low": 462.0,
-    "e_close": 490.54,
-    "atr14": 18.9179,
-    "range_pct": 7.12,
-    "template": "A",
-    "signal_date": "2026-10-01",
-    "side": "long",
-    "limit": 509.4579,
-    "stop_ref": 462.0,
-    "risk_ref": 47.4579,
-    "t1_ref": 604.3737,
-    "stop_dist_pct": 9.32,
-    "sector": "Technology",
-    "next_earnings": "2026-12-09",
-    "flags": [
-     "請手動確認：非現金併購標的"
-    ],
-    "size_factor": 1.0,
-    "blocked": false,
-    "selected": true,
-    "rank": 1
-   }
-  ],
+  "candidates": [],
   "not_selected_count": 0,
   "excluded": [
    {
-    "ticker": "FICO",
+    "ticker": "XP",
     "template": "A",
     "reason": "X3 停損距離超過 12%"
    }
   ],
   "short_watch": [
    {
-    "ticker": "CTVA",
-    "e_date": "2026-10-01",
-    "gap_pct": -81.4,
-    "vol_mult": 18.52,
-    "close_pos": 0.28,
-    "hold_pct": -83.81,
-    "e_open": 14.44,
-    "e_high": 14.44,
-    "e_low": 11.84,
-    "e_close": 12.57,
-    "atr14": 6.8389,
-    "range_pct": 20.68,
-    "side": "short_watch"
-   },
-   {
-    "ticker": "NKTR",
-    "e_date": "2026-10-01",
-    "gap_pct": -8.49,
-    "vol_mult": 4.45,
-    "close_pos": 0.07,
-    "hold_pct": -22.39,
-    "e_open": 55.41,
-    "e_high": 56.69,
-    "e_low": 46.29,
-    "e_close": 46.99,
-    "atr14": 4.445,
-    "range_pct": 22.13,
+    "ticker": "SPHR",
+    "e_date": "2026-10-05",
+    "gap_pct": -5.66,
+    "vol_mult": 5.88,
+    "close_pos": 0.06,
+    "hold_pct": -13.61,
+    "e_open": 120.99,
+    "e_high": 122.44,
+    "e_low": 110.03,
+    "e_close": 110.8,
+    "atr14": 6.8911,
+    "range_pct": 11.2,
     "side": "short_watch"
    }
   ]
  },
  "pool": {
   "CCL": {
-   "last_date": "2026-10-01",
-   "last_close": 25.07,
-   "ma10": 22.913,
-   "atr14": 0.9514,
+   "last_date": "2026-10-05",
+   "last_close": 25.56,
+   "ma10": 23.63,
+   "atr14": 0.94,
    "next_earnings": "2026-12-18",
    "template": "A",
    "e_date": "2026-09-29",
@@ -135,10 +88,10 @@
    "limit": 26.035
   },
   "SNPS": {
-   "last_date": "2026-10-01",
-   "last_close": 490.54,
-   "ma10": 421.797,
-   "atr14": 18.9179,
+   "last_date": "2026-10-05",
+   "last_close": 488.47,
+   "ma10": 440.952,
+   "atr14": 19.3707,
    "next_earnings": "2026-12-09",
    "template": "A",
    "e_date": "2026-10-01",
@@ -152,38 +105,38 @@
    "index": "SPY",
    "range": [
     "2026-09-30",
-    "2026-10-01"
+    "2026-10-05"
    ],
-   "sessions": 2,
+   "sessions": 4,
    "assumed_cash_rate_pct": 4.0,
-   "avg_exposure_pct": 6.7,
-   "max_exposure_pct": 6.8,
-   "system_pct": -0.08,
-   "system_trading_only_pct": -0.11,
-   "matched_benchmark_pct": 0.04,
-   "spy_buy_hold_pct": -0.03,
-   "cash_only_pct": 0.03,
+   "avg_exposure_pct": 9.5,
+   "max_exposure_pct": 12.4,
+   "system_pct": -0.04,
+   "system_trading_only_pct": -0.1,
+   "matched_benchmark_pct": 0.2,
+   "spy_buy_hold_pct": 1.39,
+   "cash_only_pct": 0.06,
    "max_drawdown_pct": {
-    "system": 0.0,
+    "system": -0.06,
     "matched": 0.0,
     "spy": 0.0
    },
-   "excess_vs_matched_pct": -0.12,
+   "excess_vs_matched_pct": -0.24,
    "beats_matched": false
   },
   "benchmark_iwm": null,
   "system": {
    "stats": {
     "closed": 0,
-    "open": 1,
+    "open": 2,
     "no_fill": 0,
     "skipped_capacity": 0
    },
-   "filled_trades": 1,
+   "filled_trades": 2,
    "peak": {
-    "positions": 1,
-    "open_risk_r": 1.0,
-    "cash_used_pct": 6.9
+    "positions": 2,
+    "open_risk_r": 2.0,
+    "cash_used_pct": 12.3
    },
    "skip_reasons": {},
    "open": [
@@ -199,15 +152,38 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 25.07,
+     "last_close": 25.56,
      "stop_now": 24.0,
-     "unrealized_r": -0.173,
-     "held_days": 2,
+     "unrealized_r": 0.092,
+     "held_days": 4,
      "next_action": null,
      "ticker": "CCL",
      "template": "A",
      "e_date": "2026-09-29",
      "signal_date": "2026-09-29",
+     "size": 1.0
+    },
+    {
+     "entry_date": "2026-10-02",
+     "entry": 497.86,
+     "stop": 462.0,
+     "t1": 569.58,
+     "unit": 45.3189,
+     "cost_side": 0.003,
+     "fills": [],
+     "t1_date": null,
+     "realized_r": 0.0,
+     "status": "open",
+     "remaining": 1.0,
+     "last_close": 488.47,
+     "stop_now": 462.0,
+     "unrealized_r": -0.207,
+     "held_days": 2,
+     "next_action": null,
+     "ticker": "SNPS",
+     "template": "A",
+     "e_date": "2026-10-01",
+     "signal_date": "2026-10-01",
      "size": 1.0
     }
    ],
@@ -216,7 +192,7 @@
   "compare": {
    "template_A": {
     "closed": 0,
-    "open": 1,
+    "open": 2,
     "no_fill": 0,
     "skipped_capacity": 0
    },
@@ -228,7 +204,7 @@
    },
    "selected": {
     "closed": 0,
-    "open": 1,
+    "open": 2,
     "no_fill": 0,
     "skipped_capacity": 0
    },
@@ -250,35 +226,35 @@
    "baseline_same_set": {
     "note": "入選者照現行規則（與下一列比較用）",
     "closed": 0,
-    "open": 1,
+    "open": 2,
     "no_fill": 0,
     "skipped_capacity": 0
    },
    "no_stall": {
     "note": "同一批入選者，若不執行 E4 停滯出場",
     "closed": 0,
-    "open": 1,
+    "open": 2,
     "no_fill": 0,
     "skipped_capacity": 0
    },
    "x3_excluded": {
     "note": "因停損距離 > 12% 被排除者，若照做",
     "closed": 0,
-    "open": 0,
+    "open": 1,
     "no_fill": 0,
     "skipped_capacity": 0
    },
    "target_only": {
     "note": "2R 全數停利、取消持有期上限（大爺的提議）",
     "closed": 0,
-    "open": 1,
+    "open": 2,
     "no_fill": 0,
     "skipped_capacity": 0
    },
    "losers_time": {
     "note": "持有期滿只砍未達 +1R 者，其餘改 10 日均線移動停利（發財的版本）",
     "closed": 0,
-    "open": 1,
+    "open": 2,
     "no_fill": 0,
     "skipped_capacity": 0
    }
