@@ -1,5 +1,5 @@
 {
- "last_session": "2026-10-05",
+ "last_session": "2026-10-06",
  "candidates": [
   {
    "ticker": "CCL",
@@ -110,25 +110,59 @@
    "t1_ref": 36.6733,
    "stop_dist_pct": 12.26,
    "excluded": "X3 停損距離超過 12%"
-  }
- ],
- "short_watch": [
+  },
   {
-   "ticker": "SPHR",
-   "e_date": "2026-10-05",
-   "gap_pct": -5.66,
-   "vol_mult": 5.88,
-   "close_pos": 0.06,
-   "hold_pct": -13.61,
-   "e_open": 120.99,
-   "e_high": 122.44,
-   "e_low": 110.03,
-   "e_close": 110.8,
-   "atr14": 6.8911,
-   "range_pct": 11.2,
-   "side": "short_watch"
+   "ticker": "CCL",
+   "e_date": "2026-09-29",
+   "gap_pct": 10.16,
+   "vol_mult": 3.22,
+   "e_high": 25.29,
+   "e_low": 24.0,
+   "e_close": 25.11,
+   "template": "B",
+   "signal_date": "2026-10-06",
+   "side": "long",
+   "days_after_event": 5,
+   "s_close": 26.58,
+   "atr14": 0.9721,
+   "limit": 27.0661,
+   "stop_ref": 24.0,
+   "risk_ref": 3.0661,
+   "t1_ref": 33.1982,
+   "stop_dist_pct": 11.33,
+   "sector": "Consumer Cyclical",
+   "next_earnings": "2026-12-18",
+   "flags": [
+    "請手動確認：非現金併購標的"
+   ],
+   "size_factor": 1.0,
+   "blocked": false,
+   "selected": true,
+   "rank": 1
+  },
+  {
+   "ticker": "FICO",
+   "e_date": "2026-10-01",
+   "gap_pct": 7.18,
+   "vol_mult": 3.9,
+   "e_high": 675.87,
+   "e_low": 620.0,
+   "e_close": 661.75,
+   "template": "B",
+   "signal_date": "2026-10-06",
+   "side": "long",
+   "days_after_event": 3,
+   "s_close": 695.46,
+   "atr14": 54.9136,
+   "limit": 722.9168,
+   "stop_ref": 620.0,
+   "risk_ref": 102.9168,
+   "t1_ref": 928.7504,
+   "stop_dist_pct": 14.24,
+   "excluded": "X3 停損距離超過 12%"
   }
  ],
+ "short_watch": [],
  "events": [
   {
    "ticker": "CCL",
@@ -142,7 +176,8 @@
    "e_low": 24.0,
    "e_close": 25.11,
    "atr14": 0.925,
-   "range_pct": 5.14
+   "range_pct": 5.14,
+   "b_state": "triggered"
   },
   {
    "ticker": "FICO",
@@ -156,7 +191,8 @@
    "e_low": 620.0,
    "e_close": 661.75,
    "atr14": 51.5728,
-   "range_pct": 8.44
+   "range_pct": 8.44,
+   "b_state": "triggered"
   },
   {
    "ticker": "SNPS",

@@ -118,5 +118,69 @@
   "expiry": "2026-10-09",
   "spot": 101.6,
   "implied_move_pct": 11.0
+ },
+ "PEP|2026-10-08": {
+  "ticker": "PEP",
+  "earnings_date": "2026-10-08",
+  "captured": "2026-10-06",
+  "expiry": "2026-10-09",
+  "spot": 125.71,
+  "implied_move_pct": 3.49
+ },
+ "APLD|2026-10-07": {
+  "ticker": "APLD",
+  "earnings_date": "2026-10-07",
+  "captured": "2026-10-06",
+  "expiry": "2026-10-09",
+  "spot": 24.7,
+  "implied_move_pct": 11.82
+ },
+ "STZ|2026-10-06": {
+  "ticker": "STZ",
+  "earnings_date": "2026-10-06",
+  "captured": "2026-10-06",
+  "expiry": "2026-10-09",
+  "spot": 115.67,
+  "implied_move_pct": 4.0
+ },
+ "RPM|2026-10-06": {
+  "ticker": "RPM",
+  "earnings_date": "2026-10-06",
+  "captured": "2026-10-06",
+  "expiry": "2026-10-16",
+  "spot": 98.31,
+  "implied_move_pct": 3.61
+ },
+ "LW|2026-10-06": {
+  "ticker": "LW",
+  "earnings_date": "2026-10-06",
+  "captured": "2026-10-06",
+  "expiry": "2026-10-16",
+  "spot": 44.57,
+  "implied_move_pct": 7.68
+ },
+ "PENG|2026-10-06": {
+  "ticker": "PENG",
+  "earnings_date": "2026-10-06",
+  "captured": "2026-10-06",
+  "expiry": "2026-10-16",
+  "spot": 60.71,
+  "implied_move_pct": 20.18
+ },
+ "NEOG|2026-10-06": {
+  "ticker": "NEOG",
+  "earnings_date": "2026-10-06",
+  "captured": "2026-10-06",
+  "expiry": "2026-10-16",
+  "spot": 11.96,
+  "implied_move_pct": 13.8
+ },
+ "LEVI|2026-10-07": {
+  "ticker": "LEVI",
+  "earnings_date": "2026-10-07",
+  "captured": "2026-10-06",
+  "expiry": "2026-10-16",
+  "spot": 20.27,
+  "implied_move_pct": 9.87
  }
 }

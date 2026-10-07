@@ -1,13 +1,16 @@
 {
  "version": "radar-0.3.3",
  "status": "ok",
- "generated_at": "2026-10-06T02:25:54+00:00",
- "session": "2026-10-05",
+ "generated_at": "2026-10-07T01:19:15+00:00",
+ "session": "2026-10-06",
  "universe_size": 1466,
  "coverage": {
   "requested": 1468,
-  "received": 1468,
-  "missing_sample": []
+  "received": 1466,
+  "missing_sample": [
+   "PSKY",
+   "QRVO"
+  ]
  },
  "config": {
   "gap_min": 0.05,
@@ -40,58 +43,72 @@
   "pool_days": 75
  },
  "regime": {
-  "spy_close": 774.83,
-  "spy_ma50": 764.42,
+  "spy_close": 779.09,
+  "spy_ma50": 765.22,
   "spy_above_ma50": true,
-  "vix": 15.52,
+  "vix": 15.01,
   "vix_level": "normal"
  },
  "today": {
-  "candidates": [],
+  "candidates": [
+   {
+    "ticker": "CCL",
+    "e_date": "2026-09-29",
+    "gap_pct": 10.16,
+    "vol_mult": 3.22,
+    "e_high": 25.29,
+    "e_low": 24.0,
+    "e_close": 25.11,
+    "template": "B",
+    "signal_date": "2026-10-06",
+    "side": "long",
+    "days_after_event": 5,
+    "s_close": 26.58,
+    "atr14": 0.9721,
+    "limit": 27.0661,
+    "stop_ref": 24.0,
+    "risk_ref": 3.0661,
+    "t1_ref": 33.1982,
+    "stop_dist_pct": 11.33,
+    "sector": "Consumer Cyclical",
+    "next_earnings": "2026-12-18",
+    "flags": [
+     "請手動確認：非現金併購標的"
+    ],
+    "size_factor": 1.0,
+    "blocked": false,
+    "selected": true,
+    "rank": 1
+   }
+  ],
   "not_selected_count": 0,
   "excluded": [
    {
-    "ticker": "XP",
-    "template": "A",
+    "ticker": "FICO",
+    "template": "B",
     "reason": "X3 停損距離超過 12%"
    }
   ],
-  "short_watch": [
-   {
-    "ticker": "SPHR",
-    "e_date": "2026-10-05",
-    "gap_pct": -5.66,
-    "vol_mult": 5.88,
-    "close_pos": 0.06,
-    "hold_pct": -13.61,
-    "e_open": 120.99,
-    "e_high": 122.44,
-    "e_low": 110.03,
-    "e_close": 110.8,
-    "atr14": 6.8911,
-    "range_pct": 11.2,
-    "side": "short_watch"
-   }
-  ]
+  "short_watch": []
  },
  "pool": {
   "CCL": {
-   "last_date": "2026-10-05",
-   "last_close": 25.56,
-   "ma10": 23.63,
-   "atr14": 0.94,
+   "last_date": "2026-10-06",
+   "last_close": 26.58,
+   "ma10": 24.06,
+   "atr14": 0.9721,
    "next_earnings": "2026-12-18",
-   "template": "A",
+   "template": "B",
    "e_date": "2026-09-29",
-   "signal_date": "2026-09-29",
+   "signal_date": "2026-10-06",
    "e_low": 24.0,
-   "limit": 26.035
+   "limit": 27.0661
   },
   "SNPS": {
-   "last_date": "2026-10-05",
-   "last_close": 488.47,
-   "ma10": 440.952,
-   "atr14": 19.3707,
+   "last_date": "2026-10-06",
+   "last_close": 505.17,
+   "ma10": 450.545,
+   "atr14": 19.9786,
    "next_earnings": "2026-12-09",
    "template": "A",
    "e_date": "2026-10-01",
@@ -105,24 +122,24 @@
    "index": "SPY",
    "range": [
     "2026-09-30",
-    "2026-10-05"
+    "2026-10-06"
    ],
-   "sessions": 4,
+   "sessions": 5,
    "assumed_cash_rate_pct": 4.0,
-   "avg_exposure_pct": 9.5,
-   "max_exposure_pct": 12.4,
-   "system_pct": -0.04,
-   "system_trading_only_pct": -0.1,
-   "matched_benchmark_pct": 0.2,
-   "spy_buy_hold_pct": 1.39,
-   "cash_only_pct": 0.06,
+   "avg_exposure_pct": 10.2,
+   "max_exposure_pct": 12.7,
+   "system_pct": 0.44,
+   "system_trading_only_pct": 0.36,
+   "matched_benchmark_pct": 0.29,
+   "spy_buy_hold_pct": 1.95,
+   "cash_only_pct": 0.08,
    "max_drawdown_pct": {
     "system": -0.06,
     "matched": 0.0,
     "spy": 0.0
    },
-   "excess_vs_matched_pct": -0.24,
-   "beats_matched": false
+   "excess_vs_matched_pct": 0.15,
+   "beats_matched": true
   },
   "benchmark_iwm": null,
   "system": {
@@ -152,10 +169,10 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 25.56,
+     "last_close": 26.58,
      "stop_now": 24.0,
-     "unrealized_r": 0.092,
-     "held_days": 4,
+     "unrealized_r": 0.642,
+     "held_days": 5,
      "next_action": null,
      "ticker": "CCL",
      "template": "A",
@@ -175,10 +192,10 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 488.47,
+     "last_close": 505.17,
      "stop_now": 462.0,
-     "unrealized_r": -0.207,
-     "held_days": 2,
+     "unrealized_r": 0.161,
+     "held_days": 3,
      "next_action": null,
      "ticker": "SNPS",
      "template": "A",
