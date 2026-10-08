@@ -1,5 +1,5 @@
 {
- "last_session": "2026-10-06",
+ "last_session": "2026-10-07",
  "candidates": [
   {
    "ticker": "CCL",
@@ -162,7 +162,23 @@
    "excluded": "X3 停損距離超過 12%"
   }
  ],
- "short_watch": [],
+ "short_watch": [
+  {
+   "ticker": "HESM",
+   "e_date": "2026-10-07",
+   "gap_pct": -6.82,
+   "vol_mult": 9.03,
+   "close_pos": 0.26,
+   "hold_pct": -14.63,
+   "e_open": 36.05,
+   "e_high": 36.05,
+   "e_low": 31.99,
+   "e_close": 33.03,
+   "atr14": 1.2622,
+   "range_pct": 12.29,
+   "side": "short_watch"
+  }
+ ],
  "events": [
   {
    "ticker": "CCL",

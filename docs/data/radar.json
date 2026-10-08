@@ -1,15 +1,16 @@
 {
  "version": "radar-0.3.3",
  "status": "ok",
- "generated_at": "2026-10-07T01:19:15+00:00",
- "session": "2026-10-06",
+ "generated_at": "2026-10-08T01:40:02+00:00",
+ "session": "2026-10-07",
  "universe_size": 1466,
  "coverage": {
   "requested": 1468,
-  "received": 1466,
+  "received": 1465,
   "missing_sample": [
    "PSKY",
-   "QRVO"
+   "QRVO",
+   "WBD"
   ]
  },
  "config": {
@@ -43,60 +44,40 @@
   "pool_days": 75
  },
  "regime": {
-  "spy_close": 779.09,
-  "spy_ma50": 765.22,
+  "spy_close": 777.22,
+  "spy_ma50": 765.95,
   "spy_above_ma50": true,
-  "vix": 15.01,
+  "vix": 15.08,
   "vix_level": "normal"
  },
  "today": {
-  "candidates": [
-   {
-    "ticker": "CCL",
-    "e_date": "2026-09-29",
-    "gap_pct": 10.16,
-    "vol_mult": 3.22,
-    "e_high": 25.29,
-    "e_low": 24.0,
-    "e_close": 25.11,
-    "template": "B",
-    "signal_date": "2026-10-06",
-    "side": "long",
-    "days_after_event": 5,
-    "s_close": 26.58,
-    "atr14": 0.9721,
-    "limit": 27.0661,
-    "stop_ref": 24.0,
-    "risk_ref": 3.0661,
-    "t1_ref": 33.1982,
-    "stop_dist_pct": 11.33,
-    "sector": "Consumer Cyclical",
-    "next_earnings": "2026-12-18",
-    "flags": [
-     "請手動確認：非現金併購標的"
-    ],
-    "size_factor": 1.0,
-    "blocked": false,
-    "selected": true,
-    "rank": 1
-   }
-  ],
+  "candidates": [],
   "not_selected_count": 0,
-  "excluded": [
+  "excluded": [],
+  "short_watch": [
    {
-    "ticker": "FICO",
-    "template": "B",
-    "reason": "X3 停損距離超過 12%"
+    "ticker": "HESM",
+    "e_date": "2026-10-07",
+    "gap_pct": -6.82,
+    "vol_mult": 9.03,
+    "close_pos": 0.26,
+    "hold_pct": -14.63,
+    "e_open": 36.05,
+    "e_high": 36.05,
+    "e_low": 31.99,
+    "e_close": 33.03,
+    "atr14": 1.2622,
+    "range_pct": 12.29,
+    "side": "short_watch"
    }
-  ],
-  "short_watch": []
+  ]
  },
  "pool": {
   "CCL": {
-   "last_date": "2026-10-06",
-   "last_close": 26.58,
-   "ma10": 24.06,
-   "atr14": 0.9721,
+   "last_date": "2026-10-07",
+   "last_close": 26.15,
+   "ma10": 24.495,
+   "atr14": 0.9564,
    "next_earnings": "2026-12-18",
    "template": "B",
    "e_date": "2026-09-29",
@@ -105,10 +86,10 @@
    "limit": 27.0661
   },
   "SNPS": {
-   "last_date": "2026-10-06",
-   "last_close": 505.17,
-   "ma10": 450.545,
-   "atr14": 19.9786,
+   "last_date": "2026-10-07",
+   "last_close": 502.67,
+   "ma10": 459.506,
+   "atr14": 20.0629,
    "next_earnings": "2026-12-09",
    "template": "A",
    "e_date": "2026-10-01",
@@ -122,23 +103,23 @@
    "index": "SPY",
    "range": [
     "2026-09-30",
-    "2026-10-06"
+    "2026-10-07"
    ],
-   "sessions": 5,
+   "sessions": 6,
    "assumed_cash_rate_pct": 4.0,
-   "avg_exposure_pct": 10.2,
+   "avg_exposure_pct": 10.6,
    "max_exposure_pct": 12.7,
-   "system_pct": 0.44,
-   "system_trading_only_pct": 0.36,
-   "matched_benchmark_pct": 0.29,
-   "spy_buy_hold_pct": 1.95,
-   "cash_only_pct": 0.08,
+   "system_pct": 0.31,
+   "system_trading_only_pct": 0.22,
+   "matched_benchmark_pct": 0.27,
+   "spy_buy_hold_pct": 1.7,
+   "cash_only_pct": 0.1,
    "max_drawdown_pct": {
-    "system": -0.06,
-    "matched": 0.0,
-    "spy": 0.0
+    "system": -0.13,
+    "matched": -0.02,
+    "spy": -0.24
    },
-   "excess_vs_matched_pct": 0.15,
+   "excess_vs_matched_pct": 0.04,
    "beats_matched": true
   },
   "benchmark_iwm": null,
@@ -147,7 +128,7 @@
     "closed": 0,
     "open": 2,
     "no_fill": 0,
-    "skipped_capacity": 0
+    "skipped_capacity": 1
    },
    "filled_trades": 2,
    "peak": {
@@ -155,7 +136,9 @@
     "open_risk_r": 2.0,
     "cash_used_pct": 12.3
    },
-   "skip_reasons": {},
+   "skip_reasons": {
+    "同標的已持有": 1
+   },
    "open": [
     {
      "entry_date": "2026-09-30",
@@ -169,10 +152,10 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 26.58,
+     "last_close": 26.15,
      "stop_now": 24.0,
-     "unrealized_r": 0.642,
-     "held_days": 5,
+     "unrealized_r": 0.41,
+     "held_days": 6,
      "next_action": null,
      "ticker": "CCL",
      "template": "A",
@@ -192,10 +175,10 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 505.17,
+     "last_close": 502.67,
      "stop_now": 462.0,
-     "unrealized_r": 0.161,
-     "held_days": 3,
+     "unrealized_r": 0.106,
+     "held_days": 4,
      "next_action": null,
      "ticker": "SNPS",
      "template": "A",
@@ -215,13 +198,13 @@
    },
    "template_B": {
     "closed": 0,
-    "open": 0,
+    "open": 1,
     "no_fill": 0,
     "skipped_capacity": 0
    },
    "selected": {
     "closed": 0,
-    "open": 2,
+    "open": 3,
     "no_fill": 0,
     "skipped_capacity": 0
    },
@@ -243,35 +226,41 @@
    "baseline_same_set": {
     "note": "入選者照現行規則（與下一列比較用）",
     "closed": 0,
-    "open": 2,
+    "open": 3,
     "no_fill": 0,
     "skipped_capacity": 0
    },
    "no_stall": {
     "note": "同一批入選者，若不執行 E4 停滯出場",
     "closed": 0,
-    "open": 2,
+    "open": 3,
     "no_fill": 0,
     "skipped_capacity": 0
    },
    "x3_excluded": {
     "note": "因停損距離 > 12% 被排除者，若照做",
-    "closed": 0,
-    "open": 1,
+    "closed": 1,
+    "open": 2,
     "no_fill": 0,
-    "skipped_capacity": 0
+    "skipped_capacity": 0,
+    "win_rate": 1.0,
+    "avg_r": 1.479,
+    "total_r": 1.48,
+    "avg_win": 1.479,
+    "avg_loss": null,
+    "avg_hold_days": 3.0
    },
    "target_only": {
     "note": "2R 全數停利、取消持有期上限（大爺的提議）",
     "closed": 0,
-    "open": 2,
+    "open": 3,
     "no_fill": 0,
     "skipped_capacity": 0
    },
    "losers_time": {
     "note": "持有期滿只砍未達 +1R 者，其餘改 10 日均線移動停利（發財的版本）",
     "closed": 0,
-    "open": 2,
+    "open": 3,
     "no_fill": 0,
     "skipped_capacity": 0
    }

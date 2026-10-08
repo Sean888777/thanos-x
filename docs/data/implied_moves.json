@@ -182,5 +182,13 @@
   "expiry": "2026-10-16",
   "spot": 20.27,
   "implied_move_pct": 9.87
+ },
+ "DAL|2026-10-09": {
+  "ticker": "DAL",
+  "earnings_date": "2026-10-09",
+  "captured": "2026-10-07",
+  "expiry": "2026-10-16",
+  "spot": 82.97,
+  "implied_move_pct": 6.73
  }
 }
