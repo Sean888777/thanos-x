@@ -1,5 +1,5 @@
 {
- "last_session": "2026-10-07",
+ "last_session": "2026-10-08",
  "candidates": [
   {
    "ticker": "CCL",
@@ -160,25 +160,40 @@
    "t1_ref": 928.7504,
    "stop_dist_pct": 14.24,
    "excluded": "X3 停損距離超過 12%"
-  }
- ],
- "short_watch": [
+  },
   {
-   "ticker": "HESM",
-   "e_date": "2026-10-07",
-   "gap_pct": -6.82,
-   "vol_mult": 9.03,
-   "close_pos": 0.26,
-   "hold_pct": -14.63,
-   "e_open": 36.05,
-   "e_high": 36.05,
-   "e_low": 31.99,
-   "e_close": 33.03,
-   "atr14": 1.2622,
-   "range_pct": 12.29,
-   "side": "short_watch"
+   "ticker": "HAE",
+   "e_date": "2026-10-08",
+   "gap_pct": 13.07,
+   "vol_mult": 4.93,
+   "close_pos": 0.84,
+   "hold_pct": 17.46,
+   "e_open": 115.0,
+   "e_high": 121.0,
+   "e_low": 111.66,
+   "e_close": 119.47,
+   "atr14": 3.5793,
+   "range_pct": 7.82,
+   "template": "A",
+   "signal_date": "2026-10-08",
+   "side": "long",
+   "limit": 123.0493,
+   "stop_ref": 111.66,
+   "risk_ref": 11.3893,
+   "t1_ref": 145.8279,
+   "stop_dist_pct": 9.26,
+   "sector": "Healthcare",
+   "next_earnings": "2026-11-05",
+   "flags": [
+    "請手動確認：非現金併購標的"
+   ],
+   "size_factor": 1.0,
+   "blocked": false,
+   "selected": true,
+   "rank": 1
   }
  ],
+ "short_watch": [],
  "events": [
   {
    "ticker": "CCL",
@@ -237,6 +252,20 @@
    "e_close": 28.15,
    "atr14": 1.3011,
    "range_pct": 11.23
+  },
+  {
+   "ticker": "HAE",
+   "e_date": "2026-10-08",
+   "gap_pct": 13.07,
+   "vol_mult": 4.93,
+   "close_pos": 0.84,
+   "hold_pct": 17.46,
+   "e_open": 115.0,
+   "e_high": 121.0,
+   "e_low": 111.66,
+   "e_close": 119.47,
+   "atr14": 3.5793,
+   "range_pct": 7.82
   }
  ]
 }

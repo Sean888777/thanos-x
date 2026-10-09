@@ -1,16 +1,14 @@
 {
  "version": "radar-0.3.3",
  "status": "ok",
- "generated_at": "2026-10-08T01:40:02+00:00",
- "session": "2026-10-07",
+ "generated_at": "2026-10-09T01:53:39+00:00",
+ "session": "2026-10-08",
  "universe_size": 1466,
  "coverage": {
   "requested": 1468,
-  "received": 1465,
+  "received": 1467,
   "missing_sample": [
-   "PSKY",
-   "QRVO",
-   "WBD"
+   "QRVO"
   ]
  },
  "config": {
@@ -44,40 +42,56 @@
   "pool_days": 75
  },
  "regime": {
-  "spy_close": 777.22,
-  "spy_ma50": 765.95,
+  "spy_close": 773.93,
+  "spy_ma50": 766.84,
   "spy_above_ma50": true,
-  "vix": 15.08,
+  "vix": 15.41,
   "vix_level": "normal"
  },
  "today": {
-  "candidates": [],
+  "candidates": [
+   {
+    "ticker": "HAE",
+    "e_date": "2026-10-08",
+    "gap_pct": 13.07,
+    "vol_mult": 4.93,
+    "close_pos": 0.84,
+    "hold_pct": 17.46,
+    "e_open": 115.0,
+    "e_high": 121.0,
+    "e_low": 111.66,
+    "e_close": 119.47,
+    "atr14": 3.5793,
+    "range_pct": 7.82,
+    "template": "A",
+    "signal_date": "2026-10-08",
+    "side": "long",
+    "limit": 123.0493,
+    "stop_ref": 111.66,
+    "risk_ref": 11.3893,
+    "t1_ref": 145.8279,
+    "stop_dist_pct": 9.26,
+    "sector": "Healthcare",
+    "next_earnings": "2026-11-05",
+    "flags": [
+     "請手動確認：非現金併購標的"
+    ],
+    "size_factor": 1.0,
+    "blocked": false,
+    "selected": true,
+    "rank": 1
+   }
+  ],
   "not_selected_count": 0,
   "excluded": [],
-  "short_watch": [
-   {
-    "ticker": "HESM",
-    "e_date": "2026-10-07",
-    "gap_pct": -6.82,
-    "vol_mult": 9.03,
-    "close_pos": 0.26,
-    "hold_pct": -14.63,
-    "e_open": 36.05,
-    "e_high": 36.05,
-    "e_low": 31.99,
-    "e_close": 33.03,
-    "atr14": 1.2622,
-    "range_pct": 12.29,
-    "side": "short_watch"
-   }
-  ]
+  "short_watch": []
  },
  "pool": {
   "CCL": {
-   "last_date": "2026-10-07",
-   "last_close": 26.15,
-   "ma10": 24.495,
-   "atr14": 0.9564,
+   "last_date": "2026-10-08",
+   "last_close": 26.13,
+   "ma10": 24.929,
+   "atr14": 0.9793,
    "next_earnings": "2026-12-18",
    "template": "B",
    "e_date": "2026-09-29",
@@ -86,16 +100,28 @@
    "limit": 27.0661
   },
   "SNPS": {
-   "last_date": "2026-10-07",
-   "last_close": 502.67,
-   "ma10": 459.506,
-   "atr14": 20.0629,
+   "last_date": "2026-10-08",
+   "last_close": 497.75,
+   "ma10": 466.79,
+   "atr14": 20.8179,
    "next_earnings": "2026-12-09",
    "template": "A",
    "e_date": "2026-10-01",
    "signal_date": "2026-10-01",
    "e_low": 462.0,
    "limit": 509.4579
+  },
+  "HAE": {
+   "last_date": "2026-10-08",
+   "last_close": 119.47,
+   "ma10": 106.062,
+   "atr14": 3.5793,
+   "next_earnings": "2026-11-05",
+   "template": "A",
+   "e_date": "2026-10-08",
+   "signal_date": "2026-10-08",
+   "e_low": 111.66,
+   "limit": 123.0493
   }
  },
  "paper": {
@@ -103,23 +129,23 @@
    "index": "SPY",
    "range": [
     "2026-09-30",
-    "2026-10-07"
+    "2026-10-08"
    ],
-   "sessions": 6,
+   "sessions": 7,
    "assumed_cash_rate_pct": 4.0,
-   "avg_exposure_pct": 10.6,
+   "avg_exposure_pct": 10.8,
    "max_exposure_pct": 12.7,
-   "system_pct": 0.31,
-   "system_trading_only_pct": 0.22,
-   "matched_benchmark_pct": 0.27,
-   "spy_buy_hold_pct": 1.7,
-   "cash_only_pct": 0.1,
+   "system_pct": 0.26,
+   "system_trading_only_pct": 0.16,
+   "matched_benchmark_pct": 0.23,
+   "spy_buy_hold_pct": 1.27,
+   "cash_only_pct": 0.11,
    "max_drawdown_pct": {
-    "system": -0.13,
-    "matched": -0.02,
-    "spy": -0.24
+    "system": -0.18,
+    "matched": -0.06,
+    "spy": -0.66
    },
-   "excess_vs_matched_pct": 0.04,
+   "excess_vs_matched_pct": 0.03,
    "beats_matched": true
   },
   "benchmark_iwm": null,
@@ -152,10 +178,10 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 26.15,
+     "last_close": 26.13,
      "stop_now": 24.0,
-     "unrealized_r": 0.41,
-     "held_days": 6,
+     "unrealized_r": 0.399,
+     "held_days": 7,
      "next_action": null,
      "ticker": "CCL",
      "template": "A",
@@ -175,10 +201,10 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 502.67,
+     "last_close": 497.75,
      "stop_now": 462.0,
-     "unrealized_r": 0.106,
-     "held_days": 4,
+     "unrealized_r": -0.002,
+     "held_days": 5,
      "next_action": null,
      "ticker": "SNPS",
      "template": "A",
