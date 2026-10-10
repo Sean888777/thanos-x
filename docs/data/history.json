@@ -1,5 +1,5 @@
 {
- "last_session": "2026-10-08",
+ "last_session": "2026-10-09",
  "candidates": [
   {
    "ticker": "CCL",
@@ -191,9 +191,70 @@
    "blocked": false,
    "selected": true,
    "rank": 1
+  },
+  {
+   "ticker": "CCI",
+   "e_date": "2026-10-09",
+   "gap_pct": 7.88,
+   "vol_mult": 3.8,
+   "close_pos": 0.98,
+   "hold_pct": 15.6,
+   "e_open": 74.32,
+   "e_high": 79.79,
+   "e_low": 73.75,
+   "e_close": 79.64,
+   "atr14": 2.4979,
+   "range_pct": 7.58,
+   "template": "A",
+   "signal_date": "2026-10-09",
+   "side": "long",
+   "limit": 82.1379,
+   "stop_ref": 73.75,
+   "risk_ref": 8.3879,
+   "t1_ref": 98.9137,
+   "stop_dist_pct": 10.21,
+   "sector": "Real Estate",
+   "next_earnings": "2026-10-21",
+   "excluded": "X2 2026-10-21 有財報",
+   "flags": [
+    "請手動確認：非現金併購標的"
+   ],
+   "size_factor": 1.0,
+   "blocked": false
   }
  ],
- "short_watch": [],
+ "short_watch": [
+  {
+   "ticker": "T",
+   "e_date": "2026-10-09",
+   "gap_pct": -10.01,
+   "vol_mult": 3.94,
+   "close_pos": 0.19,
+   "hold_pct": -10.82,
+   "e_open": 22.38,
+   "e_high": 23.1,
+   "e_low": 21.96,
+   "e_close": 22.18,
+   "atr14": 0.6171,
+   "range_pct": 5.14,
+   "side": "short_watch"
+  },
+  {
+   "ticker": "TMUS",
+   "e_date": "2026-10-09",
+   "gap_pct": -9.22,
+   "vol_mult": 3.67,
+   "close_pos": 0.08,
+   "hold_pct": -13.27,
+   "e_open": 155.51,
+   "e_high": 156.89,
+   "e_low": 147.9,
+   "e_close": 148.58,
+   "atr14": 4.8686,
+   "range_pct": 6.05,
+   "side": "short_watch"
+  }
+ ],
  "events": [
   {
    "ticker": "CCL",
@@ -266,6 +327,20 @@
    "e_close": 119.47,
    "atr14": 3.5793,
    "range_pct": 7.82
+  },
+  {
+   "ticker": "CCI",
+   "e_date": "2026-10-09",
+   "gap_pct": 7.88,
+   "vol_mult": 3.8,
+   "close_pos": 0.98,
+   "hold_pct": 15.6,
+   "e_open": 74.32,
+   "e_high": 79.79,
+   "e_low": 73.75,
+   "e_close": 79.64,
+   "atr14": 2.4979,
+   "range_pct": 7.58
   }
  ]
 }

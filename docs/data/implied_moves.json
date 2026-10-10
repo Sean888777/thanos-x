@@ -190,5 +190,69 @@
   "expiry": "2026-10-16",
   "spot": 82.97,
   "implied_move_pct": 6.73
+ },
+ "JPM|2026-10-13": {
+  "ticker": "JPM",
+  "earnings_date": "2026-10-13",
+  "captured": "2026-10-09",
+  "expiry": "2026-10-16",
+  "spot": 332.99,
+  "implied_move_pct": 3.58
+ },
+ "GS|2026-10-13": {
+  "ticker": "GS",
+  "earnings_date": "2026-10-13",
+  "captured": "2026-10-09",
+  "expiry": "2026-10-16",
+  "spot": 895.32,
+  "implied_move_pct": 4.72
+ },
+ "UNH|2026-10-13": {
+  "ticker": "UNH",
+  "earnings_date": "2026-10-13",
+  "captured": "2026-10-09",
+  "expiry": "2026-10-16",
+  "spot": 379.3,
+  "implied_move_pct": 7.24
+ },
+ "JNJ|2026-10-13": {
+  "ticker": "JNJ",
+  "earnings_date": "2026-10-13",
+  "captured": "2026-10-09",
+  "expiry": "2026-10-16",
+  "spot": 261.44,
+  "implied_move_pct": 3.59
+ },
+ "C|2026-10-13": {
+  "ticker": "C",
+  "earnings_date": "2026-10-13",
+  "captured": "2026-10-09",
+  "expiry": "2026-10-16",
+  "spot": 129.64,
+  "implied_move_pct": 4.18
+ },
+ "WFC|2026-10-13": {
+  "ticker": "WFC",
+  "earnings_date": "2026-10-13",
+  "captured": "2026-10-09",
+  "expiry": "2026-10-16",
+  "spot": 83.55,
+  "implied_move_pct": 4.68
+ },
+ "DPZ|2026-10-13": {
+  "ticker": "DPZ",
+  "earnings_date": "2026-10-13",
+  "captured": "2026-10-09",
+  "expiry": "2026-10-16",
+  "spot": 309.36,
+  "implied_move_pct": 7.13
+ },
+ "ACI|2026-10-13": {
+  "ticker": "ACI",
+  "earnings_date": "2026-10-13",
+  "captured": "2026-10-09",
+  "expiry": "2026-10-16",
+  "spot": 12.19,
+  "implied_move_pct": 6.15
  }
 }
