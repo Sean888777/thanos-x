@@ -1,5 +1,5 @@
 {
- "last_session": "2026-10-09",
+ "last_session": "2026-10-12",
  "candidates": [
   {
    "ticker": "CCL",
@@ -223,38 +223,7 @@
    "blocked": false
   }
  ],
- "short_watch": [
-  {
-   "ticker": "T",
-   "e_date": "2026-10-09",
-   "gap_pct": -10.01,
-   "vol_mult": 3.94,
-   "close_pos": 0.19,
-   "hold_pct": -10.82,
-   "e_open": 22.38,
-   "e_high": 23.1,
-   "e_low": 21.96,
-   "e_close": 22.18,
-   "atr14": 0.6171,
-   "range_pct": 5.14,
-   "side": "short_watch"
-  },
-  {
-   "ticker": "TMUS",
-   "e_date": "2026-10-09",
-   "gap_pct": -9.22,
-   "vol_mult": 3.67,
-   "close_pos": 0.08,
-   "hold_pct": -13.27,
-   "e_open": 155.51,
-   "e_high": 156.89,
-   "e_low": 147.9,
-   "e_close": 148.58,
-   "atr14": 4.8686,
-   "range_pct": 6.05,
-   "side": "short_watch"
-  }
- ],
+ "short_watch": [],
  "events": [
   {
    "ticker": "CCL",
