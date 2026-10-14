@@ -1,7 +1,7 @@
 {
  "version": "radar-0.3.3",
  "status": "ok",
- "generated_at": "2026-10-13T03:11:36+00:00",
+ "generated_at": "2026-10-14T01:02:00+00:00",
  "session": "2026-10-12",
  "universe_size": 1456,
  "coverage": {
@@ -45,7 +45,7 @@
   "spy_close": 778.1,
   "spy_ma50": 768.2,
   "spy_above_ma50": true,
-  "vix": 15.21,
+  "vix": 15.27,
   "vix_level": "normal"
  },
  "today": {

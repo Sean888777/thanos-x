@@ -254,5 +254,61 @@
   "expiry": "2026-10-16",
   "spot": 12.19,
   "implied_move_pct": 6.15
+ },
+ "ASML|2026-10-14": {
+  "ticker": "ASML",
+  "earnings_date": "2026-10-14",
+  "captured": "2026-10-12",
+  "expiry": "2026-10-16",
+  "spot": 1750.24,
+  "implied_move_pct": 5.6
+ },
+ "BAC|2026-10-14": {
+  "ticker": "BAC",
+  "earnings_date": "2026-10-14",
+  "captured": "2026-10-12",
+  "expiry": "2026-10-16",
+  "spot": 54.58,
+  "implied_move_pct": 3.71
+ },
+ "MS|2026-10-14": {
+  "ticker": "MS",
+  "earnings_date": "2026-10-14",
+  "captured": "2026-10-12",
+  "expiry": "2026-10-16",
+  "spot": 190.02,
+  "implied_move_pct": 4.15
+ },
+ "PGR|2026-10-14": {
+  "ticker": "PGR",
+  "earnings_date": "2026-10-14",
+  "captured": "2026-10-12",
+  "expiry": "2026-10-16",
+  "spot": 220.28,
+  "implied_move_pct": 3.84
+ },
+ "BLK|2026-10-14": {
+  "ticker": "BLK",
+  "earnings_date": "2026-10-14",
+  "captured": "2026-10-12",
+  "expiry": "2026-10-16",
+  "spot": 1083.92,
+  "implied_move_pct": 4.95
+ },
+ "STT|2026-10-14": {
+  "ticker": "STT",
+  "earnings_date": "2026-10-14",
+  "captured": "2026-10-12",
+  "expiry": "2026-10-16",
+  "spot": 174.93,
+  "implied_move_pct": 4.32
+ },
+ "FAST|2026-10-14": {
+  "ticker": "FAST",
+  "earnings_date": "2026-10-14",
+  "captured": "2026-10-12",
+  "expiry": "2026-10-16",
+  "spot": 51.49,
+  "implied_move_pct": 5.78
  }
 }
