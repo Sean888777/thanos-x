@@ -310,5 +310,101 @@
   "expiry": "2026-10-16",
   "spot": 51.49,
   "implied_move_pct": 5.78
+ },
+ "TSM|2026-10-15": {
+  "ticker": "TSM",
+  "earnings_date": "2026-10-15",
+  "captured": "2026-10-13",
+  "expiry": "2026-10-16",
+  "spot": 445.12,
+  "implied_move_pct": 4.52
+ },
+ "SCHW|2026-10-15": {
+  "ticker": "SCHW",
+  "earnings_date": "2026-10-15",
+  "captured": "2026-10-13",
+  "expiry": "2026-10-16",
+  "spot": 95.94,
+  "implied_move_pct": 4.16
+ },
+ "BNY|2026-10-15": {
+  "ticker": "BNY",
+  "earnings_date": "2026-10-15",
+  "captured": "2026-10-13",
+  "expiry": "2026-10-16",
+  "spot": 141.03,
+  "implied_move_pct": 3.53
+ },
+ "MRSH|2026-10-15": {
+  "ticker": "MRSH",
+  "earnings_date": "2026-10-15",
+  "captured": "2026-10-13",
+  "expiry": "2026-10-16",
+  "spot": 177.01,
+  "implied_move_pct": 3.81
+ },
+ "PLD|2026-10-15": {
+  "ticker": "PLD",
+  "earnings_date": "2026-10-15",
+  "captured": "2026-10-13",
+  "expiry": "2026-10-16",
+  "spot": 133.55,
+  "implied_move_pct": 4.47
+ },
+ "USB|2026-10-15": {
+  "ticker": "USB",
+  "earnings_date": "2026-10-15",
+  "captured": "2026-10-13",
+  "expiry": "2026-10-16",
+  "spot": 56.89,
+  "implied_move_pct": 3.44
+ },
+ "PNC|2026-10-15": {
+  "ticker": "PNC",
+  "earnings_date": "2026-10-15",
+  "captured": "2026-10-13",
+  "expiry": "2026-10-16",
+  "spot": 219.48,
+  "implied_move_pct": 3.9
+ },
+ "IBKR|2026-10-15": {
+  "ticker": "IBKR",
+  "earnings_date": "2026-10-15",
+  "captured": "2026-10-13",
+  "expiry": "2026-10-16",
+  "spot": 87.49,
+  "implied_move_pct": 5.2
+ },
+ "JBHT|2026-10-15": {
+  "ticker": "JBHT",
+  "earnings_date": "2026-10-15",
+  "captured": "2026-10-13",
+  "expiry": "2026-10-16",
+  "spot": 229.04,
+  "implied_move_pct": 6.18
+ },
+ "AA|2026-10-15": {
+  "ticker": "AA",
+  "earnings_date": "2026-10-15",
+  "captured": "2026-10-13",
+  "expiry": "2026-10-16",
+  "spot": 41.49,
+  "implied_move_pct": 6.63
+ },
+ "FHN|2026-10-15": {
+  "ticker": "FHN",
+  "earnings_date": "2026-10-15",
+  "captured": "2026-10-13",
+  "expiry": "2026-10-16",
+  "spot": 22.77,
+  "implied_move_pct": 4.28
+ },
+ "CMC|2026-10-15": {
+  "ticker": "CMC",
+  "earnings_date": "2026-10-15",
+  "captured": "2026-10-13",
+  "expiry": "2026-10-16",
+  "spot": 64.77,
+  "implied_move_pct": 5.25
  }
 }
