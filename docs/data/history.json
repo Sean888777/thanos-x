@@ -1,5 +1,5 @@
 {
- "last_session": "2026-10-13",
+ "last_session": "2026-10-14",
  "candidates": [
   {
    "ticker": "CCL",
@@ -225,18 +225,18 @@
  ],
  "short_watch": [
   {
-   "ticker": "S",
-   "e_date": "2026-10-13",
-   "gap_pct": -8.57,
-   "vol_mult": 3.16,
-   "close_pos": 0.29,
-   "hold_pct": -6.43,
-   "e_open": 23.46,
-   "e_high": 25.348,
-   "e_low": 23.46,
-   "e_close": 24.01,
-   "atr14": 1.0566,
-   "range_pct": 7.86,
+   "ticker": "CRWV",
+   "e_date": "2026-10-14",
+   "gap_pct": -7.8,
+   "vol_mult": 3.6,
+   "close_pos": 0.17,
+   "hold_pct": -15.46,
+   "e_open": 71.74,
+   "e_high": 72.52,
+   "e_low": 64.41,
+   "e_close": 65.78,
+   "atr14": 5.0761,
+   "range_pct": 12.33,
    "side": "short_watch"
   }
  ],
