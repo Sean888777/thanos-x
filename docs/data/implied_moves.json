@@ -470,5 +470,125 @@
   "expiry": "2026-10-16",
   "spot": 28.29,
   "implied_move_pct": 4.63
+ },
+ "AGNC|2026-10-19": {
+  "ticker": "AGNC",
+  "earnings_date": "2026-10-19",
+  "captured": "2026-10-15",
+  "expiry": "2026-10-23",
+  "spot": 8.82,
+  "implied_move_pct": 4.65
+ },
+ "FITB|2026-10-19": {
+  "ticker": "FITB",
+  "earnings_date": "2026-10-19",
+  "captured": "2026-10-15",
+  "expiry": "2026-11-20",
+  "spot": 50.35,
+  "implied_move_pct": 6.9
+ },
+ "WRB|2026-10-19": {
+  "ticker": "WRB",
+  "earnings_date": "2026-10-19",
+  "captured": "2026-10-15",
+  "expiry": "2026-11-20",
+  "spot": 73.97,
+  "implied_move_pct": 6.39
+ },
+ "STLD|2026-10-19": {
+  "ticker": "STLD",
+  "earnings_date": "2026-10-19",
+  "captured": "2026-10-15",
+  "expiry": "2026-11-20",
+  "spot": 240.76,
+  "implied_move_pct": 10.65
+ },
+ "CLF|2026-10-19": {
+  "ticker": "CLF",
+  "earnings_date": "2026-10-19",
+  "captured": "2026-10-15",
+  "expiry": "2026-10-23",
+  "spot": 12.15,
+  "implied_move_pct": 12.14
+ },
+ "SMMT|2026-10-19": {
+  "ticker": "SMMT",
+  "earnings_date": "2026-10-19",
+  "captured": "2026-10-15",
+  "expiry": "2026-10-23",
+  "spot": 15.37,
+  "implied_move_pct": 11.22
+ },
+ "CCK|2026-10-19": {
+  "ticker": "CCK",
+  "earnings_date": "2026-10-19",
+  "captured": "2026-10-15",
+  "expiry": "2026-11-20",
+  "spot": 113.68,
+  "implied_move_pct": 7.21
+ },
+ "WAL|2026-10-19": {
+  "ticker": "WAL",
+  "earnings_date": "2026-10-19",
+  "captured": "2026-10-15",
+  "expiry": "2026-11-20",
+  "spot": 74.35,
+  "implied_move_pct": 10.02
+ },
+ "ZION|2026-10-19": {
+  "ticker": "ZION",
+  "earnings_date": "2026-10-19",
+  "captured": "2026-10-15",
+  "expiry": "2026-11-20",
+  "spot": 63.01,
+  "implied_move_pct": 7.97
+ },
+ "FNB|2026-10-19": {
+  "ticker": "FNB",
+  "earnings_date": "2026-10-19",
+  "captured": "2026-10-15",
+  "expiry": "2026-11-20",
+  "spot": 17.16,
+  "implied_move_pct": 11.07
+ },
+ "DX|2026-10-19": {
+  "ticker": "DX",
+  "earnings_date": "2026-10-19",
+  "captured": "2026-10-15",
+  "expiry": "2026-11-20",
+  "spot": 11.12,
+  "implied_move_pct": 11.02
+ },
+ "WTFC|2026-10-19": {
+  "ticker": "WTFC",
+  "earnings_date": "2026-10-19",
+  "captured": "2026-10-15",
+  "expiry": "2026-11-20",
+  "spot": 143.54,
+  "implied_move_pct": 2.37
+ },
+ "RLI|2026-10-19": {
+  "ticker": "RLI",
+  "earnings_date": "2026-10-19",
+  "captured": "2026-10-15",
+  "expiry": "2026-11-20",
+  "spot": 59.48,
+  "implied_move_pct": 14.04
+ },
+ "CLBK|2026-10-19": {
+  "ticker": "CLBK",
+  "earnings_date": "2026-10-19",
+  "captured": "2026-10-15",
+  "expiry": "2026-11-20",
+  "spot": 10.82,
+  "implied_move_pct": 10.86
+ },
+ "FFIN|2026-10-15": {
+  "ticker": "FFIN",
+  "earnings_date": "2026-10-15",
+  "captured": "2026-10-15",
+  "expiry": "2027-01-15",
+  "spot": 31.59,
+  "implied_move_pct": 48.53
  }
 }

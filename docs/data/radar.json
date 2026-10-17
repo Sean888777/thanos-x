@@ -1,8 +1,8 @@
 {
  "version": "radar-0.3.3",
  "status": "ok",
- "generated_at": "2026-10-16T00:11:56+00:00",
- "session": "2026-10-14",
+ "generated_at": "2026-10-17T00:15:12+00:00",
+ "session": "2026-10-15",
  "universe_size": 1456,
  "coverage": {
   "requested": 1458,
@@ -42,40 +42,35 @@
   "pool_days": 75
  },
  "regime": {
-  "spy_close": 769.6,
-  "spy_ma50": 768.57,
+  "spy_close": 771.79,
+  "spy_ma50": 768.61,
   "spy_above_ma50": true,
-  "vix": 16.46,
+  "vix": 19.99,
   "vix_level": "normal"
  },
  "today": {
   "candidates": [],
   "not_selected_count": 0,
-  "excluded": [],
-  "short_watch": [
+  "excluded": [
    {
-    "ticker": "CRWV",
-    "e_date": "2026-10-14",
-    "gap_pct": -7.8,
-    "vol_mult": 3.6,
-    "close_pos": 0.17,
-    "hold_pct": -15.46,
-    "e_open": 71.74,
-    "e_high": 72.52,
-    "e_low": 64.41,
-    "e_close": 65.78,
-    "atr14": 5.0761,
-    "range_pct": 12.33,
-    "side": "short_watch"
+    "ticker": "PAG",
+    "template": "A",
+    "reason": "X1 疑似現金併購（跳空後區間極窄）"
+   },
+   {
+    "ticker": "CCI",
+    "template": "B",
+    "reason": "X2 2026-10-21 有財報"
    }
-  ]
+  ],
+  "short_watch": []
  },
  "pool": {
   "CCL": {
-   "last_date": "2026-10-14",
-   "last_close": 25.97,
-   "ma10": 26.078,
-   "atr14": 0.9443,
+   "last_date": "2026-10-15",
+   "last_close": 26.46,
+   "ma10": 26.217,
+   "atr14": 0.9364,
    "next_earnings": "2026-12-18",
    "template": "B",
    "e_date": "2026-09-29",
@@ -84,10 +79,10 @@
    "limit": 27.0661
   },
   "SNPS": {
-   "last_date": "2026-10-14",
-   "last_close": 479.93,
-   "ma10": 496.144,
-   "atr14": 20.6743,
+   "last_date": "2026-10-15",
+   "last_close": 468.11,
+   "ma10": 493.901,
+   "atr14": 20.9407,
    "next_earnings": "2026-12-09",
    "template": "A",
    "e_date": "2026-10-01",
@@ -96,10 +91,10 @@
    "limit": 509.4579
   },
   "HAE": {
-   "last_date": "2026-10-14",
-   "last_close": 121.11,
-   "ma10": 112.201,
-   "atr14": 3.9079,
+   "last_date": "2026-10-15",
+   "last_close": 121.29,
+   "ma10": 113.893,
+   "atr14": 4.0464,
    "next_earnings": "2026-11-05",
    "template": "A",
    "e_date": "2026-10-08",
@@ -113,23 +108,23 @@
    "index": "SPY",
    "range": [
     "2026-09-30",
-    "2026-10-14"
+    "2026-10-15"
    ],
-   "sessions": 11,
+   "sessions": 12,
    "assumed_cash_rate_pct": 4.0,
-   "avg_exposure_pct": 13.7,
+   "avg_exposure_pct": 14.1,
    "max_exposure_pct": 18.8,
-   "system_pct": 0.12,
-   "system_trading_only_pct": -0.03,
-   "matched_benchmark_pct": 0.14,
-   "spy_buy_hold_pct": 0.71,
-   "cash_only_pct": 0.17,
+   "system_pct": 0.14,
+   "system_trading_only_pct": -0.02,
+   "matched_benchmark_pct": 0.21,
+   "spy_buy_hold_pct": 0.99,
+   "cash_only_pct": 0.19,
    "max_drawdown_pct": {
     "system": -0.41,
     "matched": -0.19,
     "spy": -1.22
    },
-   "excess_vs_matched_pct": -0.02,
+   "excess_vs_matched_pct": -0.07,
    "beats_matched": false
   },
   "benchmark_iwm": null,
@@ -162,10 +157,10 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 25.97,
+     "last_close": 26.46,
      "stop_now": 24.0,
-     "unrealized_r": 0.313,
-     "held_days": 11,
+     "unrealized_r": 0.578,
+     "held_days": 12,
      "next_action": null,
      "ticker": "CCL",
      "template": "A",
@@ -185,11 +180,11 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 479.93,
+     "last_close": 468.11,
      "stop_now": 462.0,
-     "unrealized_r": -0.396,
-     "held_days": 9,
-     "next_action": null,
+     "unrealized_r": -0.656,
+     "held_days": 10,
+     "next_action": "E4 停滯",
      "ticker": "SNPS",
      "template": "A",
      "e_date": "2026-10-01",
@@ -208,10 +203,10 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 121.11,
+     "last_close": 121.29,
      "stop_now": 111.66,
-     "unrealized_r": 0.131,
-     "held_days": 4,
+     "unrealized_r": 0.149,
+     "held_days": 5,
      "next_action": null,
      "ticker": "HAE",
      "template": "A",

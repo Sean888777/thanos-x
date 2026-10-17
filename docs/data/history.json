@@ -1,5 +1,5 @@
 {
- "last_session": "2026-10-14",
+ "last_session": "2026-10-15",
  "candidates": [
   {
    "ticker": "CCL",
@@ -221,25 +221,60 @@
    ],
    "size_factor": 1.0,
    "blocked": false
-  }
- ],
- "short_watch": [
+  },
   {
-   "ticker": "CRWV",
-   "e_date": "2026-10-14",
-   "gap_pct": -7.8,
-   "vol_mult": 3.6,
-   "close_pos": 0.17,
-   "hold_pct": -15.46,
-   "e_open": 71.74,
-   "e_high": 72.52,
-   "e_low": 64.41,
-   "e_close": 65.78,
-   "atr14": 5.0761,
-   "range_pct": 12.33,
-   "side": "short_watch"
+   "ticker": "PAG",
+   "e_date": "2026-10-15",
+   "gap_pct": 8.32,
+   "vol_mult": 6.91,
+   "close_pos": 0.89,
+   "hold_pct": 8.84,
+   "e_open": 211.0,
+   "e_high": 212.19,
+   "e_low": 210.51,
+   "e_close": 212.0,
+   "atr14": 4.9536,
+   "range_pct": 0.79,
+   "template": "A",
+   "signal_date": "2026-10-15",
+   "side": "long",
+   "limit": 216.9536,
+   "stop_ref": 208.2755,
+   "risk_ref": 8.6781,
+   "t1_ref": 234.3099,
+   "stop_dist_pct": 4.0,
+   "excluded": "X1 疑似現金併購（跳空後區間極窄）"
+  },
+  {
+   "ticker": "CCI",
+   "e_date": "2026-10-09",
+   "gap_pct": 7.88,
+   "vol_mult": 3.8,
+   "e_high": 79.79,
+   "e_low": 73.75,
+   "e_close": 79.64,
+   "template": "B",
+   "signal_date": "2026-10-15",
+   "side": "long",
+   "days_after_event": 4,
+   "s_close": 80.0,
+   "atr14": 2.6421,
+   "limit": 81.3211,
+   "stop_ref": 73.75,
+   "risk_ref": 7.5711,
+   "t1_ref": 96.4632,
+   "stop_dist_pct": 9.31,
+   "sector": "Real Estate",
+   "next_earnings": "2026-10-21",
+   "excluded": "X2 2026-10-21 有財報",
+   "flags": [
+    "請手動確認：非現金併購標的"
+   ],
+   "size_factor": 1.0,
+   "blocked": false
   }
  ],
+ "short_watch": [],
  "events": [
   {
    "ticker": "CCL",
@@ -325,7 +360,23 @@
    "e_low": 73.75,
    "e_close": 79.64,
    "atr14": 2.4979,
-   "range_pct": 7.58
+   "range_pct": 7.58,
+   "b_state": "triggered"
+  },
+  {
+   "ticker": "PAG",
+   "e_date": "2026-10-15",
+   "gap_pct": 8.32,
+   "vol_mult": 6.91,
+   "close_pos": 0.89,
+   "hold_pct": 8.84,
+   "e_open": 211.0,
+   "e_high": 212.19,
+   "e_low": 210.51,
+   "e_close": 212.0,
+   "atr14": 4.9536,
+   "range_pct": 0.79,
+   "x1": true
   }
  ]
 }
