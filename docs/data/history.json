@@ -1,5 +1,5 @@
 {
- "last_session": "2026-10-15",
+ "last_session": "2026-10-16",
  "candidates": [
   {
    "ticker": "CCL",
@@ -318,7 +318,8 @@
    "e_low": 462.0,
    "e_close": 490.54,
    "atr14": 18.9179,
-   "range_pct": 7.12
+   "range_pct": 7.12,
+   "b_state": "broken"
   },
   {
    "ticker": "XP",
