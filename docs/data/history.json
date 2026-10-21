@@ -1,5 +1,5 @@
 {
- "last_session": "2026-10-16",
+ "last_session": "2026-10-19",
  "candidates": [
   {
    "ticker": "CCL",
@@ -272,6 +272,31 @@
    ],
    "size_factor": 1.0,
    "blocked": false
+  },
+  {
+   "ticker": "CLF",
+   "e_date": "2026-10-19",
+   "gap_pct": 17.16,
+   "vol_mult": 4.88,
+   "close_pos": 0.71,
+   "hold_pct": 16.34,
+   "e_open": 14.2,
+   "e_high": 14.58,
+   "e_low": 12.94,
+   "e_close": 14.1,
+   "atr14": 0.8121,
+   "range_pct": 11.63,
+   "template": "A",
+   "signal_date": "2026-10-19",
+   "side": "long",
+   "limit": 14.9121,
+   "stop_ref": 12.94,
+   "risk_ref": 1.9721,
+   "t1_ref": 18.8563,
+   "stop_dist_pct": 13.22,
+   "excluded": "X3 停損距離超過 12%",
+   "implied_move_pct": 12.14,
+   "surprise_ratio": 1.41
   }
  ],
  "short_watch": [],
@@ -378,6 +403,20 @@
    "atr14": 4.9536,
    "range_pct": 0.79,
    "x1": true
+  },
+  {
+   "ticker": "CLF",
+   "e_date": "2026-10-19",
+   "gap_pct": 17.16,
+   "vol_mult": 4.88,
+   "close_pos": 0.71,
+   "hold_pct": 16.34,
+   "e_open": 14.2,
+   "e_high": 14.58,
+   "e_low": 12.94,
+   "e_close": 14.1,
+   "atr14": 0.8121,
+   "range_pct": 11.63
   }
  ]
 }
