@@ -1,5 +1,5 @@
 {
- "last_session": "2026-10-19",
+ "last_session": "2026-10-20",
  "candidates": [
   {
    "ticker": "CCL",
@@ -297,6 +297,29 @@
    "excluded": "X3 停損距離超過 12%",
    "implied_move_pct": 12.14,
    "surprise_ratio": 1.41
+  },
+  {
+   "ticker": "BRZE",
+   "e_date": "2026-10-20",
+   "gap_pct": 51.56,
+   "vol_mult": 32.66,
+   "close_pos": 0.89,
+   "hold_pct": 51.7,
+   "e_open": 45.53,
+   "e_high": 45.61,
+   "e_low": 45.26,
+   "e_close": 45.57,
+   "atr14": 2.4506,
+   "range_pct": 0.77,
+   "template": "A",
+   "signal_date": "2026-10-20",
+   "side": "long",
+   "limit": 48.0206,
+   "stop_ref": 45.26,
+   "risk_ref": 2.7606,
+   "t1_ref": 53.5418,
+   "stop_dist_pct": 5.75,
+   "excluded": "X1 疑似現金併購（跳空後區間極窄）"
   }
  ],
  "short_watch": [],
@@ -417,6 +440,21 @@
    "e_close": 14.1,
    "atr14": 0.8121,
    "range_pct": 11.63
+  },
+  {
+   "ticker": "BRZE",
+   "e_date": "2026-10-20",
+   "gap_pct": 51.56,
+   "vol_mult": 32.66,
+   "close_pos": 0.89,
+   "hold_pct": 51.7,
+   "e_open": 45.53,
+   "e_high": 45.61,
+   "e_low": 45.26,
+   "e_close": 45.57,
+   "atr14": 2.4506,
+   "range_pct": 0.77,
+   "x1": true
   }
  ]
 }

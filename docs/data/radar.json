@@ -1,8 +1,8 @@
 {
  "version": "radar-0.3.3",
  "status": "ok",
- "generated_at": "2026-10-21T00:29:37+00:00",
- "session": "2026-10-19",
+ "generated_at": "2026-10-22T00:32:24+00:00",
+ "session": "2026-10-20",
  "universe_size": 1417,
  "coverage": {
   "requested": 1419,
@@ -42,10 +42,10 @@
   "pool_days": 75
  },
  "regime": {
-  "spy_close": 766.48,
-  "spy_ma50": 768.37,
-  "spy_above_ma50": false,
-  "vix": 17.31,
+  "spy_close": 769.05,
+  "spy_ma50": 768.29,
+  "spy_above_ma50": true,
+  "vix": 16.68,
   "vix_level": "normal"
  },
  "today": {
@@ -53,19 +53,19 @@
   "not_selected_count": 0,
   "excluded": [
    {
-    "ticker": "CLF",
+    "ticker": "BRZE",
     "template": "A",
-    "reason": "X3 停損距離超過 12%"
+    "reason": "X1 疑似現金併購（跳空後區間極窄）"
    }
   ],
   "short_watch": []
  },
  "pool": {
   "CCL": {
-   "last_date": "2026-10-19",
-   "last_close": 26.45,
-   "ma10": 26.32,
-   "atr14": 0.7929,
+   "last_date": "2026-10-20",
+   "last_close": 27.06,
+   "ma10": 26.368,
+   "atr14": 0.8507,
    "next_earnings": "2026-12-18",
    "template": "B",
    "e_date": "2026-09-29",
@@ -74,10 +74,10 @@
    "limit": 27.0661
   },
   "SNPS": {
-   "last_date": "2026-10-19",
-   "last_close": 454.58,
-   "ma10": 486.985,
-   "atr14": 21.3136,
+   "last_date": "2026-10-20",
+   "last_close": 447.62,
+   "ma10": 481.23,
+   "atr14": 20.1,
    "next_earnings": "2026-12-09",
    "template": "A",
    "e_date": "2026-10-01",
@@ -86,10 +86,10 @@
    "limit": 509.4579
   },
   "HAE": {
-   "last_date": "2026-10-19",
-   "last_close": 118.73,
-   "ma10": 116.658,
-   "atr14": 4.2443,
+   "last_date": "2026-10-20",
+   "last_close": 118.21,
+   "ma10": 118.127,
+   "atr14": 4.3179,
    "next_earnings": "2026-11-05",
    "template": "A",
    "e_date": "2026-10-08",
@@ -103,23 +103,23 @@
    "index": "SPY",
    "range": [
     "2026-09-30",
-    "2026-10-19"
+    "2026-10-20"
    ],
-   "sessions": 14,
+   "sessions": 15,
    "assumed_cash_rate_pct": 4.0,
    "avg_exposure_pct": 13.9,
    "max_exposure_pct": 18.8,
-   "system_pct": -0.02,
-   "system_trading_only_pct": -0.21,
-   "matched_benchmark_pct": 0.08,
-   "spy_buy_hold_pct": 0.3,
-   "cash_only_pct": 0.22,
+   "system_pct": 0.13,
+   "system_trading_only_pct": -0.07,
+   "matched_benchmark_pct": 0.14,
+   "spy_buy_hold_pct": 0.63,
+   "cash_only_pct": 0.24,
    "max_drawdown_pct": {
     "system": -0.73,
     "matched": -0.32,
     "spy": -2.03
    },
-   "excess_vs_matched_pct": -0.1,
+   "excess_vs_matched_pct": -0.01,
    "beats_matched": false
   },
   "benchmark_iwm": null,
@@ -158,10 +158,10 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 26.45,
+     "last_close": 27.06,
      "stop_now": 24.0,
-     "unrealized_r": 0.572,
-     "held_days": 14,
+     "unrealized_r": 0.901,
+     "held_days": 15,
      "next_action": null,
      "ticker": "CCL",
      "template": "A",
@@ -181,10 +181,10 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 118.73,
+     "last_close": 118.21,
      "stop_now": 111.66,
-     "unrealized_r": -0.109,
-     "held_days": 7,
+     "unrealized_r": -0.161,
+     "held_days": 8,
      "next_action": null,
      "ticker": "HAE",
      "template": "A",
@@ -299,7 +299,7 @@
    "x3_excluded": {
     "note": "因停損距離 > 12% 被排除者，若照做",
     "closed": 1,
-    "open": 2,
+    "open": 3,
     "no_fill": 0,
     "skipped_capacity": 0,
     "win_rate": 1.0,
