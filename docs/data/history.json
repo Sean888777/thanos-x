@@ -1,5 +1,5 @@
 {
- "last_session": "2026-10-21",
+ "last_session": "2026-10-22",
  "candidates": [
   {
    "ticker": "CCL",
@@ -320,9 +320,89 @@
    "t1_ref": 53.5418,
    "stop_dist_pct": 5.75,
    "excluded": "X1 疑似現金併購（跳空後區間極窄）"
+  },
+  {
+   "ticker": "SPOT",
+   "e_date": "2026-10-22",
+   "gap_pct": 6.84,
+   "vol_mult": 3.23,
+   "close_pos": 0.84,
+   "hold_pct": 11.1,
+   "e_open": 561.29,
+   "e_high": 588.88,
+   "e_low": 555.32,
+   "e_close": 583.66,
+   "atr14": 21.2761,
+   "range_pct": 5.75,
+   "template": "A",
+   "signal_date": "2026-10-22",
+   "side": "long",
+   "limit": 604.9361,
+   "stop_ref": 555.32,
+   "risk_ref": 49.6161,
+   "t1_ref": 704.1683,
+   "stop_dist_pct": 8.2,
+   "implied_move_pct": 8.64,
+   "surprise_ratio": 0.79,
+   "sector": "Communication Services",
+   "next_earnings": "2027-02-09",
+   "flags": [
+    "請手動確認：非現金併購標的",
+    "大盤在 50 日均線下，0.5R"
+   ],
+   "size_factor": 0.5,
+   "blocked": false,
+   "selected": true,
+   "rank": 1
   }
  ],
- "short_watch": [],
+ "short_watch": [
+  {
+   "ticker": "TTMI",
+   "e_date": "2026-10-22",
+   "gap_pct": -18.01,
+   "vol_mult": 5.87,
+   "close_pos": 0.18,
+   "hold_pct": -27.67,
+   "e_open": 83.75,
+   "e_high": 84.09,
+   "e_low": 71.71,
+   "e_close": 73.89,
+   "atr14": 10.7221,
+   "range_pct": 16.75,
+   "side": "short_watch"
+  },
+  {
+   "ticker": "CRS",
+   "e_date": "2026-10-22",
+   "gap_pct": -10.37,
+   "vol_mult": 3.97,
+   "close_pos": 0.17,
+   "hold_pct": -20.62,
+   "e_open": 330.0,
+   "e_high": 330.0,
+   "e_low": 284.27,
+   "e_close": 292.26,
+   "atr14": 17.84,
+   "range_pct": 15.65,
+   "side": "short_watch"
+  },
+  {
+   "ticker": "GGG",
+   "e_date": "2026-10-22",
+   "gap_pct": -10.63,
+   "vol_mult": 3.78,
+   "close_pos": 0.23,
+   "hold_pct": -15.32,
+   "e_open": 73.11,
+   "e_high": 74.5,
+   "e_low": 67.74,
+   "e_close": 69.28,
+   "atr14": 2.3286,
+   "range_pct": 9.76,
+   "side": "short_watch"
+  }
+ ],
  "events": [
   {
    "ticker": "CCL",
@@ -455,6 +535,20 @@
    "atr14": 2.4506,
    "range_pct": 0.77,
    "x1": true
+  },
+  {
+   "ticker": "SPOT",
+   "e_date": "2026-10-22",
+   "gap_pct": 6.84,
+   "vol_mult": 3.23,
+   "close_pos": 0.84,
+   "hold_pct": 11.1,
+   "e_open": 561.29,
+   "e_high": 588.88,
+   "e_low": 555.32,
+   "e_close": 583.66,
+   "atr14": 21.2761,
+   "range_pct": 5.75
   }
  ]
 }
