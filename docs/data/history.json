@@ -1,5 +1,5 @@
 {
- "last_session": "2026-10-23",
+ "last_session": "2026-10-26",
  "candidates": [
   {
    "ticker": "CCL",
@@ -379,55 +379,40 @@
    "excluded": "X3 停損距離超過 12%",
    "implied_move_pct": 13.52,
    "surprise_ratio": 0.84
-  }
- ],
- "short_watch": [
-  {
-   "ticker": "LKQ",
-   "e_date": "2026-10-23",
-   "gap_pct": -19.18,
-   "vol_mult": 7.18,
-   "close_pos": 0.19,
-   "hold_pct": -22.47,
-   "e_open": 18.16,
-   "e_high": 18.29,
-   "e_low": 17.21,
-   "e_close": 17.42,
-   "atr14": 1.0164,
-   "range_pct": 6.2,
-   "side": "short_watch"
   },
   {
-   "ticker": "TNGX",
-   "e_date": "2026-10-23",
-   "gap_pct": -8.56,
-   "vol_mult": 4.12,
-   "close_pos": 0.2,
-   "hold_pct": -16.43,
-   "e_open": 25.54,
-   "e_high": 25.94,
-   "e_low": 22.68,
-   "e_close": 23.34,
-   "atr14": 1.9529,
-   "range_pct": 13.97,
-   "side": "short_watch"
-  },
-  {
-   "ticker": "FLG",
-   "e_date": "2026-10-23",
-   "gap_pct": -7.78,
-   "vol_mult": 3.92,
-   "close_pos": 0.11,
-   "hold_pct": -9.27,
-   "e_open": 10.55,
-   "e_high": 11.05,
-   "e_low": 10.3,
-   "e_close": 10.38,
-   "atr14": 0.3464,
-   "range_pct": 7.23,
-   "side": "short_watch"
+   "ticker": "RRC",
+   "e_date": "2026-10-26",
+   "gap_pct": 11.62,
+   "vol_mult": 9.77,
+   "close_pos": 0.98,
+   "hold_pct": 17.66,
+   "e_open": 50.81,
+   "e_high": 53.65,
+   "e_low": 50.0,
+   "e_close": 53.56,
+   "atr14": 1.69,
+   "range_pct": 6.81,
+   "template": "A",
+   "signal_date": "2026-10-26",
+   "side": "long",
+   "limit": 55.25,
+   "stop_ref": 50.0,
+   "risk_ref": 5.25,
+   "t1_ref": 65.75,
+   "stop_dist_pct": 9.5,
+   "sector": "Energy",
+   "next_earnings": "2026-10-27",
+   "excluded": "X2 2026-10-27 有財報",
+   "flags": [
+    "請手動確認：非現金併購標的",
+    "大盤在 50 日均線下，0.5R"
+   ],
+   "size_factor": 0.5,
+   "blocked": false
   }
  ],
+ "short_watch": [],
  "events": [
   {
    "ticker": "CCL",
@@ -486,7 +471,8 @@
    "e_low": 25.84,
    "e_close": 28.15,
    "atr14": 1.3011,
-   "range_pct": 11.23
+   "range_pct": 11.23,
+   "b_state": "broken"
   },
   {
    "ticker": "HAE",
@@ -588,6 +574,20 @@
    "e_close": 45.87,
    "atr14": 2.035,
    "range_pct": 13.39
+  },
+  {
+   "ticker": "RRC",
+   "e_date": "2026-10-26",
+   "gap_pct": 11.62,
+   "vol_mult": 9.77,
+   "close_pos": 0.98,
+   "hold_pct": 17.66,
+   "e_open": 50.81,
+   "e_high": 53.65,
+   "e_low": 50.0,
+   "e_close": 53.56,
+   "atr14": 1.69,
+   "range_pct": 6.81
   }
  ]
 }
