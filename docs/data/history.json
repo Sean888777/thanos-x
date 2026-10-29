@@ -1,5 +1,5 @@
 {
- "last_session": "2026-10-26",
+ "last_session": "2026-10-28",
  "candidates": [
   {
    "ticker": "CCL",
@@ -410,9 +410,135 @@
    ],
    "size_factor": 0.5,
    "blocked": false
+  },
+  {
+   "ticker": "AXGN",
+   "e_date": "2026-10-28",
+   "gap_pct": 21.33,
+   "vol_mult": 6.03,
+   "close_pos": 0.89,
+   "hold_pct": 31.47,
+   "e_open": 45.45,
+   "e_high": 49.97,
+   "e_low": 43.5,
+   "e_close": 49.25,
+   "atr14": 2.1971,
+   "range_pct": 13.14,
+   "template": "A",
+   "signal_date": "2026-10-28",
+   "side": "long",
+   "limit": 51.4471,
+   "stop_ref": 43.5,
+   "risk_ref": 7.9471,
+   "t1_ref": 67.3413,
+   "stop_dist_pct": 15.45,
+   "excluded": "X3 停損距離超過 12%"
+  },
+  {
+   "ticker": "ICLR",
+   "e_date": "2026-10-28",
+   "gap_pct": 8.86,
+   "vol_mult": 4.57,
+   "close_pos": 0.96,
+   "hold_pct": 17.04,
+   "e_open": 199.19,
+   "e_high": 214.94,
+   "e_low": 195.8,
+   "e_close": 214.16,
+   "atr14": 9.7243,
+   "range_pct": 8.94,
+   "template": "A",
+   "signal_date": "2026-10-28",
+   "side": "long",
+   "limit": 223.8843,
+   "stop_ref": 195.8,
+   "risk_ref": 28.0843,
+   "t1_ref": 280.0529,
+   "stop_dist_pct": 12.54,
+   "excluded": "X3 停損距離超過 12%"
+  },
+  {
+   "ticker": "VRT",
+   "e_date": "2026-10-28",
+   "gap_pct": 16.51,
+   "vol_mult": 3.33,
+   "close_pos": 0.86,
+   "hold_pct": 16.48,
+   "e_open": 243.0,
+   "e_high": 245.31,
+   "e_low": 228.81,
+   "e_close": 242.94,
+   "atr14": 13.4,
+   "range_pct": 6.79,
+   "template": "A",
+   "signal_date": "2026-10-28",
+   "side": "long",
+   "limit": 256.34,
+   "stop_ref": 228.81,
+   "risk_ref": 27.53,
+   "t1_ref": 311.4,
+   "stop_dist_pct": 10.74,
+   "implied_move_pct": 11.12,
+   "surprise_ratio": 1.48,
+   "sector": "Industrials",
+   "next_earnings": null,
+   "flags": [
+    "請手動確認：非現金併購標的",
+    "財報日未知，請手動確認"
+   ],
+   "size_factor": 1.0,
+   "blocked": false,
+   "selected": true,
+   "rank": 1
   }
  ],
- "short_watch": [],
+ "short_watch": [
+  {
+   "ticker": "LPLA",
+   "e_date": "2026-10-28",
+   "gap_pct": -7.37,
+   "vol_mult": 6.89,
+   "close_pos": 0.03,
+   "hold_pct": -15.23,
+   "e_open": 294.17,
+   "e_high": 297.27,
+   "e_low": 268.39,
+   "e_close": 269.19,
+   "atr14": 11.43,
+   "range_pct": 10.73,
+   "side": "short_watch"
+  },
+  {
+   "ticker": "FFIV",
+   "e_date": "2026-10-28",
+   "gap_pct": -8.28,
+   "vol_mult": 6.08,
+   "close_pos": 0.06,
+   "hold_pct": -20.43,
+   "e_open": 421.31,
+   "e_high": 429.46,
+   "e_low": 361.78,
+   "e_close": 365.53,
+   "atr14": 21.7429,
+   "range_pct": 18.52,
+   "side": "short_watch"
+  },
+  {
+   "ticker": "LII",
+   "e_date": "2026-10-28",
+   "gap_pct": -6.22,
+   "vol_mult": 4.21,
+   "close_pos": 0.25,
+   "hold_pct": -10.59,
+   "e_open": 348.9,
+   "e_high": 353.18,
+   "e_low": 325.7,
+   "e_close": 332.64,
+   "atr14": 13.8371,
+   "range_pct": 8.26,
+   "side": "short_watch"
+  }
+ ],
  "events": [
   {
    "ticker": "CCL",
@@ -559,7 +685,8 @@
    "e_low": 555.32,
    "e_close": 583.66,
    "atr14": 21.2761,
-   "range_pct": 5.75
+   "range_pct": 5.75,
+   "b_state": "broken"
   },
   {
    "ticker": "RHI",
@@ -588,6 +715,48 @@
    "e_close": 53.56,
    "atr14": 1.69,
    "range_pct": 6.81
+  },
+  {
+   "ticker": "AXGN",
+   "e_date": "2026-10-28",
+   "gap_pct": 21.33,
+   "vol_mult": 6.03,
+   "close_pos": 0.89,
+   "hold_pct": 31.47,
+   "e_open": 45.45,
+   "e_high": 49.97,
+   "e_low": 43.5,
+   "e_close": 49.25,
+   "atr14": 2.1971,
+   "range_pct": 13.14
+  },
+  {
+   "ticker": "ICLR",
+   "e_date": "2026-10-28",
+   "gap_pct": 8.86,
+   "vol_mult": 4.57,
+   "close_pos": 0.96,
+   "hold_pct": 17.04,
+   "e_open": 199.19,
+   "e_high": 214.94,
+   "e_low": 195.8,
+   "e_close": 214.16,
+   "atr14": 9.7243,
+   "range_pct": 8.94
+  },
+  {
+   "ticker": "VRT",
+   "e_date": "2026-10-28",
+   "gap_pct": 16.51,
+   "vol_mult": 3.33,
+   "close_pos": 0.86,
+   "hold_pct": 16.48,
+   "e_open": 243.0,
+   "e_high": 245.31,
+   "e_low": 228.81,
+   "e_close": 242.94,
+   "atr14": 13.4,
+   "range_pct": 6.79
   }
  ]
 }
