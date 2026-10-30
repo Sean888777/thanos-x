@@ -3262,5 +3262,645 @@
   "expiry": "2026-11-20",
   "spot": 360.9,
   "implied_move_pct": 10.5
+ },
+ "AAPL|2026-11-02": {
+  "ticker": "AAPL",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-04",
+  "spot": 348.91,
+  "implied_move_pct": 4.01
+ },
+ "PLTR|2026-11-02": {
+  "ticker": "PLTR",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-06",
+  "spot": 196.42,
+  "implied_move_pct": 12.09
+ },
+ "ON|2026-11-02": {
+  "ticker": "ON",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-06",
+  "spot": 75.24,
+  "implied_move_pct": 10.2
+ },
+ "VRTX|2026-11-02": {
+  "ticker": "VRTX",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-06",
+  "spot": 540.0,
+  "implied_move_pct": 5.23
+ },
+ "WMB|2026-11-02": {
+  "ticker": "WMB",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-06",
+  "spot": 74.88,
+  "implied_move_pct": 3.94
+ },
+ "MAR|2026-11-02": {
+  "ticker": "MAR",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-06",
+  "spot": 399.65,
+  "implied_move_pct": 4.82
+ },
+ "TSEM|2026-11-02": {
+  "ticker": "TSEM",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-06",
+  "spot": 187.92,
+  "implied_move_pct": 12.93
+ },
+ "TEM|2026-11-02": {
+  "ticker": "TEM",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-06",
+  "spot": 77.84,
+  "implied_move_pct": 12.46
+ },
+ "O|2026-11-02": {
+  "ticker": "O",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 57.2,
+  "implied_move_pct": 3.76
+ },
+ "FANG|2026-11-02": {
+  "ticker": "FANG",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 206.43,
+  "implied_move_pct": 7.34
+ },
+ "FN|2026-11-02": {
+  "ticker": "FN",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 348.68,
+  "implied_move_pct": 19.06
+ },
+ "ROKU|2026-11-02": {
+  "ticker": "ROKU",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-06",
+  "spot": 156.33,
+  "implied_move_pct": 3.14
+ },
+ "EL|2026-11-02": {
+  "ticker": "EL",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-06",
+  "spot": 108.81,
+  "implied_move_pct": 9.47
+ },
+ "FOXA|2026-11-02": {
+  "ticker": "FOXA",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 64.51,
+  "implied_move_pct": 8.33
+ },
+ "PEG|2026-11-02": {
+  "ticker": "PEG",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 73.63,
+  "implied_move_pct": 4.96
+ },
+ "IDXX|2026-11-02": {
+  "ticker": "IDXX",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 575.98,
+  "implied_move_pct": 8.43
+ },
+ "ETR|2026-11-02": {
+  "ticker": "ETR",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 109.97,
+  "implied_move_pct": 5.07
+ },
+ "WST|2026-10-29": {
+  "ticker": "WST",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 416.67,
+  "implied_move_pct": 3.67
+ },
+ "XPO|2026-10-29": {
+  "ticker": "XPO",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 183.01,
+  "implied_move_pct": 8.36
+ },
+ "CVE|2026-10-30": {
+  "ticker": "CVE",
+  "earnings_date": "2026-10-30",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 32.13,
+  "implied_move_pct": 8.56
+ },
+ "TROW|2026-10-29": {
+  "ticker": "TROW",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 106.63,
+  "implied_move_pct": 5.25
+ },
+ "LSCC|2026-11-02": {
+  "ticker": "LSCC",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 103.0,
+  "implied_move_pct": 16.5
+ },
+ "TTE|2026-10-29": {
+  "ticker": "TTE",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 94.03,
+  "implied_move_pct": 4.97
+ },
+ "SBAC|2026-11-02": {
+  "ticker": "SBAC",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 184.88,
+  "implied_move_pct": 8.36
+ },
+ "INCY|2026-10-29": {
+  "ticker": "INCY",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 116.8,
+  "implied_move_pct": 7.75
+ },
+ "LYB|2026-10-30": {
+  "ticker": "LYB",
+  "earnings_date": "2026-10-30",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 65.37,
+  "implied_move_pct": 8.41
+ },
+ "CLX|2026-11-02": {
+  "ticker": "CLX",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 88.67,
+  "implied_move_pct": 8.35
+ },
+ "QSR|2026-10-29": {
+  "ticker": "QSR",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 73.01,
+  "implied_move_pct": 4.83
+ },
+ "CHD|2026-10-30": {
+  "ticker": "CHD",
+  "earnings_date": "2026-10-30",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 106.0,
+  "implied_move_pct": 5.4
+ },
+ "HNGE|2026-11-02": {
+  "ticker": "HNGE",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 116.9,
+  "implied_move_pct": 14.71
+ },
+ "AEHR|2026-11-02": {
+  "ticker": "AEHR",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-06",
+  "spot": 61.21,
+  "implied_move_pct": 17.89
+ },
+ "LNT|2026-10-29": {
+  "ticker": "LNT",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 70.68,
+  "implied_move_pct": 4.99
+ },
+ "CHKP|2026-11-02": {
+  "ticker": "CHKP",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 153.5,
+  "implied_move_pct": 11.69
+ },
+ "LQDA|2026-11-02": {
+  "ticker": "LQDA",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-06",
+  "spot": 44.99,
+  "implied_move_pct": 9.39
+ },
+ "FTI|2026-10-29": {
+  "ticker": "FTI",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 66.95,
+  "implied_move_pct": 7.54
+ },
+ "TW|2026-10-29": {
+  "ticker": "TW",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 118.88,
+  "implied_move_pct": 3.68
+ },
+ "BBIO|2026-10-29": {
+  "ticker": "BBIO",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 70.73,
+  "implied_move_pct": 12.02
+ },
+ "THC|2026-10-29": {
+  "ticker": "THC",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 270.57,
+  "implied_move_pct": 7.89
+ },
+ "HLN|2026-10-29": {
+  "ticker": "HLN",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 8.57,
+  "implied_move_pct": 12.84
+ },
+ "NBIX|2026-11-02": {
+  "ticker": "NBIX",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 146.38,
+  "implied_move_pct": 9.53
+ },
+ "JAZZ|2026-11-02": {
+  "ticker": "JAZZ",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 207.83,
+  "implied_move_pct": 8.54
+ },
+ "VLTO|2026-10-29": {
+  "ticker": "VLTO",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 104.06,
+  "implied_move_pct": 5.33
+ },
+ "WY|2026-10-29": {
+  "ticker": "WY",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 19.75,
+  "implied_move_pct": 6.58
+ },
+ "BWA|2026-10-29": {
+  "ticker": "BWA",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 53.3,
+  "implied_move_pct": 6.94
+ },
+ "CRBG|2026-11-02": {
+  "ticker": "CRBG",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 35.29,
+  "implied_move_pct": 7.44
+ },
+ "BUD|2026-10-29": {
+  "ticker": "BUD",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-10-30",
+  "spot": 79.52,
+  "implied_move_pct": 2.83
+ },
+ "GDDY|2026-10-29": {
+  "ticker": "GDDY",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-10-30",
+  "spot": 105.89,
+  "implied_move_pct": 13.55
+ },
+ "TECK|2026-10-29": {
+  "ticker": "TECK",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-10-30",
+  "spot": 63.72,
+  "implied_move_pct": 4.63
+ },
+ "WTW|2026-10-29": {
+  "ticker": "WTW",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 320.73,
+  "implied_move_pct": 4.24
+ },
+ "BAX|2026-10-29": {
+  "ticker": "BAX",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-10-30",
+  "spot": 23.5,
+  "implied_move_pct": 2.77
+ },
+ "HII|2026-10-29": {
+  "ticker": "HII",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 316.21,
+  "implied_move_pct": 2.93
+ },
+ "BWXT|2026-11-02": {
+  "ticker": "BWXT",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 137.93,
+  "implied_move_pct": 11.02
+ },
+ "CROX|2026-10-29": {
+  "ticker": "CROX",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 150.26,
+  "implied_move_pct": 6.75
+ },
+ "MHK|2026-10-29": {
+  "ticker": "MHK",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 129.99,
+  "implied_move_pct": 12.0
+ },
+ "FDXF|2026-10-29": {
+  "ticker": "FDXF",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 109.69,
+  "implied_move_pct": 10.8
+ },
+ "BG|2026-10-29": {
+  "ticker": "BG",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 96.02,
+  "implied_move_pct": 6.82
+ },
+ "UDR|2026-11-02": {
+  "ticker": "UDR",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 35.42,
+  "implied_move_pct": 6.28
+ },
+ "AEIS|2026-11-02": {
+  "ticker": "AEIS",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 239.75,
+  "implied_move_pct": 15.41
+ },
+ "CRGY|2026-11-02": {
+  "ticker": "CRGY",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 13.75,
+  "implied_move_pct": 10.36
+ },
+ "AXSM|2026-11-02": {
+  "ticker": "AXSM",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 143.45,
+  "implied_move_pct": 13.63
+ },
+ "BLDR|2026-10-29": {
+  "ticker": "BLDR",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 63.06,
+  "implied_move_pct": 12.92
+ },
+ "RBC|2026-10-30": {
+  "ticker": "RBC",
+  "earnings_date": "2026-10-30",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 495.74,
+  "implied_move_pct": 27.46
+ },
+ "H|2026-10-29": {
+  "ticker": "H",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 184.3,
+  "implied_move_pct": 6.4
+ },
+ "BMRN|2026-11-02": {
+  "ticker": "BMRN",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 57.49,
+  "implied_move_pct": 7.09
+ },
+ "FND|2026-10-29": {
+  "ticker": "FND",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 50.34,
+  "implied_move_pct": 11.62
+ },
+ "SNY|2026-10-30": {
+  "ticker": "SNY",
+  "earnings_date": "2026-10-30",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 43.13,
+  "implied_move_pct": 6.78
+ },
+ "EQH|2026-11-02": {
+  "ticker": "EQH",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 54.61,
+  "implied_move_pct": 8.01
+ },
+ "MTCH|2026-11-02": {
+  "ticker": "MTCH",
+  "earnings_date": "2026-11-02",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 42.65,
+  "implied_move_pct": 11.25
+ },
+ "EXEL|2026-10-29": {
+  "ticker": "EXEL",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 66.2,
+  "implied_move_pct": 10.12
+ },
+ "EPD|2026-10-29": {
+  "ticker": "EPD",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-10-30",
+  "spot": 39.05,
+  "implied_move_pct": 1.6
+ },
+ "TXT|2026-10-29": {
+  "ticker": "TXT",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 87.46,
+  "implied_move_pct": 5.23
+ },
+ "DVA|2026-10-29": {
+  "ticker": "DVA",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 193.31,
+  "implied_move_pct": 11.92
+ },
+ "BTSG|2026-10-30": {
+  "ticker": "BTSG",
+  "earnings_date": "2026-10-30",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 60.22,
+  "implied_move_pct": 12.16
+ },
+ "LTH|2026-10-29": {
+  "ticker": "LTH",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 45.35,
+  "implied_move_pct": 7.66
+ },
+ "TPG|2026-10-29": {
+  "ticker": "TPG",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 47.94,
+  "implied_move_pct": 9.07
+ },
+ "CNI|2026-10-30": {
+  "ticker": "CNI",
+  "earnings_date": "2026-10-30",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 124.06,
+  "implied_move_pct": 5.48
+ },
+ "POR|2026-10-29": {
+  "ticker": "POR",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 44.19,
+  "implied_move_pct": 4.41
+ },
+ "DTM|2026-10-29": {
+  "ticker": "DTM",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 126.98,
+  "implied_move_pct": 6.54
+ },
+ "SAIA|2026-10-29": {
+  "ticker": "SAIA",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 343.07,
+  "implied_move_pct": 9.12
+ },
+ "ALGM|2026-10-29": {
+  "ticker": "ALGM",
+  "earnings_date": "2026-10-29",
+  "captured": "2026-10-29",
+  "expiry": "2026-11-20",
+  "spot": 33.03,
+  "implied_move_pct": 13.02
  }
 }
