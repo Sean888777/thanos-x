@@ -1,5 +1,5 @@
 {
- "last_session": "2026-10-29",
+ "last_session": "2026-10-30",
  "candidates": [
   {
    "ticker": "CCL",
@@ -668,52 +668,77 @@
    "t1_ref": 18.325,
    "stop_dist_pct": 12.18,
    "excluded": "X3 停損距離超過 12%"
+  },
+  {
+   "ticker": "REGN",
+   "e_date": "2026-10-30",
+   "gap_pct": 6.19,
+   "vol_mult": 4.54,
+   "close_pos": 0.92,
+   "hold_pct": 13.33,
+   "e_open": 869.43,
+   "e_high": 935.35,
+   "e_low": 839.08,
+   "e_close": 927.89,
+   "atr14": 27.6421,
+   "range_pct": 10.38,
+   "template": "A",
+   "signal_date": "2026-10-30",
+   "side": "long",
+   "limit": 955.5321,
+   "stop_ref": 839.08,
+   "risk_ref": 116.4521,
+   "t1_ref": 1188.4363,
+   "stop_dist_pct": 12.19,
+   "excluded": "X3 停損距離超過 12%",
+   "implied_move_pct": 5.61,
+   "surprise_ratio": 1.1
+  },
+  {
+   "ticker": "RHI",
+   "e_date": "2026-10-23",
+   "gap_pct": 11.33,
+   "vol_mult": 3.81,
+   "e_high": 47.14,
+   "e_low": 41.0,
+   "e_close": 45.87,
+   "template": "B",
+   "signal_date": "2026-10-30",
+   "side": "long",
+   "days_after_event": 5,
+   "s_close": 43.73,
+   "atr14": 2.435,
+   "limit": 44.9475,
+   "stop_ref": 41.0,
+   "risk_ref": 3.9475,
+   "t1_ref": 52.8425,
+   "stop_dist_pct": 8.78,
+   "sector": "Industrials",
+   "next_earnings": "2027-01-28",
+   "flags": [
+    "請手動確認：非現金併購標的",
+    "大盤在 50 日均線下，0.5R"
+   ],
+   "size_factor": 0.5,
+   "blocked": false,
+   "selected": true,
+   "rank": 1
   }
  ],
  "short_watch": [
   {
-   "ticker": "ALNY",
-   "e_date": "2026-10-29",
-   "gap_pct": -20.14,
-   "vol_mult": 8.37,
-   "close_pos": 0.06,
-   "hold_pct": -25.13,
-   "e_open": 185.59,
-   "e_high": 202.37,
-   "e_low": 172.31,
-   "e_close": 174.0,
-   "atr14": 11.4464,
-   "range_pct": 17.28,
-   "side": "short_watch"
-  },
-  {
-   "ticker": "SFM",
-   "e_date": "2026-10-29",
-   "gap_pct": -23.13,
-   "vol_mult": 8.24,
-   "close_pos": 0.18,
-   "hold_pct": -22.58,
-   "e_open": 47.66,
-   "e_high": 50.9,
-   "e_low": 47.35,
-   "e_close": 48.0,
-   "atr14": 3.855,
-   "range_pct": 7.4,
-   "side": "short_watch"
-  },
-  {
-   "ticker": "NOW",
-   "e_date": "2026-10-29",
-   "gap_pct": -19.46,
-   "vol_mult": 6.07,
-   "close_pos": 0.08,
-   "hold_pct": -26.95,
-   "e_open": 120.91,
-   "e_high": 121.5,
-   "e_low": 108.68,
-   "e_close": 109.67,
-   "atr14": 9.0786,
-   "range_pct": 11.69,
+   "ticker": "RDDT",
+   "e_date": "2026-10-30",
+   "gap_pct": -22.65,
+   "vol_mult": 6.75,
+   "close_pos": 0.19,
+   "hold_pct": -29.22,
+   "e_open": 100.25,
+   "e_high": 101.98,
+   "e_low": 89.28,
+   "e_close": 91.73,
+   "atr14": 10.3539,
+   "range_pct": 13.84,
    "side": "short_watch"
   }
  ],
@@ -879,7 +904,8 @@
    "e_low": 41.0,
    "e_close": 45.87,
    "atr14": 2.035,
-   "range_pct": 13.39
+   "range_pct": 13.39,
+   "b_state": "triggered"
   },
   {
    "ticker": "RRC",
@@ -1006,6 +1032,20 @@
    "e_close": 18.22,
    "atr14": 0.7836,
    "range_pct": 5.87
+  },
+  {
+   "ticker": "REGN",
+   "e_date": "2026-10-30",
+   "gap_pct": 6.19,
+   "vol_mult": 4.54,
+   "close_pos": 0.92,
+   "hold_pct": 13.33,
+   "e_open": 869.43,
+   "e_high": 935.35,
+   "e_low": 839.08,
+   "e_close": 927.89,
+   "atr14": 27.6421,
+   "range_pct": 10.38
   }
  ]
 }
