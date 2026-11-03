@@ -1,13 +1,14 @@
 {
  "version": "radar-0.3.3",
  "status": "ok",
- "generated_at": "2026-10-31T01:30:15+00:00",
- "session": "2026-10-30",
- "universe_size": 1448,
+ "generated_at": "2026-11-03T03:40:31+00:00",
+ "session": "2026-11-02",
+ "universe_size": 1420,
  "coverage": {
-  "requested": 1450,
-  "received": 1449,
+  "requested": 1422,
+  "received": 1420,
   "missing_sample": [
+   "AIOK",
    "VYLR"
   ]
  },
@@ -42,37 +43,42 @@
   "pool_days": 75
  },
  "regime": {
-  "spy_close": 755.72,
-  "spy_ma50": 767.49,
+  "spy_close": 752.1,
+  "spy_ma50": 767.22,
   "spy_above_ma50": false,
-  "vix": 19.42,
+  "vix": 21.15,
   "vix_level": "normal"
  },
  "today": {
   "candidates": [
    {
-    "ticker": "RHI",
-    "e_date": "2026-10-23",
-    "gap_pct": 11.33,
-    "vol_mult": 3.81,
-    "e_high": 47.14,
-    "e_low": 41.0,
-    "e_close": 45.87,
-    "template": "B",
-    "signal_date": "2026-10-30",
+    "ticker": "IDXX",
+    "e_date": "2026-11-02",
+    "gap_pct": 13.39,
+    "vol_mult": 3.52,
+    "close_pos": 0.97,
+    "hold_pct": 21.85,
+    "e_open": 625.0,
+    "e_high": 673.19,
+    "e_low": 620.2,
+    "e_close": 671.64,
+    "atr14": 23.3036,
+    "range_pct": 7.89,
+    "template": "A",
+    "signal_date": "2026-11-02",
     "side": "long",
-    "days_after_event": 5,
-    "s_close": 43.73,
-    "atr14": 2.435,
-    "limit": 44.9475,
-    "stop_ref": 41.0,
-    "risk_ref": 3.9475,
-    "t1_ref": 52.8425,
-    "stop_dist_pct": 8.78,
-    "sector": "Industrials",
-    "next_earnings": "2027-01-28",
+    "limit": 694.9436,
+    "stop_ref": 620.2,
+    "risk_ref": 74.7436,
+    "t1_ref": 844.4308,
+    "stop_dist_pct": 10.76,
+    "implied_move_pct": 8.43,
+    "surprise_ratio": 1.59,
+    "sector": null,
+    "next_earnings": null,
     "flags": [
      "請手動確認：非現金併購標的",
+     "財報日未知，請手動確認",
      "大盤在 50 日均線下，0.5R"
     ],
     "size_factor": 0.5,
@@ -82,37 +88,15 @@
    }
   ],
   "not_selected_count": 0,
-  "excluded": [
-   {
-    "ticker": "REGN",
-    "template": "A",
-    "reason": "X3 停損距離超過 12%"
-   }
-  ],
-  "short_watch": [
-   {
-    "ticker": "RDDT",
-    "e_date": "2026-10-30",
-    "gap_pct": -22.65,
-    "vol_mult": 6.75,
-    "close_pos": 0.19,
-    "hold_pct": -29.22,
-    "e_open": 100.25,
-    "e_high": 101.98,
-    "e_low": 89.28,
-    "e_close": 91.73,
-    "atr14": 10.3539,
-    "range_pct": 13.84,
-    "side": "short_watch"
-   }
-  ]
+  "excluded": [],
+  "short_watch": []
  },
  "pool": {
   "CCL": {
-   "last_date": "2026-10-30",
-   "last_close": 28.83,
-   "ma10": 27.433,
-   "atr14": 0.9571,
+   "last_date": "2026-11-02",
+   "last_close": 30.05,
+   "ma10": 27.793,
+   "atr14": 1.0486,
    "next_earnings": "2026-12-18",
    "template": "B",
    "e_date": "2026-09-29",
@@ -121,10 +105,10 @@
    "limit": 27.0661
   },
   "SNPS": {
-   "last_date": "2026-10-30",
-   "last_close": 467.61,
-   "ma10": 457.445,
-   "atr14": 19.7079,
+   "last_date": "2026-11-02",
+   "last_close": 466.08,
+   "ma10": 458.595,
+   "atr14": 19.6443,
    "next_earnings": "2026-12-09",
    "template": "A",
    "e_date": "2026-10-01",
@@ -133,10 +117,10 @@
    "limit": 509.4579
   },
   "HAE": {
-   "last_date": "2026-10-30",
-   "last_close": 119.65,
-   "ma10": 118.564,
-   "atr14": 2.9986,
+   "last_date": "2026-11-02",
+   "last_close": 120.14,
+   "ma10": 118.705,
+   "atr14": 2.9764,
    "next_earnings": "2026-11-05",
    "template": "A",
    "e_date": "2026-10-08",
@@ -145,10 +129,10 @@
    "limit": 123.0493
   },
   "SPOT": {
-   "last_date": "2026-10-30",
-   "last_close": 593.44,
-   "ma10": 555.495,
-   "atr14": 23.7039,
+   "last_date": "2026-11-02",
+   "last_close": 594.04,
+   "ma10": 563.023,
+   "atr14": 24.1243,
    "next_earnings": "2027-02-09",
    "template": "A",
    "e_date": "2026-10-22",
@@ -157,10 +141,10 @@
    "limit": 604.9361
   },
   "VRT": {
-   "last_date": "2026-10-30",
-   "last_close": 232.5,
-   "ma10": 214.14,
-   "atr14": 15.0621,
+   "last_date": "2026-11-02",
+   "last_close": 224.24,
+   "ma10": 215.956,
+   "atr14": 15.5746,
    "next_earnings": null,
    "template": "A",
    "e_date": "2026-10-28",
@@ -169,10 +153,10 @@
    "limit": 256.34
   },
   "CROX": {
-   "last_date": "2026-10-30",
-   "last_close": 150.52,
-   "ma10": 125.908,
-   "atr14": 6.2221,
+   "last_date": "2026-11-02",
+   "last_close": 153.13,
+   "ma10": 129.203,
+   "atr14": 6.4843,
    "next_earnings": null,
    "template": "A",
    "e_date": "2026-10-29",
@@ -181,10 +165,10 @@
    "limit": 156.4071
   },
   "FCN": {
-   "last_date": "2026-10-30",
-   "last_close": 182.84,
-   "ma10": 160.585,
-   "atr14": 6.1964,
+   "last_date": "2026-11-02",
+   "last_close": 191.77,
+   "ma10": 164.952,
+   "atr14": 6.9821,
    "next_earnings": null,
    "template": "A",
    "e_date": "2026-10-29",
@@ -193,10 +177,10 @@
    "limit": 187.3014
   },
   "INSM": {
-   "last_date": "2026-10-30",
-   "last_close": 112.58,
-   "ma10": 98.289,
-   "atr14": 4.0607,
+   "last_date": "2026-11-02",
+   "last_close": 109.31,
+   "ma10": 99.691,
+   "atr14": 4.1064,
    "next_earnings": null,
    "template": "A",
    "e_date": "2026-10-29",
@@ -205,16 +189,28 @@
    "limit": 115.4714
   },
   "RHI": {
-   "last_date": "2026-10-30",
-   "last_close": 43.73,
-   "ma10": 40.025,
-   "atr14": 2.435,
+   "last_date": "2026-11-02",
+   "last_close": 44.77,
+   "ma10": 41.215,
+   "atr14": 2.4843,
    "next_earnings": "2027-01-28",
    "template": "B",
    "e_date": "2026-10-23",
    "signal_date": "2026-10-30",
    "e_low": 41.0,
    "limit": 44.9475
+  },
+  "IDXX": {
+   "last_date": "2026-11-02",
+   "last_close": 671.64,
+   "ma10": 573.175,
+   "atr14": 23.3036,
+   "next_earnings": null,
+   "template": "A",
+   "e_date": "2026-11-02",
+   "signal_date": "2026-11-02",
+   "e_low": 620.2,
+   "limit": 694.9436
   }
  },
  "paper": {
@@ -222,30 +218,30 @@
    "index": "SPY",
    "range": [
     "2026-09-30",
-    "2026-10-30"
+    "2026-11-02"
    ],
-   "sessions": 23,
+   "sessions": 24,
    "assumed_cash_rate_pct": 4.0,
-   "avg_exposure_pct": 13.1,
-   "max_exposure_pct": 21.7,
-   "system_pct": -0.41,
+   "avg_exposure_pct": 13.5,
+   "max_exposure_pct": 24.6,
+   "system_pct": -0.4,
    "system_trading_only_pct": -0.73,
-   "matched_benchmark_pct": 0.13,
-   "spy_buy_hold_pct": -1.11,
-   "cash_only_pct": 0.37,
+   "matched_benchmark_pct": 0.04,
+   "spy_buy_hold_pct": -1.58,
+   "cash_only_pct": 0.38,
    "max_drawdown_pct": {
     "system": -0.94,
     "matched": -0.32,
-    "spy": -3.0
+    "spy": -3.46
    },
-   "excess_vs_matched_pct": -0.54,
+   "excess_vs_matched_pct": -0.44,
    "beats_matched": false
   },
   "benchmark_iwm": null,
   "system": {
    "stats": {
     "closed": 4,
-    "open": 4,
+    "open": 5,
     "no_fill": 0,
     "skipped_capacity": 1,
     "win_rate": 0.25,
@@ -255,11 +251,11 @@
     "avg_loss": -0.623,
     "avg_hold_days": 11.0
    },
-   "filled_trades": 8,
+   "filled_trades": 9,
    "peak": {
-    "positions": 4,
-    "open_risk_r": 4.0,
-    "cash_used_pct": 22.0
+    "positions": 5,
+    "open_risk_r": 4.5,
+    "cash_used_pct": 24.9
    },
    "skip_reasons": {
     "同標的已持有": 1
@@ -277,11 +273,11 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 232.5,
+     "last_close": 224.24,
      "stop_now": 228.4416,
-     "unrealized_r": -0.337,
-     "held_days": 2,
-     "next_action": null,
+     "unrealized_r": -0.846,
+     "held_days": 3,
+     "next_action": "E1 停損",
      "ticker": "VRT",
      "template": "A",
      "e_date": "2026-10-28",
@@ -300,10 +296,10 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 150.52,
+     "last_close": 153.13,
      "stop_now": 139.33,
-     "unrealized_r": -0.078,
-     "held_days": 1,
+     "unrealized_r": 0.09,
+     "held_days": 2,
      "next_action": null,
      "ticker": "CROX",
      "template": "A",
@@ -323,10 +319,10 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 112.58,
+     "last_close": 109.31,
      "stop_now": 103.78,
-     "unrealized_r": -0.087,
-     "held_days": 1,
+     "unrealized_r": -0.365,
+     "held_days": 2,
      "next_action": null,
      "ticker": "INSM",
      "template": "A",
@@ -346,16 +342,39 @@
      "realized_r": 0.0,
      "status": "open",
      "remaining": 1.0,
-     "last_close": 182.84,
+     "last_close": 191.77,
      "stop_now": 169.23,
-     "unrealized_r": -0.108,
-     "held_days": 1,
+     "unrealized_r": 0.37,
+     "held_days": 2,
      "next_action": null,
      "ticker": "FCN",
      "template": "A",
      "e_date": "2026-10-29",
      "signal_date": "2026-10-29",
      "size": 1.0
+    },
+    {
+     "entry_date": "2026-11-02",
+     "entry": 43.63,
+     "stop": 41.0,
+     "t1": 48.89,
+     "unit": 3.8475,
+     "cost_side": 0.003,
+     "fills": [],
+     "t1_date": null,
+     "realized_r": 0.0,
+     "status": "open",
+     "remaining": 1.0,
+     "last_close": 44.77,
+     "stop_now": 41.0,
+     "unrealized_r": 0.296,
+     "held_days": 1,
+     "next_action": null,
+     "ticker": "RHI",
+     "template": "B",
+     "e_date": "2026-10-23",
+     "signal_date": "2026-10-30",
+     "size": 0.5
     }
    ],
    "recent_closed": [
@@ -488,7 +507,7 @@
    },
    "template_B": {
     "closed": 1,
-    "open": 0,
+    "open": 1,
     "no_fill": 0,
     "skipped_capacity": 0,
     "win_rate": 0.0,
@@ -500,7 +519,7 @@
    },
    "selected": {
     "closed": 5,
-    "open": 4,
+    "open": 5,
     "no_fill": 0,
     "skipped_capacity": 0,
     "win_rate": 0.2,
@@ -528,7 +547,7 @@
    "baseline_same_set": {
     "note": "入選者照現行規則（與下一列比較用）",
     "closed": 5,
-    "open": 4,
+    "open": 5,
     "no_fill": 0,
     "skipped_capacity": 0,
     "win_rate": 0.2,
@@ -541,7 +560,7 @@
    "no_stall": {
     "note": "同一批入選者，若不執行 E4 停滯出場",
     "closed": 3,
-    "open": 6,
+    "open": 7,
     "no_fill": 0,
     "skipped_capacity": 0,
     "win_rate": 0.333,
@@ -554,7 +573,7 @@
    "x3_excluded": {
     "note": "因停損距離 > 12% 被排除者，若照做",
     "closed": 2,
-    "open": 7,
+    "open": 8,
     "no_fill": 0,
     "skipped_capacity": 0,
     "win_rate": 0.5,
@@ -567,7 +586,7 @@
    "target_only": {
     "note": "2R 全數停利、取消持有期上限（大爺的提議）",
     "closed": 5,
-    "open": 4,
+    "open": 5,
     "no_fill": 0,
     "skipped_capacity": 0,
     "win_rate": 0.2,
@@ -580,7 +599,7 @@
    "losers_time": {
     "note": "持有期滿只砍未達 +1R 者，其餘改 10 日均線移動停利（發財的版本）",
     "closed": 4,
-    "open": 5,
+    "open": 6,
     "no_fill": 0,
     "skipped_capacity": 0,
     "win_rate": 0.0,
