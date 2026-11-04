@@ -1,14 +1,16 @@
 {
  "version": "radar-0.3.3",
  "status": "ok",
- "generated_at": "2026-11-03T03:40:31+00:00",
+ "generated_at": "2026-11-04T02:03:43+00:00",
  "session": "2026-11-02",
  "universe_size": 1420,
  "coverage": {
   "requested": 1422,
-  "received": 1420,
+  "received": 1418,
   "missing_sample": [
    "AIOK",
+   "INDV",
+   "KVUE",
    "VYLR"
   ]
  },
@@ -46,7 +48,7 @@
   "spy_close": 752.1,
   "spy_ma50": 767.22,
   "spy_above_ma50": false,
-  "vix": 21.15,
+  "vix": 20.83,
   "vix_level": "normal"
  },
  "today": {
