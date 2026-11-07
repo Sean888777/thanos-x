@@ -1,5 +1,5 @@
 {
- "last_session": "2026-11-04",
+ "last_session": "2026-11-06",
  "candidates": [
   {
    "ticker": "CCL",
@@ -1049,52 +1049,53 @@
    "blocked": false,
    "selected": true,
    "rank": 3
+  },
+  {
+   "ticker": "INSM",
+   "e_date": "2026-10-29",
+   "gap_pct": 13.43,
+   "vol_mult": 3.44,
+   "e_high": 114.51,
+   "e_low": 103.78,
+   "e_close": 111.59,
+   "template": "B",
+   "signal_date": "2026-11-06",
+   "side": "long",
+   "days_after_event": 6,
+   "s_close": 114.41,
+   "atr14": 5.1314,
+   "limit": 116.9757,
+   "stop_ref": 103.78,
+   "risk_ref": 13.1957,
+   "t1_ref": 143.3672,
+   "stop_dist_pct": 11.28,
+   "sector": "Healthcare",
+   "next_earnings": "2027-02-18",
+   "flags": [
+    "請手動確認：非現金併購標的",
+    "大盤在 50 日均線下，0.5R",
+    "VIX > 25，0.5R"
+   ],
+   "size_factor": 0.5,
+   "blocked": false,
+   "selected": true,
+   "rank": 1
   }
  ],
  "short_watch": [
   {
-   "ticker": "UNM",
-   "e_date": "2026-11-04",
-   "gap_pct": -17.61,
-   "vol_mult": 6.42,
-   "close_pos": 0.25,
-   "hold_pct": -17.84,
-   "e_open": 75.0,
-   "e_high": 79.72,
-   "e_low": 73.11,
-   "e_close": 74.79,
-   "atr14": 3.1236,
-   "range_pct": 8.84,
-   "side": "short_watch"
-  },
-  {
-   "ticker": "FIS",
-   "e_date": "2026-11-04",
-   "gap_pct": -21.57,
-   "vol_mult": 6.13,
-   "close_pos": 0.19,
-   "hold_pct": -23.67,
-   "e_open": 30.58,
-   "e_high": 32.4,
-   "e_low": 29.15,
-   "e_close": 29.76,
-   "atr14": 1.9886,
-   "range_pct": 10.92,
-   "side": "short_watch"
-  },
-  {
-   "ticker": "MOD",
-   "e_date": "2026-11-04",
-   "gap_pct": -7.93,
-   "vol_mult": 6.11,
-   "close_pos": 0.28,
-   "hold_pct": -21.43,
-   "e_open": 115.5,
-   "e_high": 116.48,
-   "e_low": 91.42,
-   "e_close": 98.56,
-   "atr14": 10.8114,
-   "range_pct": 25.43,
+   "ticker": "AXON",
+   "e_date": "2026-11-06",
+   "gap_pct": -11.91,
+   "vol_mult": 5.04,
+   "close_pos": 0.2,
+   "hold_pct": -18.18,
+   "e_open": 337.0,
+   "e_high": 337.0,
+   "e_low": 307.0,
+   "e_close": 313.0,
+   "atr14": 23.7907,
+   "range_pct": 9.58,
    "side": "short_watch"
   }
  ],
@@ -1276,7 +1277,8 @@
    "e_low": 50.0,
    "e_close": 53.56,
    "atr14": 1.69,
-   "range_pct": 6.81
+   "range_pct": 6.81,
+   "b_state": "broken"
   },
   {
    "ticker": "AXGN",
@@ -1376,7 +1378,8 @@
    "e_low": 103.78,
    "e_close": 111.59,
    "atr14": 3.8814,
-   "range_pct": 9.62
+   "range_pct": 9.62,
+   "b_state": "triggered"
   },
   {
    "ticker": "NCLH",
@@ -1433,7 +1436,8 @@
    "e_low": 54.01,
    "e_close": 65.11,
    "atr14": 6.9957,
-   "range_pct": 18.74
+   "range_pct": 18.74,
+   "b_state": "broken"
   },
   {
    "ticker": "DD",
