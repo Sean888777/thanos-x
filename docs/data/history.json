@@ -1,5 +1,5 @@
 {
- "last_session": "2026-11-06",
+ "last_session": "2026-11-09",
  "candidates": [
   {
    "ticker": "CCL",
@@ -1080,25 +1080,196 @@
    "blocked": false,
    "selected": true,
    "rank": 1
-  }
- ],
- "short_watch": [
+  },
   {
-   "ticker": "AXON",
-   "e_date": "2026-11-06",
-   "gap_pct": -11.91,
-   "vol_mult": 5.04,
-   "close_pos": 0.2,
-   "hold_pct": -18.18,
-   "e_open": 337.0,
-   "e_high": 337.0,
-   "e_low": 307.0,
-   "e_close": 313.0,
-   "atr14": 23.7907,
-   "range_pct": 9.58,
-   "side": "short_watch"
+   "ticker": "TTD",
+   "e_date": "2026-11-09",
+   "gap_pct": 6.57,
+   "vol_mult": 6.68,
+   "close_pos": 0.77,
+   "hold_pct": 15.47,
+   "e_open": 13.78,
+   "e_high": 15.29,
+   "e_low": 13.75,
+   "e_close": 14.93,
+   "atr14": 0.7032,
+   "range_pct": 10.31,
+   "template": "A",
+   "signal_date": "2026-11-09",
+   "side": "long",
+   "limit": 15.6332,
+   "stop_ref": 13.75,
+   "risk_ref": 1.8832,
+   "t1_ref": 19.3996,
+   "stop_dist_pct": 12.05,
+   "excluded": "X3 停損距離超過 12%",
+   "implied_move_pct": 16.51,
+   "surprise_ratio": 0.4
+  },
+  {
+   "ticker": "AXGN",
+   "e_date": "2026-10-28",
+   "gap_pct": 21.33,
+   "vol_mult": 6.03,
+   "e_high": 49.97,
+   "e_low": 43.5,
+   "e_close": 49.25,
+   "template": "B",
+   "signal_date": "2026-11-09",
+   "side": "long",
+   "days_after_event": 8,
+   "s_close": 50.64,
+   "atr14": 2.7864,
+   "limit": 52.0332,
+   "stop_ref": 43.5,
+   "risk_ref": 8.5332,
+   "t1_ref": 69.0996,
+   "stop_dist_pct": 16.4,
+   "excluded": "X3 停損距離超過 12%"
+  },
+  {
+   "ticker": "REGN",
+   "e_date": "2026-10-30",
+   "gap_pct": 6.19,
+   "vol_mult": 4.54,
+   "e_high": 935.35,
+   "e_low": 839.08,
+   "e_close": 927.89,
+   "template": "B",
+   "signal_date": "2026-11-09",
+   "side": "long",
+   "days_after_event": 6,
+   "s_close": 919.96,
+   "atr14": 34.2164,
+   "limit": 937.0682,
+   "stop_ref": 839.08,
+   "risk_ref": 97.9882,
+   "t1_ref": 1133.0447,
+   "stop_dist_pct": 10.46,
+   "sector": null,
+   "next_earnings": "2027-01-28",
+   "flags": [
+    "請手動確認：非現金併購標的",
+    "大盤在 50 日均線下，0.5R"
+   ],
+   "size_factor": 0.5,
+   "blocked": false,
+   "selected": true,
+   "rank": 1
+  },
+  {
+   "ticker": "IDXX",
+   "e_date": "2026-11-02",
+   "gap_pct": 13.39,
+   "vol_mult": 3.52,
+   "e_high": 673.19,
+   "e_low": 620.2,
+   "e_close": 671.64,
+   "template": "B",
+   "signal_date": "2026-11-09",
+   "side": "long",
+   "days_after_event": 5,
+   "s_close": 706.65,
+   "atr14": 30.6057,
+   "limit": 721.9529,
+   "stop_ref": 620.2,
+   "risk_ref": 101.7529,
+   "t1_ref": 925.4587,
+   "stop_dist_pct": 14.09,
+   "excluded": "X3 停損距離超過 12%"
+  },
+  {
+   "ticker": "DD",
+   "e_date": "2026-11-03",
+   "gap_pct": 6.12,
+   "vol_mult": 3.37,
+   "e_high": 155.61,
+   "e_low": 143.36,
+   "e_close": 153.46,
+   "template": "B",
+   "signal_date": "2026-11-09",
+   "side": "long",
+   "days_after_event": 4,
+   "s_close": 155.14,
+   "atr14": 4.5814,
+   "limit": 157.4307,
+   "stop_ref": 143.36,
+   "risk_ref": 14.0707,
+   "t1_ref": 185.5721,
+   "stop_dist_pct": 8.94,
+   "sector": null,
+   "next_earnings": "2027-02-09",
+   "flags": [
+    "請手動確認：非現金併購標的",
+    "大盤在 50 日均線下，0.5R"
+   ],
+   "size_factor": 0.5,
+   "blocked": false,
+   "selected": true,
+   "rank": 3
+  },
+  {
+   "ticker": "TREX",
+   "e_date": "2026-11-04",
+   "gap_pct": 7.9,
+   "vol_mult": 3.16,
+   "e_high": 58.7,
+   "e_low": 53.26,
+   "e_close": 57.15,
+   "template": "B",
+   "signal_date": "2026-11-09",
+   "side": "long",
+   "days_after_event": 3,
+   "s_close": 58.74,
+   "atr14": 2.5829,
+   "limit": 60.0314,
+   "stop_ref": 53.26,
+   "risk_ref": 6.7714,
+   "t1_ref": 73.5743,
+   "stop_dist_pct": 11.28,
+   "sector": null,
+   "next_earnings": "2027-02-24",
+   "flags": [
+    "請手動確認：非現金併購標的",
+    "大盤在 50 日均線下，0.5R"
+   ],
+   "size_factor": 0.5,
+   "blocked": false,
+   "selected": false,
+   "shadow_reason": "超過每日上限"
+  },
+  {
+   "ticker": "XYZ",
+   "e_date": "2026-11-04",
+   "gap_pct": 10.53,
+   "vol_mult": 4.14,
+   "e_high": 88.51,
+   "e_low": 83.26,
+   "e_close": 87.63,
+   "template": "B",
+   "signal_date": "2026-11-09",
+   "side": "long",
+   "days_after_event": 3,
+   "s_close": 88.56,
+   "atr14": 3.5056,
+   "limit": 90.3128,
+   "stop_ref": 83.26,
+   "risk_ref": 7.0528,
+   "t1_ref": 104.4183,
+   "stop_dist_pct": 7.81,
+   "sector": null,
+   "next_earnings": "2027-03-01",
+   "flags": [
+    "請手動確認：非現金併購標的",
+    "大盤在 50 日均線下，0.5R"
+   ],
+   "size_factor": 0.5,
+   "blocked": false,
+   "selected": true,
+   "rank": 2
   }
  ],
+ "short_watch": [],
  "events": [
   {
    "ticker": "CCL",
@@ -1292,7 +1463,8 @@
    "e_low": 43.5,
    "e_close": 49.25,
    "atr14": 2.1971,
-   "range_pct": 13.14
+   "range_pct": 13.14,
+   "b_state": "triggered"
   },
   {
    "ticker": "ICLR",
@@ -1408,7 +1580,8 @@
    "e_low": 839.08,
    "e_close": 927.89,
    "atr14": 27.6421,
-   "range_pct": 10.38
+   "range_pct": 10.38,
+   "b_state": "triggered"
   },
   {
    "ticker": "IDXX",
@@ -1422,7 +1595,8 @@
    "e_low": 620.2,
    "e_close": 671.64,
    "atr14": 23.3036,
-   "range_pct": 7.89
+   "range_pct": 7.89,
+   "b_state": "triggered"
   },
   {
    "ticker": "AEHR",
@@ -1451,7 +1625,8 @@
    "e_low": 143.36,
    "e_close": 153.46,
    "atr14": 3.6129,
-   "range_pct": 7.98
+   "range_pct": 7.98,
+   "b_state": "triggered"
   },
   {
    "ticker": "FISV",
@@ -1507,7 +1682,8 @@
    "e_low": 53.26,
    "e_close": 57.15,
    "atr14": 2.2229,
-   "range_pct": 9.52
+   "range_pct": 9.52,
+   "b_state": "triggered"
   },
   {
    "ticker": "XYZ",
@@ -1521,7 +1697,22 @@
    "e_low": 83.26,
    "e_close": 87.63,
    "atr14": 3.0884,
-   "range_pct": 5.99
+   "range_pct": 5.99,
+   "b_state": "triggered"
+  },
+  {
+   "ticker": "TTD",
+   "e_date": "2026-11-09",
+   "gap_pct": 6.57,
+   "vol_mult": 6.68,
+   "close_pos": 0.77,
+   "hold_pct": 15.47,
+   "e_open": 13.78,
+   "e_high": 15.29,
+   "e_low": 13.75,
+   "e_close": 14.93,
+   "atr14": 0.7032,
+   "range_pct": 10.31
   }
  ]
 }
