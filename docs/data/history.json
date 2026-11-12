@@ -1,5 +1,5 @@
 {
- "last_session": "2026-11-10",
+ "last_session": "2026-11-11",
  "candidates": [
   {
    "ticker": "CCL",
@@ -1269,23 +1269,7 @@
    "rank": 2
   }
  ],
- "short_watch": [
-  {
-   "ticker": "NOVT",
-   "e_date": "2026-11-10",
-   "gap_pct": -8.21,
-   "vol_mult": 3.9,
-   "close_pos": 0.26,
-   "hold_pct": -15.26,
-   "e_open": 134.0,
-   "e_high": 134.0,
-   "e_low": 120.01,
-   "e_close": 123.71,
-   "atr14": 8.6879,
-   "range_pct": 11.31,
-   "side": "short_watch"
-  }
- ],
+ "short_watch": [],
  "events": [
   {
    "ticker": "CCL",

@@ -7222,5 +7222,13 @@
   "expiry": "2026-11-20",
   "spot": 32.73,
   "implied_move_pct": 23.5
+ },
+ "VYLR|2026-11-11": {
+  "ticker": "VYLR",
+  "earnings_date": "2026-11-11",
+  "captured": "2026-11-11",
+  "expiry": "2026-11-20",
+  "spot": 72.1,
+  "implied_move_pct": 3.95
  }
 }
