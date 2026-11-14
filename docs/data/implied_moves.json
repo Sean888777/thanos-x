@@ -7230,5 +7230,181 @@
   "expiry": "2026-11-20",
   "spot": 72.1,
   "implied_move_pct": 3.95
+ },
+ "NVDA|2026-11-17": {
+  "ticker": "NVDA",
+  "earnings_date": "2026-11-17",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-18",
+  "spot": 162.85,
+  "implied_move_pct": 8.63
+ },
+ "HD|2026-11-17": {
+  "ticker": "HD",
+  "earnings_date": "2026-11-17",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 348.69,
+  "implied_move_pct": 5.15
+ },
+ "DIS|2026-11-17": {
+  "ticker": "DIS",
+  "earnings_date": "2026-11-17",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 118.97,
+  "implied_move_pct": 6.01
+ },
+ "XP|2026-11-16": {
+  "ticker": "XP",
+  "earnings_date": "2026-11-16",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 15.04,
+  "implied_move_pct": 7.81
+ },
+ "BHP|2026-11-17": {
+  "ticker": "BHP",
+  "earnings_date": "2026-11-17",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 79.49,
+  "implied_move_pct": 3.96
+ },
+ "TSN|2026-11-16": {
+  "ticker": "TSN",
+  "earnings_date": "2026-11-16",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 58.82,
+  "implied_move_pct": 6.12
+ },
+ "ARMK|2026-11-16": {
+  "ticker": "ARMK",
+  "earnings_date": "2026-11-16",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 53.88,
+  "implied_move_pct": 7.19
+ },
+ "BIDU|2026-11-16": {
+  "ticker": "BIDU",
+  "earnings_date": "2026-11-16",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 78.14,
+  "implied_move_pct": 6.96
+ },
+ "AS|2026-11-17": {
+  "ticker": "AS",
+  "earnings_date": "2026-11-17",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 30.19,
+  "implied_move_pct": 10.02
+ },
+ "TCOM|2026-11-16": {
+  "ticker": "TCOM",
+  "earnings_date": "2026-11-16",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 43.58,
+  "implied_move_pct": 4.65
+ },
+ "POWL|2026-11-16": {
+  "ticker": "POWL",
+  "earnings_date": "2026-11-16",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 142.72,
+  "implied_move_pct": 15.98
+ },
+ "BEKE|2026-11-16": {
+  "ticker": "BEKE",
+  "earnings_date": "2026-11-16",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 17.65,
+  "implied_move_pct": 8.5
+ },
+ "ACM|2026-11-16": {
+  "ticker": "ACM",
+  "earnings_date": "2026-11-16",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 70.5,
+  "implied_move_pct": 7.62
+ },
+ "BZ|2026-11-17": {
+  "ticker": "BZ",
+  "earnings_date": "2026-11-17",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 12.49,
+  "implied_move_pct": 8.21
+ },
+ "HTHT|2026-11-16": {
+  "ticker": "HTHT",
+  "earnings_date": "2026-11-16",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 50.39,
+  "implied_move_pct": 7.59
+ },
+ "XPEV|2026-11-16": {
+  "ticker": "XPEV",
+  "earnings_date": "2026-11-16",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 9.46,
+  "implied_move_pct": 8.3
+ },
+ "KLAR|2026-11-17": {
+  "ticker": "KLAR",
+  "earnings_date": "2026-11-17",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 12.71,
+  "implied_move_pct": 16.33
+ },
+ "ESLT|2026-11-17": {
+  "ticker": "ESLT",
+  "earnings_date": "2026-11-17",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 706.62,
+  "implied_move_pct": 8.22
+ },
+ "SHAZ|2026-11-16": {
+  "ticker": "SHAZ",
+  "earnings_date": "2026-11-16",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 24.29,
+  "implied_move_pct": 20.79
+ },
+ "SQM|2026-11-17": {
+  "ticker": "SQM",
+  "earnings_date": "2026-11-17",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 53.61,
+  "implied_move_pct": 4.38
+ },
+ "SR|2026-11-17": {
+  "ticker": "SR",
+  "earnings_date": "2026-11-17",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 88.84,
+  "implied_move_pct": 4.11
+ },
+ "DLB|2026-11-17": {
+  "ticker": "DLB",
+  "earnings_date": "2026-11-17",
+  "captured": "2026-11-13",
+  "expiry": "2026-11-20",
+  "spot": 63.61,
+  "implied_move_pct": 4.21
  }
 }
