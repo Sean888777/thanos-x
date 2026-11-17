@@ -1,5 +1,5 @@
 {
- "last_session": "2026-11-13",
+ "last_session": "2026-11-16",
  "candidates": [
   {
    "ticker": "CCL",
@@ -1267,55 +1267,56 @@
    "blocked": false,
    "selected": true,
    "rank": 2
+  },
+  {
+   "ticker": "GPK",
+   "e_date": "2026-11-03",
+   "gap_pct": 14.36,
+   "vol_mult": 3.02,
+   "e_high": 11.4,
+   "e_low": 10.17,
+   "e_close": 11.31,
+   "template": "B",
+   "signal_date": "2026-11-16",
+   "side": "long",
+   "days_after_event": 9,
+   "s_close": 11.0,
+   "atr14": 0.565,
+   "limit": 11.2825,
+   "stop_ref": 10.17,
+   "risk_ref": 1.1125,
+   "t1_ref": 13.5075,
+   "stop_dist_pct": 9.86,
+   "sector": null,
+   "next_earnings": "2027-02-09",
+   "flags": [
+    "請手動確認：非現金併購標的",
+    "大盤在 50 日均線下，0.5R"
+   ],
+   "size_factor": 0.5,
+   "blocked": false,
+   "selected": true,
+   "rank": 1
   }
  ],
- "short_watch": [],
+ "short_watch": [
+  {
+   "ticker": "SMMT",
+   "e_date": "2026-11-16",
+   "gap_pct": -10.21,
+   "vol_mult": 5.05,
+   "close_pos": 0.17,
+   "hold_pct": -16.47,
+   "e_open": 12.705,
+   "e_high": 13.28,
+   "e_low": 11.525,
+   "e_close": 11.82,
+   "atr14": 1.4545,
+   "range_pct": 14.85,
+   "side": "short_watch"
+  }
+ ],
  "events": [
-  {
-   "ticker": "CCL",
-   "e_date": "2026-09-29",
-   "gap_pct": 10.16,
-   "vol_mult": 3.22,
-   "close_pos": 0.86,
-   "hold_pct": 13.41,
-   "e_open": 24.39,
-   "e_high": 25.29,
-   "e_low": 24.0,
-   "e_close": 25.11,
-   "atr14": 0.925,
-   "range_pct": 5.14,
-   "b_state": "triggered"
-  },
-  {
-   "ticker": "FICO",
-   "e_date": "2026-10-01",
-   "gap_pct": 7.18,
-   "vol_mult": 3.9,
-   "close_pos": 0.75,
-   "hold_pct": 11.69,
-   "e_open": 635.0,
-   "e_high": 675.87,
-   "e_low": 620.0,
-   "e_close": 661.75,
-   "atr14": 51.5728,
-   "range_pct": 8.44,
-   "b_state": "triggered"
-  },
-  {
-   "ticker": "SNPS",
-   "e_date": "2026-10-01",
-   "gap_pct": 7.57,
-   "vol_mult": 3.32,
-   "close_pos": 0.82,
-   "hold_pct": 12.78,
-   "e_open": 467.85,
-   "e_high": 496.95,
-   "e_low": 462.0,
-   "e_close": 490.54,
-   "atr14": 18.9179,
-   "range_pct": 7.12,
-   "b_state": "broken"
-  },
   {
    "ticker": "XP",
    "e_date": "2026-10-05",
@@ -1655,7 +1656,8 @@
    "e_low": 10.17,
    "e_close": 11.31,
    "atr14": 0.4893,
-   "range_pct": 10.88
+   "range_pct": 10.88,
+   "b_state": "triggered"
   },
   {
    "ticker": "TBBB",
