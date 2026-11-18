@@ -1,5 +1,5 @@
 {
- "last_session": "2026-11-16",
+ "last_session": "2026-11-17",
  "candidates": [
   {
    "ticker": "CCL",
@@ -1299,23 +1299,7 @@
    "rank": 1
   }
  ],
- "short_watch": [
-  {
-   "ticker": "SMMT",
-   "e_date": "2026-11-16",
-   "gap_pct": -10.21,
-   "vol_mult": 5.05,
-   "close_pos": 0.17,
-   "hold_pct": -16.47,
-   "e_open": 12.705,
-   "e_high": 13.28,
-   "e_low": 11.525,
-   "e_close": 11.82,
-   "atr14": 1.4545,
-   "range_pct": 14.85,
-   "side": "short_watch"
-  }
- ],
+ "short_watch": [],
  "events": [
   {
    "ticker": "XP",
