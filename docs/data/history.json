@@ -1,5 +1,5 @@
 {
- "last_session": "2026-11-17",
+ "last_session": "2026-11-18",
  "candidates": [
   {
    "ticker": "CCL",
@@ -1297,6 +1297,27 @@
    "blocked": false,
    "selected": true,
    "rank": 1
+  },
+  {
+   "ticker": "TTD",
+   "e_date": "2026-11-09",
+   "gap_pct": 6.57,
+   "vol_mult": 6.68,
+   "e_high": 15.29,
+   "e_low": 13.75,
+   "e_close": 14.93,
+   "template": "B",
+   "signal_date": "2026-11-18",
+   "side": "long",
+   "days_after_event": 7,
+   "s_close": 15.52,
+   "atr14": 0.9439,
+   "limit": 15.9919,
+   "stop_ref": 13.75,
+   "risk_ref": 2.2419,
+   "t1_ref": 20.4758,
+   "stop_dist_pct": 14.02,
+   "excluded": "X3 停損距離超過 12%"
   }
  ],
  "short_watch": [],
@@ -1699,7 +1720,8 @@
    "e_low": 13.75,
    "e_close": 14.93,
    "atr14": 0.7032,
-   "range_pct": 10.31
+   "range_pct": 10.31,
+   "b_state": "triggered"
   }
  ]
 }

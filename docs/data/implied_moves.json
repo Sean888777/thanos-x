@@ -7670,5 +7670,45 @@
   "expiry": "2026-11-20",
   "spot": 55.35,
   "implied_move_pct": 13.46
+ },
+ "BJ|2026-11-20": {
+  "ticker": "BJ",
+  "earnings_date": "2026-11-20",
+  "captured": "2026-11-18",
+  "expiry": "2026-12-18",
+  "spot": 110.88,
+  "implied_move_pct": 8.61
+ },
+ "FRO|2026-11-20": {
+  "ticker": "FRO",
+  "earnings_date": "2026-11-20",
+  "captured": "2026-11-18",
+  "expiry": "2026-12-18",
+  "spot": 44.41,
+  "implied_move_pct": 15.76
+ },
+ "MOG-A|2026-11-20": {
+  "ticker": "MOG-A",
+  "earnings_date": "2026-11-20",
+  "captured": "2026-11-18",
+  "expiry": "2026-12-18",
+  "spot": 335.19,
+  "implied_move_pct": 11.5
+ },
+ "IESC|2026-11-20": {
+  "ticker": "IESC",
+  "earnings_date": "2026-11-20",
+  "captured": "2026-11-18",
+  "expiry": "2026-12-18",
+  "spot": 166.05,
+  "implied_move_pct": 81.61
+ },
+ "BSP|2026-11-20": {
+  "ticker": "BSP",
+  "earnings_date": "2026-11-20",
+  "captured": "2026-11-18",
+  "expiry": "2026-12-18",
+  "spot": 42.79,
+  "implied_move_pct": 24.66
  }
 }
