@@ -1,5 +1,5 @@
 {
- "last_session": "2026-11-18",
+ "last_session": "2026-11-19",
  "candidates": [
   {
    "ticker": "CCL",
@@ -1320,7 +1320,38 @@
    "excluded": "X3 停損距離超過 12%"
   }
  ],
- "short_watch": [],
+ "short_watch": [
+  {
+   "ticker": "SNEX",
+   "e_date": "2026-11-19",
+   "gap_pct": -9.07,
+   "vol_mult": 5.38,
+   "close_pos": 0.04,
+   "hold_pct": -26.71,
+   "e_open": 48.95,
+   "e_high": 49.68,
+   "e_low": 39.0,
+   "e_close": 39.45,
+   "atr14": 3.0207,
+   "range_pct": 27.07,
+   "side": "short_watch"
+  },
+  {
+   "ticker": "WSM",
+   "e_date": "2026-11-19",
+   "gap_pct": -6.5,
+   "vol_mult": 4.46,
+   "close_pos": 0.12,
+   "hold_pct": -15.16,
+   "e_open": 243.19,
+   "e_high": 247.22,
+   "e_low": 217.11,
+   "e_close": 220.66,
+   "atr14": 12.6457,
+   "range_pct": 13.65,
+   "side": "short_watch"
+  }
+ ],
  "events": [
   {
    "ticker": "XP",

@@ -7710,5 +7710,61 @@
   "expiry": "2026-12-18",
   "spot": 42.79,
   "implied_move_pct": 24.66
+ },
+ "HPE|2026-11-23": {
+  "ticker": "HPE",
+  "earnings_date": "2026-11-23",
+  "captured": "2026-11-19",
+  "expiry": "2026-11-27",
+  "spot": 45.78,
+  "implied_move_pct": 12.99
+ },
+ "SMTC|2026-11-23": {
+  "ticker": "SMTC",
+  "earnings_date": "2026-11-23",
+  "captured": "2026-11-19",
+  "expiry": "2026-11-27",
+  "spot": 101.81,
+  "implied_move_pct": 15.42
+ },
+ "A|2026-11-23": {
+  "ticker": "A",
+  "earnings_date": "2026-11-23",
+  "captured": "2026-11-19",
+  "expiry": "2026-12-18",
+  "spot": 175.34,
+  "implied_move_pct": 9.52
+ },
+ "ZM|2026-11-23": {
+  "ticker": "ZM",
+  "earnings_date": "2026-11-23",
+  "captured": "2026-11-19",
+  "expiry": "2026-11-27",
+  "spot": 92.68,
+  "implied_move_pct": 12.27
+ },
+ "J|2026-11-23": {
+  "ticker": "J",
+  "earnings_date": "2026-11-23",
+  "captured": "2026-11-19",
+  "expiry": "2026-12-18",
+  "spot": 154.58,
+  "implied_move_pct": 8.41
+ },
+ "TCOM|2026-11-23": {
+  "ticker": "TCOM",
+  "earnings_date": "2026-11-23",
+  "captured": "2026-11-19",
+  "expiry": "2026-12-18",
+  "spot": 42.26,
+  "implied_move_pct": 8.81
+ },
+ "SYM|2026-11-23": {
+  "ticker": "SYM",
+  "earnings_date": "2026-11-23",
+  "captured": "2026-11-19",
+  "expiry": "2026-11-27",
+  "spot": 33.79,
+  "implied_move_pct": 15.76
  }
 }
