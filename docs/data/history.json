@@ -1,5 +1,5 @@
 {
- "last_session": "2026-11-19",
+ "last_session": "2026-11-20",
  "candidates": [
   {
    "ticker": "CCL",
@@ -1322,52 +1322,22 @@
  ],
  "short_watch": [
   {
-   "ticker": "SNEX",
-   "e_date": "2026-11-19",
-   "gap_pct": -9.07,
-   "vol_mult": 5.38,
+   "ticker": "INTU",
+   "e_date": "2026-11-20",
+   "gap_pct": -8.37,
+   "vol_mult": 3.49,
    "close_pos": 0.04,
-   "hold_pct": -26.71,
-   "e_open": 48.95,
-   "e_high": 49.68,
-   "e_low": 39.0,
-   "e_close": 39.45,
-   "atr14": 3.0207,
-   "range_pct": 27.07,
-   "side": "short_watch"
-  },
-  {
-   "ticker": "WSM",
-   "e_date": "2026-11-19",
-   "gap_pct": -6.5,
-   "vol_mult": 4.46,
-   "close_pos": 0.12,
-   "hold_pct": -15.16,
-   "e_open": 243.19,
-   "e_high": 247.22,
-   "e_low": 217.11,
-   "e_close": 220.66,
-   "atr14": 12.6457,
-   "range_pct": 13.65,
+   "hold_pct": -12.77,
+   "e_open": 284.06,
+   "e_high": 300.44,
+   "e_low": 269.33,
+   "e_close": 270.44,
+   "atr14": 15.2964,
+   "range_pct": 11.5,
    "side": "short_watch"
   }
  ],
  "events": [
-  {
-   "ticker": "XP",
-   "e_date": "2026-10-05",
-   "gap_pct": 20.79,
-   "vol_mult": 5.85,
-   "close_pos": 0.73,
-   "hold_pct": 30.93,
-   "e_open": 25.97,
-   "e_high": 29.0,
-   "e_low": 25.84,
-   "e_close": 28.15,
-   "atr14": 1.3011,
-   "range_pct": 11.23,
-   "b_state": "broken"
-  },
   {
    "ticker": "HAE",
    "e_date": "2026-10-08",
