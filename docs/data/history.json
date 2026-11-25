@@ -1,5 +1,5 @@
 {
- "last_session": "2026-11-23",
+ "last_session": "2026-11-24",
  "candidates": [
   {
    "ticker": "CCL",
@@ -1343,25 +1343,90 @@
    "excluded": "X3 停損距離超過 12%",
    "implied_move_pct": 24.66,
    "surprise_ratio": 0.27
+  },
+  {
+   "ticker": "SNY",
+   "e_date": "2026-11-24",
+   "gap_pct": 7.61,
+   "vol_mult": 3.06,
+   "close_pos": 0.97,
+   "hold_pct": 10.97,
+   "e_open": 50.33,
+   "e_high": 51.95,
+   "e_low": 50.29,
+   "e_close": 51.9,
+   "atr14": 1.3121,
+   "range_pct": 3.2,
+   "template": "A",
+   "signal_date": "2026-11-24",
+   "side": "long",
+   "limit": 53.2121,
+   "stop_ref": 50.29,
+   "risk_ref": 2.9221,
+   "t1_ref": 59.0563,
+   "stop_dist_pct": 5.49,
+   "sector": "Healthcare",
+   "next_earnings": "2027-01-28",
+   "flags": [
+    "請手動確認：非現金併購標的",
+    "大盤在 50 日均線下，0.5R",
+    "VIX > 25，0.5R"
+   ],
+   "size_factor": 0.5,
+   "blocked": false,
+   "selected": true,
+   "rank": 1
+  },
+  {
+   "ticker": "FISV",
+   "e_date": "2026-11-03",
+   "gap_pct": 8.86,
+   "vol_mult": 3.41,
+   "e_high": 59.38,
+   "e_low": 54.62,
+   "e_close": 58.4,
+   "template": "B",
+   "signal_date": "2026-11-24",
+   "side": "long",
+   "days_after_event": 15,
+   "s_close": 58.62,
+   "atr14": 2.1643,
+   "limit": 59.7021,
+   "stop_ref": 54.62,
+   "risk_ref": 5.0821,
+   "t1_ref": 69.8664,
+   "stop_dist_pct": 8.51,
+   "sector": null,
+   "next_earnings": "2027-02-10",
+   "flags": [
+    "請手動確認：非現金併購標的",
+    "大盤在 50 日均線下，0.5R",
+    "VIX > 25，0.5R"
+   ],
+   "size_factor": 0.5,
+   "blocked": false,
+   "selected": true,
+   "rank": 2
   }
  ],
- "short_watch": [],
- "events": [
+ "short_watch": [
   {
-   "ticker": "CCI",
-   "e_date": "2026-10-09",
-   "gap_pct": 7.88,
-   "vol_mult": 3.8,
-   "close_pos": 0.98,
-   "hold_pct": 15.6,
-   "e_open": 74.32,
-   "e_high": 79.79,
-   "e_low": 73.75,
-   "e_close": 79.64,
-   "atr14": 2.4979,
-   "range_pct": 7.58,
-   "b_state": "triggered"
-  },
+   "ticker": "DY",
+   "e_date": "2026-11-24",
+   "gap_pct": -7.95,
+   "vol_mult": 3.03,
+   "close_pos": 0.06,
+   "hold_pct": -18.02,
+   "e_open": 201.0,
+   "e_high": 205.24,
+   "e_low": 177.34,
+   "e_close": 179.01,
+   "atr14": 15.5679,
+   "range_pct": 15.59,
+   "side": "short_watch"
+  }
+ ],
+ "events": [
   {
    "ticker": "PAG",
    "e_date": "2026-10-15",
@@ -1642,7 +1707,8 @@
    "e_low": 54.62,
    "e_close": 58.4,
    "atr14": 1.915,
-   "range_pct": 8.15
+   "range_pct": 8.15,
+   "b_state": "triggered"
   },
   {
    "ticker": "GPK",
@@ -1731,6 +1797,20 @@
    "e_close": 47.27,
    "atr14": 3.3293,
    "range_pct": 10.73
+  },
+  {
+   "ticker": "SNY",
+   "e_date": "2026-11-24",
+   "gap_pct": 7.61,
+   "vol_mult": 3.06,
+   "close_pos": 0.97,
+   "hold_pct": 10.97,
+   "e_open": 50.33,
+   "e_high": 51.95,
+   "e_low": 50.29,
+   "e_close": 51.9,
+   "atr14": 1.3121,
+   "range_pct": 3.2
   }
  ]
 }
