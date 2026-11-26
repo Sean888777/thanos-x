@@ -1,5 +1,5 @@
 {
- "last_session": "2026-11-24",
+ "last_session": "2026-11-25",
  "candidates": [
   {
    "ticker": "CCL",
@@ -1409,23 +1409,7 @@
    "rank": 2
   }
  ],
- "short_watch": [
-  {
-   "ticker": "DY",
-   "e_date": "2026-11-24",
-   "gap_pct": -7.95,
-   "vol_mult": 3.03,
-   "close_pos": 0.06,
-   "hold_pct": -18.02,
-   "e_open": 201.0,
-   "e_high": 205.24,
-   "e_low": 177.34,
-   "e_close": 179.01,
-   "atr14": 15.5679,
-   "range_pct": 15.59,
-   "side": "short_watch"
-  }
- ],
+ "short_watch": [],
  "events": [
   {
    "ticker": "PAG",
