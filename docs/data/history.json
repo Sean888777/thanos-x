@@ -1,5 +1,5 @@
 {
- "last_session": "2026-11-25",
+ "last_session": "2026-11-27",
  "candidates": [
   {
    "ticker": "CCL",
@@ -1780,7 +1780,8 @@
    "e_low": 43.05,
    "e_close": 47.27,
    "atr14": 3.3293,
-   "range_pct": 10.73
+   "range_pct": 10.73,
+   "b_state": "broken"
   },
   {
    "ticker": "SNY",
